@@ -1,0 +1,103 @@
+body
+  font-family body-stack
+
+main
+  position relative
+  margin 0 auto
+
+a
+  color link-color
+
+.content-box
+  background: url(/static/bg3.jpg);
+  background-position left top
+  background-attachment: fixed;
+  padding-top: 3rem;
+  section
+    margin 0 3rem 3rem 31%
+    padding 2rem 1.236rem 2rem 3.236rem
+    background bg-color
+    text-shadow 0 1px 1px #FFF
+    &.desc-box
+      h1
+        font-family handwritting-stack
+        margin-bottom 1rem
+        font-size 3rem
+        color #333
+      h2
+        margin-bottom 2rem
+  ol
+    li
+      color muted-color
+      strong, p
+        color text-color
+
+.cta-box
+  position: fixed;
+  top: 30%
+  right: 0;
+  fieldset
+    margin 0 0 0 3rem
+  legend
+    margin-bottom .5rem
+
+  .btn
+    position absolute
+    top 0
+    left 210px
+    padding 8px 18px 10px
+    border-radius: 3px;
+    background-color: #FFA500;
+    color: #FFF;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 1rem;
+    text-shadow: 0 1px 1px #E09100;
+    cursor: pointer;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    &:focus
+      outline: 1px solid #FFF;
+      outline-offset: -2px;
+    &:hover
+      background darken(#FFA500, 5%)
+      box-shadow inset 0 1px 1px #9C9C9C
+      outline none
+      transition .15s ease
+    &:active
+      background darken(#FFA500, 10%)
+      box-shadow inset 0 1px 2px #6C6C6C
+      outline none
+    .label
+      vertical-align 1px
+
+  input[type='email']
+    position absolute
+    top 0
+    border: 1px solid #FFA500;
+    height: 35px;
+    border-right: 0;
+    margin-right: -3px;
+    width: 210px;
+    padding: .5rem;
+    background bg-color
+    border-top-left-radius: 3px
+    border-bottom-left-radius: 3px
+    background #FFF
+    &:focus
+      outline none
+
+footer
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0 1rem;
+  text-align: right;
+  p
+    border-top: 1px solid #DEDEDE;
+    padding: 1rem 0;
+    font-size: 80%;
+    margin-bottom 0

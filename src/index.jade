@@ -1,0 +1,93 @@
+extends _base.jade
+
+
+block title
+    | Newsletter
+
+
+block meta
+    link(rel="canonical", href="")
+    link(rel="stylesheet", href="/css/index.css")
+    link(href='http://fonts.useso.com/css?family=Satisfy&text=Morty', rel='stylesheet')
+    link(href='http://fonts.useso.com/css?family=Open+Sans:400,700', rel='stylesheet')
+
+
+block content
+    // Use http://schema.org tags to annotate what your page is about,
+    // Google+, Google Search and other search engines use this to know
+    // what your page is about.
+    main
+
+      article.w-50p.content-box.h-100p
+        section.desc-box
+          h1 Morty
+          h2 5 best tech links, every week.
+          p Morty is a newsletter giving you the 5 best links every week. One link for each category:
+          ol
+            li
+              strong Backend Technologies
+              p Databases, Architectures, Web Frameworks, Deployments, etc.
+            li
+              strong Web Frontend Technologies
+              p HTML, CSS, Javascript, browsers optimizations, etc.
+            li
+              strong Data Science
+              p Data crawling and mining, Neural Networks, Computer Vision, etc.
+            li
+              strong User Experience
+              p Information Architecture, Copy-writing, Accessibility, etc.
+            li
+              strong Tech Entrepreneurship
+              p SaaS, Hiring, Freelancer tips, Company culture, etc.
+
+        section.sample-box
+          h1 Sample Issue
+          h2
+            a(href='#') Lorem ipsum dolor sit amet
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.
+          h2
+            a(href='#') Lorem ipsum dolor sit amet
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.
+          h2
+            a(href='#') Lorem ipsum dolor sit amet
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.
+
+        section.faq-box
+          h1 F.A.Q.
+          h2 What is Morty?
+          p Morty is a weekly newsletter. It gives you the best 5 links every week on Backend, Web Frontend, Data Science, User experience and Entrepreneurship. One link for each category each week. Nothing else.
+          h2 Who need to read it?
+          p Morty primarily targets Full-Stack Developers, Directors of Engineering, and anybody who need to stay relevant on a wide scope of technologies.
+          p Morty is also read by non-tech people, working in tech environment, who want to acquire a good general knowledge on what the tech world is about today.
+          h2 Where are the links curated from?
+          p The links are curated from any tech media whose publish in English. Including social sites like HN, DN, Reddit, tech blogs like techcrunch, pandodaily, but also other newsletters and podcasts.
+          h2 When do I receive the links?
+          p Every Tuesday 9am.
+          h2 Is it free?
+          p Yes.
+          h2 Can I unsubscribe at any time?
+          p Yes. Every email we send contains a link to unsubscribe.
+          h2 How can I send feedback?
+          p Click 
+            a(href='#') this link
+            |  to see our contact form.
+
+      article.h-100p.w-50p.cta-box
+        fieldset.v-center
+          legend Join 254 subscribers:
+          form.pos-rel(method='post', action="//newsletter.us11.list-manage.com/subscribe/post?u=8e9d09ec89c0c4ededef3beab&amp;id=b98e776907")
+            input(type="email", placeholder="Email", name='EMAIL', autofocus, required)
+            div(style="position: absolute; left: -5000px;")
+             input(type="text", name="b_8e9d09ec89c0c4ededef3beab_b98e776907", tabindex="-1", value="")
+            button(type="submit", class="btn")
+              span.label Subscribe
+
+      footer.w-50p
+        p
+          a(href='http://us11.campaign-archive1.com/feed?u=8e9d09ec89c0c4ededef3beab&id=b98e776907', target='_blank') RSS Feed
+          |  &middot; 
+          a(href='http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907', target='_blank') Archives
+          |  &middot; 
+          a(href='/humans.txt') Credits
+          |  &middot; 
+          |  &copy; 2015
