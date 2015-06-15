@@ -26,6 +26,11 @@ build: jade coffee stylus
 	@echo ">>> BUILD COMPLETE --------------------"
 
 
+gh-pages:
+	@git co gh-pages
+	@cp -fr public/* .
+
+
 serve:
 	$(BINS)/http-server public -c-1 -o
 
