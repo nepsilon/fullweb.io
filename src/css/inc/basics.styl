@@ -1,7 +1,6 @@
 body
   background bg-color
 
-
 main
   position relative
   margin 0 auto
@@ -9,18 +8,33 @@ main
 
 a
   color link-color
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 49%, text-color 50%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 49%, text-color 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 85%;
+  text-shadow: -2px 0 #FFF, -1px 0 #FFF, 1px 0 #FFF, 2px 0 #FFF;
 
 .content-box
+  width 50%
+  height 100%
   background: url(../static/bg3.jpg);
   background-position left top
   background-attachment: fixed;
   padding-top: 3rem;
+  text-align right
   section
-    margin 0 3rem 3rem 31%
+    display inline-block
+    width 450px
+    min-width 400px
+    margin 0 2rem 3rem .5rem
     padding 2rem 1.236rem 2rem 3.236rem
     background bg-color
     text-shadow 0 1px 1px #FFF
     border-radius 2px
+    text-align left
     &.desc-box
       h1
         margin-bottom 1rem
@@ -42,6 +56,8 @@ a
   position: fixed;
   top: 30%
   right: 0;
+  width 50%
+  height 100%
   fieldset
     margin 0 0 0 3rem
   legend
@@ -143,3 +159,75 @@ footer
     padding: 1rem 0;
     font-size: 80%;
     margin-bottom 0
+
+@media screen and (max-width:mobile-breakpoint)
+  main
+    padding-bottom 5rem
+  .content-box
+    width 100%
+    background: url(../static/bg3.jpg);
+    background-position left top
+    background-size cover
+    background-attachment: fixed;
+    padding-top: 1px
+    section
+      display block
+      max-width 400px
+      min-width initial
+      width 95%
+      margin 3rem auto
+      padding 2rem 1.25rem
+      background bg-color
+      text-shadow 0 1px 1px #FFF
+      border-radius 2px
+      &.desc-box
+        h1
+          margin-bottom 1rem
+          font-size 3rem
+        h2
+          margin-bottom 2rem
+        p
+          margin-bottom .5rem
+    ul
+      list-style-type square
+      list-style-position inside
+      color muted-color
+      strong
+        color text-color
+    li
+      margin-bottom .15rem
+
+  .cta-box
+    position: fixed;
+    bottom: 0;
+    top: initial;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width 100%
+    background-color: #FCFCFA;
+    height: 100px;
+    padding: 1rem 0;
+    box-shadow 0 -3px 2px -2px #DEDEDE
+    &:before
+      content ' '
+      position absolute
+      top 0
+      left 0
+      right 0
+      opacity .25
+      height 3px
+      background #DEDEDE
+    fieldset
+      margin 0
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      height: 100px;
+      width: 340px;
+    legend
+      margin-bottom .5rem
+
+
+  footer
+    display none
