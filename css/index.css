@@ -441,6 +441,7 @@
   }
   .cta-box fieldset {
     margin: 0;
+    padding: 0 0.5rem;
     position: relative;
     display: block;
     margin: 0 auto;
@@ -448,7 +449,16 @@
     width: 340px;
   }
   .cta-box legend {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .cta-box input[type='email'] {
+    width: auto;
+    min-width: 100px;
+    width: 65%;
+  }
+  .cta-box .btn {
+    left: 65%;
+    min-width: 100px;
   }
   footer {
     display: none;
