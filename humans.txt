@@ -1,0 +1,29 @@
+   ___          ___    ___                        __        
+ /'___\        /\_ \  /\_ \                      /\ \       
+/\ \__/  __  __\//\ \ \//\ \    __  __  __     __\ \ \____  
+\ \ ,__\/\ \/\ \ \ \ \  \ \ \  /\ \/\ \/\ \  /'__`\ \ '__`\ 
+ \ \ \_/\ \ \_\ \ \_\ \_ \_\ \_\ \ \_/ \_/ \/\  __/\ \ \L\ \
+  \ \_\  \ \____/ /\____\/\____\\ \___x___/'\ \____\\ \_,__/
+   \/_/   \/___/  \/____/\/____/ \/__//__/   \/____/ \/___/ 
+                                                            
+                                                                      
+
+/* TEAM */
+
+Newsletter creator, developer and designer: Julien Buty <julien.buty@gmail.com>
+Location: Beijing, China
+Code: https://github.com/nepsilon/fullweb.io
+
+
+/* SITE & THANKS */
+
+Tech stack:
+  - Jade
+  - Stylus
+  - Makefile
+  - Hosted on github.io pages
+
+Site Credits:
+  - Unsplash for images: https://unsplash.com
+
+Newsletters sent with MailChimp (http://mailchimp.com).
