@@ -21,6 +21,7 @@
 			-webkit-text-size-adjust:none;
 			width:100%!important;
 			height:100%;
+            margin-top: 5px;
 		}
 		a{
 			color:#0079DF;
@@ -49,8 +50,10 @@
 		table.body-wrap{
 			width:100%;
 		}
-		table.body-wrap .container{
-			border:1px solid #f0f0f0;
+		table.body-wrap .container {
+		  margin-top: 10px;
+          border: 1px solid #FFDE00;
+          border-radius: 2px;
 		}
 		table.footer-wrap{
 			width:100%;
@@ -71,43 +74,46 @@
 			margin:0;
 			font-weight:500;
 		}
-		h1{
-			font-size:32px;
-		}
-		h2{
-			font-size:28px;
-			color:#999;
-		}
-		h3{
+		h1 {
 			font-size:22px;
+            font-family: Avenir;
+         	text-transform: uppercase;
+		}
+		h2 {
+			font-size:22px;
+			color: #847516;
+            font-family: Avenir;
+		}
+		h3, h3 a {
+			font-size:22px;
+            margin-bottom: 0;
 		}
 		.link-section{
 			padding-bottom:10px;
 			font-family:Georgia, sans-serif;
 		}
-		.link-section h3{
+		.link-section h3 a {
 			margin-bottom:5px;
 			font-family:Georgia, sans-serif;
 			color:#0079DF;
 		}
-		.link-section h3{
+		.link-section h3 {
 			text-decoration:underline;
 			line-height:1.2;
 			font-family:Georgia, sans-serif;
 		}
-		.link-section p{
-			font-family:Georgia, sans-serif;
-		}
-		.link-section a{
+		.link-section p a {
 			color:#333;
 			text-decoration:none;
+          	font-family:Georgia, sans-serif;
+            font-size: 15px
 		}
-		p,ul{
+		p,ul {
 			margin-bottom:20px;
 			font-weight:normal;
 			font-size:15px;
 		}
-		ul li{
+		ul li {
 			margin-left:5px;
 			list-style-position:inside;
 		}
@@ -124,31 +130,34 @@
 			display:block;
 		}
 		.header{
-			background-color:#f6f6f6;
-			padding:20px 20px 10px 20px;
+			background-color: #FFDE00;
+			padding:30px 20px 10px 20px;
 		}
-		.header p{
+		.header p {
 			margin-bottom:10px;
 		}
+        .content {
+          padding-top: 30px;
+        }
 		.content table{
 			width:100%;
 		}
 </style></head>
- 
-<body bgcolor="#f6f6f6">
 
+<body bgcolor="#fff">
+<br />
 <!-- body -->
 <table class="body-wrap">
 	<tr>
 		<td></td>
 		<td class="container" bgcolor="#FFFFFF">
-          
+
           <!-- header -->
 			<div class="header">
 			<table style="width:100%">
 				<tr style="width:100%">
 					<td style="width:50%">
-                      <h1>fullweb</h1>
+                      <h1>Fullweb</h1>
 					</td>
                   <td style="text-align:right;width:50%">
                       <h2>issue #1</h2>
@@ -161,38 +170,43 @@
 			<!-- content -->
 			<div class="content">
 			<table>
-              
+
 				<tr>
 					<td class="link-section">
-                      <a href="https://timdettmers.wordpress.com/2015/03/26/convolution-deep-learning/?blogsub=confirming#subscribe-blog">
-                      <h3>Understanding Convolution in Deep Learning &raquo;</h3>
-						</a><p>This is a really simple email template. It's sole purpose is to get you to click the button below.</p>
+                      
+                      <h3>
+                        <a href="https://timdettmers.wordpress.com/2015/03/26/convolution-deep-learning/?blogsub=confirming#subscribe-blog">Understanding Convolution in Deep Learning &raquo;
+                        </a>
+                      </h3>
+					  <p>
+                        <a href="https://timdettmers.wordpress.com/2015/03/26/convolution-deep-learning/?blogsub=confirming#subscribe-blog">This is a really simple email template. It's sole purpose is to get you to click the button below.</a>
+                      </p>
                   </td></tr>
-              
+
               <tr><td class="link-section">
-                        <a href="https://timdettmers.wordpress.com/2015/03/26/convolution-deep-learning/?blogsub=confirming#subscribe-blog"><h3>Ten Useful Techniques in Go &raquo;</h3>
-						</a><p>In the coming weeks another Regional Internet Registry will reach into its inventory of available IPv4 addresses to hand out and it will find that there is nothing left.</p>
+                        <h3><a href="#">Ten Useful Techniques in Go &raquo;</a></h3>
+						<p><a href="https://timdettmers.wordpress.com/2015/03/26/convolution-deep-learning/?blogsub=confirming#subscribe-blog">In the coming weeks another Regional Internet Registry will reach into its inventory of available IPv4 addresses to hand out and it will find that there is nothing left.</a></p>
                       	</td></tr>
-              
-              <tr><td class="link-section"><a href="#">
-                        <h3>Low-level web programming in Racket + a wiki in 500 lines &raquo;</h3>
-						</a><p>All the information you need is on GitHub.</p>
+
+              <tr><td class="link-section">
+                        <h3><a href="#">Low-level web programming in Racket + a wiki in 500 lines &raquo;</a></h3>
+						</a><p><a href="#">All the information you need is on GitHub.</a></p>
                       	</td></tr>
-              
-              <tr><td class="link-section"><a href="#">
-                        <h3>Stanford study finds walking improves creativity (2014) &raquo;</h3>
-						</a><p>All the information you need is on GitHub.</p>
+
+              <tr><td class="link-section">
+                        <h3><a href="#">Stanford study finds walking improves creativity (2014) &raquo;</a></h3>
+						<p><a href="#">All the information you need is on GitHub.</a></p>
                       </td></tr>
-              
-              <tr><td class="link-section"><a href="#">
-                        <h3>An Update on IPv6 &raquo;</h3>
-						</a><p>All the information you need is on GitHub.</p>
+
+              <tr><td class="link-section">
+                        <h3><a href="#">An Update on IPv6 &raquo;</a></h3>
+						<p><a href="#">All the information you need is on GitHub.</a></p>
 					</td>
 				</tr>
 			</table>
 			</div>
 			<!-- /content -->
-									
+
 		</td>
 		<td></td>
 	</tr>
@@ -204,7 +218,7 @@
 	<tr>
 		<td></td>
 		<td class="container">
-			
+
 			<!-- content -->
 			<div class="content">
 				<table>
@@ -218,13 +232,13 @@
                               <a href="*|UNSUB|*">Unsubscribe</a>
                               <br><br><br>
                               *|REWARDS|*
-                              
+
 							</p>
 						</td>
 					</tr>
 				</table>
 			</div><!-- /content -->
-				
+
 		</td>
 		<td></td>
 	</tr>
