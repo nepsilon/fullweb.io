@@ -132,10 +132,18 @@
     margin: 0;
     padding: 0;
     line-height: inherit;
-    color: text-color;
+    color: inherit;
+  }
+  ul,
+  ol {
+    list-style: none;
+  }
+  strong,
+  bold {
+    font-weight: 600;
   }
   body {
-    font: 400 0.875rem/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+    font: 400 0.9375rem/1.5 Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   h1 {
     line-height: 1;
@@ -156,11 +164,12 @@
     margin-top: 2rem;
   }
   body {
-    font-family: 'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+    background: #fcfcfa;
   }
   main {
     position: relative;
     margin: 0 auto;
+    color: #313131;
   }
   a {
     color: #313131;
@@ -176,22 +185,28 @@
     padding: 2rem 1.236rem 2rem 3.236rem;
     background: #fcfcfa;
     text-shadow: 0 1px 1px #fff;
+    border-radius: 2px;
   }
   .content-box section.desc-box h1 {
-    font-family: 'Satisfy', cursive;
     margin-bottom: 1rem;
     font-size: 3rem;
-    color: #333;
   }
   .content-box section.desc-box h2 {
     margin-bottom: 2rem;
   }
-  .content-box ol li {
+  .content-box section.desc-box p {
+    margin-bottom: 0.5rem;
+  }
+  .content-box ul {
+    list-style-type: square;
+    list-style-position: inside;
     color: #989898;
   }
-  .content-box ol li strong,
-  .content-box ol li p {
+  .content-box ul strong {
     color: #313131;
+  }
+  .content-box li {
+    margin-bottom: 0.15rem;
   }
   .cta-box {
     position: fixed;
@@ -207,7 +222,8 @@
   .cta-box .btn {
     position: absolute;
     top: 0;
-    left: 210px;
+    left: 240px;
+    height: 42px;
     padding: 8px 18px 10px;
     border-radius: 3px;
     background-color: #ffde00;
@@ -222,31 +238,71 @@
     cursor: pointer;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    border-left: 0;
   }
   .cta-box .btn:focus {
-    outline: 1px solid #fff;
-    outline-offset: -2px;
+    outline: 2px solid #fff;
+    outline-offset: -4px;
   }
   .cta-box .btn:hover {
     background: #fada00;
     outline: none;
   }
   .cta-box .btn:active {
-    box-shadow: inset 0 1px 2px #6c6c6c;
+    box-shadow: inset -2px 2px 1px #d9bd00;
     outline: none;
   }
   .cta-box .btn .label {
     vertical-align: 1px;
   }
+  .cta-box input + label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 10;
+    color: #989898;
+    letter-spacing: 0.3px;
+    will-change: transform, font-size, font-weight, text-transform;
+    transition: 0.15s ease-out;
+  }
+  .cta-box input:focus + label,
+  .cta-box input:invalid + label,
+  .cta-box input:valid + label {
+    transform: translateY(-5px);
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .cta-box input:valid + label {
+    color: #27ae60;
+  }
+  .cta-box input + label:after {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+  .cta-box input:valid + label:after {
+    opacity: 1;
+    content: '✓';
+    color: #fff;
+    margin-left: 2px;
+    background-color: #27ae60;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    text-align: center;
+    font-weight: 200;
+  }
   .cta-box input[type='email'] {
     position: absolute;
     top: 0;
-    border: 1px solid #f2d300;
-    height: 35px;
+    border: 2px solid #fada00;
+    height: 42px;
     border-right: 0;
     margin-right: -3px;
-    width: 210px;
+    width: 250px;
     padding: 0.5rem;
+    padding-bottom: 0;
     background: #fcfcfa;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -282,6 +338,12 @@
   }
   .w-50p {
     width: 50%;
+  }
+  .lead {
+    font-size: 1.15em;
+  }
+  .bold {
+    font-weight: 600;
   }
 }
 @media screen {
