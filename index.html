@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="utf8">
-  <title>Newsletter</title>
+  <link rel="author" href="/humans.txt">
+  <title>Fullweb &middot; Newsletter for fullstack engineers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <!-- Baidu.com still uses this for its ranking (!?)-->
@@ -30,10 +31,8 @@
   <!--link(rel="search", type="application/opensearchdescription+xml", href="/opensearch.xml", title="")-->
   <!--link(rel="alternate", type="application/rss+xml", title="", href="")-->
   <!--link(rel='shortlink', href='')-->
-  <link rel="canonical" href="">
+  <link rel="canonical" href="http://fullweb.io">
   <link rel="stylesheet" href="css/index.css">
-  <link href="http://fonts.useso.com/css?family=Satisfy&amp;text=Morty" rel="stylesheet">
-  <link href="http://fonts.useso.com/css?family=Open+Sans:400,700" rel="stylesheet">
   <!-- Favicon path is useless if you put your favicon.ico at /favicon.ico-->
   <!-- link(rel="shortcut icon", href="//your-cdn.net/favicon.ico")-->
   <!-- if lt IE 9
@@ -46,26 +45,16 @@
   <main>
     <article class="w-50p content-box h-100p">
       <section class="desc-box">
-        <h1>Morty</h1>
-        <h2>5 best tech links, every week.</h2>
-        <p>Morty is a newsletter giving you the 5 best links every week. One link for each category:</p>
-        <ol>
-          <li><strong>Backend Technologies</strong>
-            <p>Databases, Architectures, Web Frameworks, Deployments, etc.</p>
-          </li>
-          <li><strong>Web Frontend Technologies</strong>
-            <p>HTML, CSS, Javascript, browsers optimizations, etc.</p>
-          </li>
-          <li><strong>Data Science</strong>
-            <p>Data crawling and mining, Neural Networks, Computer Vision, etc.</p>
-          </li>
-          <li><strong>User Experience</strong>
-            <p>Information Architecture, Copy-writing, Accessibility, etc.</p>
-          </li>
-          <li><strong>Tech Entrepreneurship</strong>
-            <p>SaaS, Hiring, Freelancer tips, Company culture, etc.</p>
-          </li>
-        </ol>
+        <h1>Fullweb</h1>
+        <h2>The newsletter for fullstack engineers.</h2>
+        <p>The 5 best links every week, about:</p>
+        <ul>
+          <li><strong>Web Frontend Technologies</strong></li>
+          <li><strong>Backend Technologies</strong></li>
+          <li><strong>DevOps Processes</strong></li>
+          <li><strong>User Experience</strong></li>
+          <li><strong>Tech Entrepreneurship</strong></li>
+        </ul>
       </section>
       <section class="sample-box">
         <h1>Sample Issue</h1>
@@ -78,11 +67,11 @@
       </section>
       <section class="faq-box">
         <h1>F.A.Q.</h1>
-        <h2>What is Morty?</h2>
-        <p>Morty is a weekly newsletter. It gives you the best 5 links every week on Backend, Web Frontend, Data Science, User experience and Entrepreneurship. One link for each category each week. Nothing else.</p>
+        <h2>What is Fullweb?</h2>
+        <p>Fullweb is a weekly newsletter. It gives you the best 5 links every week on Backend, Web Frontend, Data Science, User experience and Entrepreneurship. One link for each category each week. Nothing else.</p>
         <h2>Who need to read it?</h2>
-        <p>Morty primarily targets Full-Stack Developers, Directors of Engineering, and anybody who need to stay relevant on a wide scope of technologies.</p>
-        <p>Morty is also read by non-tech people, working in tech environment, who want to acquire a good general knowledge on what the tech world is about today.</p>
+        <p>Fullweb primarily targets Full-Stack Developers, Directors of Engineering, and anybody who need to stay relevant on a wide scope of technologies.</p>
+        <p>Fullweb is also read by non-tech people, working in tech environment, who want to acquire a good general knowledge on what the tech world is about today.</p>
         <h2>Where are the links curated from?</h2>
         <p>The links are curated from any tech media whose publish in English. Including social sites like HN, DN, Reddit, tech blogs like techcrunch, pandodaily, but also other newsletters and podcasts.</p>
         <h2>When do I receive the links?</h2>
@@ -92,23 +81,24 @@
         <h2>Can I unsubscribe at any time?</h2>
         <p>Yes. Every email we send contains a link to unsubscribe.</p>
         <h2>How can I send feedback?</h2>
-        <p>Click <a href="#">this link</a> to see our contact form.</p>
+        <p>Click<a href="#">this link</a> to see our contact form.</p>
       </section>
     </article>
-    <article class="h-100p w-50p cta-box">
+    <aside class="h-100p w-50p cta-box">
       <fieldset class="v-center">
         <legend>Join 254 subscribers:</legend>
         <form method="post" action="//newsletter.us11.list-manage.com/subscribe/post?u=8e9d09ec89c0c4ededef3beab&amp;amp;id=b98e776907" class="pos-rel">
-          <input type="email" placeholder="Email" name="EMAIL" autofocus required>
+          <input id="user-email" type="email" placeholder="" name="EMAIL" autofocus required tabindex="1">
+          <label for="user-email">Email</label>
           <div style="position: absolute; left: -5000px;">
             <input type="text" name="b_8e9d09ec89c0c4ededef3beab_b98e776907" tabindex="-1" value="">
           </div>
-          <button type="submit" class="btn"><span class="label">Subscribe</span></button>
+          <button type="submit" tabindex="2" class="btn"><span class="label">Subscribe</span></button>
         </form>
       </fieldset>
-    </article>
+    </aside>
     <footer class="w-50p">
-      <p><a href="https://twitter.com/fullwebio" target="_blank">Twitter Feed</a> &middot; <a href="https://www.facebook.com/pages/Fullweb/520411174775602" target="_blank">Facebook Page</a> &middot; <a href="http://us11.campaign-archive1.com/feed?u=8e9d09ec89c0c4ededef3beab&amp;id=b98e776907" target="_blank">RSS Feed</a> &middot; <a href="http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&amp;id=b98e776907" target="_blank">Archives</a> &middot; <a href="/humans.txt">Credits</a> &middot; 
+      <p><a href="https://twitter.com/fullwebio" target="_blank">Twitter Feed</a> &middot; <a href="https://www.facebook.com/pages/Fullweb/520411174775602" target="_blank">Facebook Page</a> &middot; <a href="http://us11.campaign-archive1.com/feed?u=8e9d09ec89c0c4ededef3beab&amp;id=b98e776907" target="_blank">RSS Feed</a> &middot; <a href="http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&amp;id=b98e776907" target="_blank">Archives</a> &middot; <a href="/humans.txt" target="_blank">Credits</a> &middot; 
          &copy; 2015
       </p>
     </footer>
