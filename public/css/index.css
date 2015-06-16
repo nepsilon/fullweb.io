@@ -427,17 +427,15 @@
     background-color: #fcfcfa;
     height: 100px;
     padding: 1rem 0;
-    box-shadow: 0 -3px 2px -2px #dedede;
   }
   .cta-box:before {
     content: ' ';
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     right: 0;
-    opacity: 0.25;
-    height: 3px;
-    background: #dedede;
+    height: 1px;
+    background: #ececd3;
   }
   .cta-box fieldset {
     margin: 0;
@@ -455,10 +453,12 @@
     width: auto;
     min-width: 100px;
     width: 66%;
+    padding-top: 0.5rem;
   }
   .cta-box .btn {
     left: 65%;
-    min-width: 100px;
+    min-width: 80px;
+    padding: 8px 12px 10px;
   }
   footer {
     display: none;
