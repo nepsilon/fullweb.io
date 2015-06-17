@@ -213,6 +213,32 @@
   .content-box section.desc-box p {
     margin-bottom: 0.5rem;
   }
+  .content-box section.sample-box h2 {
+    font-family: Georgia, serif;
+    font-weight: 500;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  .content-box section.sample-box h2 a {
+    color: #0079df;
+    background-position: 0 95%;
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 49%, #0079df 50%);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 49%, #0079df 50%);
+  }
+  .content-box section.sample-box blockquote {
+    margin-bottom: 2rem;
+    font-family: Georgia, serif;
+    border-left: 2px solid #dedede;
+    padding-left: 0.5rem;
+  }
+  .content-box section.sample-box cite {
+    font-family: 'Avenir', Helvetica Neue, Helvetica, Arial, sans-serif;
+    display: block;
+    margin-bottom: 0.25rem;
+    font-style: normal;
+    font-size: 0.8em;
+    color: #96999b;
+  }
   .content-box ul {
     list-style-type: square;
     list-style-position: inside;
