@@ -88,6 +88,7 @@
     font-style: inherit;
     font-weight: inherit;
     min-height: 1.5em;
+    box-shadow: none;
   }
   code,
   kbd,
@@ -169,14 +170,14 @@
   main {
     position: relative;
     margin: 0 auto;
-    color: #313131;
+    color: #313233;
   }
   a {
-    color: #313131;
+    color: #313233;
     text-decoration: none;
     background-color: rgba(0,0,0,0);
-    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 49%, #313131 50%);
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 49%, #313131 50%);
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 49%, #313233 50%);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 49%, #313233 50%);
     background-repeat: repeat-x;
     background-size: 2px 2px;
     background-position: 0 85%;
@@ -215,10 +216,10 @@
   .content-box ul {
     list-style-type: square;
     list-style-position: inside;
-    color: #989898;
+    color: #96999b;
   }
   .content-box ul strong {
-    color: #313131;
+    color: #313233;
   }
   .content-box li {
     margin-bottom: 0.15rem;
@@ -251,7 +252,7 @@
     line-height: 1;
     font-size: 1rem;
     text-shadow: 0 0px 1px #fff;
-    color: #313131;
+    color: #313233;
     cursor: pointer;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -274,41 +275,17 @@
   }
   .cta-box input + label {
     position: absolute;
-    top: 0.5rem;
+    top: 0.25rem;
     left: 0.5rem;
     z-index: 10;
-    color: #989898;
-    letter-spacing: 0.3px;
-    will-change: transform, font-size, font-weight, text-transform;
-    transition: 0.15s ease-out;
-  }
-  .cta-box input:focus + label,
-  .cta-box input:invalid + label,
-  .cta-box input:valid + label {
-    transform: translateY(-5px);
+    color: #96999b;
     font-size: 9px;
     text-transform: uppercase;
     font-weight: 600;
+    letter-spacing: 0.3px;
   }
   .cta-box input:valid + label {
     color: #27ae60;
-  }
-  .cta-box input + label:after {
-    opacity: 0;
-    transition: opacity 0.2s ease-out;
-  }
-  .cta-box input:valid + label:after {
-    opacity: 1;
-    content: '✓';
-    color: #fff;
-    margin-left: 2px;
-    background-color: #27ae60;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    text-align: center;
-    font-weight: 200;
   }
   .cta-box input[type='email'] {
     position: absolute;
@@ -324,6 +301,7 @@
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     background: #fff;
+    line-height: 0;
   }
   .cta-box input[type='email']:focus {
     outline: none;
@@ -378,9 +356,8 @@
   }
   .content-box {
     width: 100%;
-    background: url("../static/bg3.jpg");
     background-position: left top;
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
     padding-top: 1px;
   }
@@ -408,10 +385,10 @@
   .content-box ul {
     list-style-type: square;
     list-style-position: inside;
-    color: #989898;
+    color: #96999b;
   }
   .content-box ul strong {
-    color: #313131;
+    color: #313233;
   }
   .content-box li {
     margin-bottom: 0.15rem;
@@ -454,6 +431,10 @@
     min-width: 100px;
     width: 66%;
     padding-top: 0.5rem;
+  }
+  .cta-box input[type='email'] + label {
+    top: 0.25rem;
+    letter-spacing: 0;
   }
   .cta-box .btn {
     left: 65%;
