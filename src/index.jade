@@ -2,7 +2,7 @@ extends _base.jade
 
 
 block title
-    | Fullweb &middot; Newsletter for fullstack engineers
+    | Fullweb &middot; Newsletter for Fullstack Engineers
 
 
 block meta
@@ -26,7 +26,7 @@ block content
           h1(itemprop="publisher", itemscope, itemtype="http://schema.org/Organization")
             span(itemprop="name") Fullweb
           h2(itemprop='about') The newsletter for fullstack engineers.
-          p The 5 best links every week, about:
+          p The 5 best links every week, from top sources, about:
           ul
             li
               strong Web Frontend Technologies
@@ -42,24 +42,40 @@ block content
         section.sample-box(itemprop='workExample')
           h1 Sample Issue
           h2
-            a(href='#') Lorem ipsum dolor sit amet
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.
+            a(href='https://www.quora.com/Why-did-Quora-choose-Python-for-its-development/answer/Adam-DAngelo') Quora CEO on Why did Quora choose Python for its development? &raquo;
+          blockquote
+            cite quora.com
+            | We were sure we didn't want to use PHP.
           h2
-            a(href='#') Lorem ipsum dolor sit amet
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.
+            a(href='http://highscalability.com/blog/2015/3/16/how-and-why-swiftype-moved-from-ec2-to-real-hardware.html') How And Why Swiftype Moved From EC2 To Real Hardware &raquo;
+          blockquote
+            cite highscalability.com
+            | This is a guest post by Oleksiy Kovyrin, Head of Technical Operations at Swiftype. Swiftype currently powers search on over 100,000 websites and serves more than 1 billion queries every month.
           h2
-            a(href='#') Lorem ipsum dolor sit amet
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.
+            a(href='http://bitsofco.de/2015/the-accessibility-cheatsheet') The Web Accessibility Cheatsheet &raquo;
+          blockquote
+            cite.muted bitsofco.de
+            | We all know that accessibility is important. The problem is, it is not always clear what exactly we can do to make our sites more accessible.
+          h2
+            a(href='https://blog.cloudflare.com/how-to-receive-a-million-packets/') How to receive a million packets per secondt &raquo;
+          blockquote
+            cite.muted blog.cloudflare.com
+            | On Linux, how hard is it to write a program that receives 1 million UDP packets per second?
+          h2
+            a(href='http://www.nngroup.com/articles/low-contrast/') Low-Contrast Text Is Not the Answert &raquo;
+          blockquote
+            cite.muted www.nngroup.com
+            | Low-contrast text may be trendy, but it is also illegible, undiscoverable, and inaccessible. Instead, consider more usable alternatives.
 
         section.faq-box
           h1 F.A.Q.
           h2 What is Fullweb?
-          p Fullweb is a weekly newsletter. It gives you the best 5 links every week on Backend, Web Frontend, Data Science, User experience and Entrepreneurship. One link for each category each week. Nothing else.
+          p Fullweb is a weekly newsletter. It gives you the best 5 links every week about Backend, Web Frontend, DevOps, User Experience and Entrepreneurship.
           h2 Who need to read it?
-          p Fullweb primarily targets Full-Stack Developers, Directors of Engineering, and anybody who need to stay relevant on a wide scope of technologies.
+          p Fullweb primarily targets Full-Stack Developers and Engineers, and anybody who need to stay relevant on a wide scope of technologies.
           p Fullweb is also read by non-tech people, working in tech environment, who want to acquire a good general knowledge on what the tech world is about today.
           h2 Where are the links curated from?
-          p The links are curated from any tech media whose publish in English. Including social sites like HN, DN, Reddit, tech blogs like techcrunch, pandodaily, but also other newsletters and podcasts.
+          p The links are curated from social sites like HN, DN, Reddit, Quora, tech blogs like TechCrunch, PandoDaily, and also other newsletters and podcasts.
           h2 When do I receive the links?
           p Every Tuesday 9am.
           h2 Is it free?
