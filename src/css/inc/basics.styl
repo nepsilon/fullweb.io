@@ -97,39 +97,17 @@ a
 
   input + label
     position: absolute
-    top: .5rem
+    top: .25rem
     left: .5rem
     z-index: 10
     color muted-color
-    letter-spacing .3px
-    will-change transform, font-size, font-weight, text-transform
-    transition .15s ease-out
-
-  input:focus + label,
-  input:invalid + label,
-  input:valid + label
-    transform translateY(-5px)
     font-size 9px
     text-transform uppercase
     font-weight 600
+    letter-spacing .3px
 
   input:valid + label
     color valid-color
-  input + label:after
-    opacity 0
-    transition opacity .2s ease-out
-  input:valid + label:after
-    opacity 1
-    content: '✓';
-    color: #FFF;
-    margin-left: 2px;
-    background-color: #27AE60;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    text-align: center;
-    font-weight: 200;
 
   input[type='email']
     position absolute
@@ -145,6 +123,7 @@ a
     border-top-left-radius: 3px
     border-bottom-left-radius: 3px
     background #FFF
+    line-height 0
     &:focus
       outline none
 
@@ -160,15 +139,15 @@ footer
     font-size: 80%;
     margin-bottom 0
 
-@media screen and (max-width:mobile-breakpoint)
+
+@media screen and (max-width: mobile-breakpoint)
   main
     padding-bottom 5rem
   .content-box
     width 100%
-    background: url(../static/bg3.jpg);
     background-position left top
-    background-size cover
-    background-attachment: fixed;
+    background-size contain
+    background-attachment fixed
     padding-top: 1px
     section
       display block
@@ -232,12 +211,13 @@ footer
       min-width 100px
       width 66%
       padding-top 0.5rem
+    input[type='email'] + label
+      top .25rem
+      letter-spacing 0
     .btn
       left 65%
       min-width 80px
       padding 8px 12px 10px
-
-
 
   footer
     display none
