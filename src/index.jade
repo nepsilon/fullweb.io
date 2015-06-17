@@ -14,13 +14,18 @@ block content
     // Use http://schema.org tags to annotate what your page is about,
     // Google+, Google Search and other search engines use this to know
     // what your page is about.
-    main
+    main(itemscope, itemtype="http://schema.org/WebPage")
+      meta(itemprop='specialty', content='Full-stack developer')
+      meta(itemprop='specialty', content='Web development')
+      meta(itemprop='specialty', content='Tech Entrepreneurship')
+      meta(itemprop='specialty', content='DevOps')
 
       article.content-box
 
-        section.desc-box
-          h1 Fullweb
-          h2 The newsletter for fullstack engineers.
+        section.desc-box(itemprop='mainContentOfPage')
+          h1(itemprop="publisher", itemscope, itemtype="http://schema.org/Organization")
+            span(itemprop="name") Fullweb
+          h2(itemprop='about') The newsletter for fullstack engineers.
           p The 5 best links every week, about:
           ul
             li
@@ -34,7 +39,7 @@ block content
             li
               strong Tech Entrepreneurship
 
-        section.sample-box
+        section.sample-box(itemprop='workExample')
           h1 Sample Issue
           h2
             a(href='#') Lorem ipsum dolor sit amet
