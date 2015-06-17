@@ -356,6 +356,7 @@
   }
   .content-box {
     width: 100%;
+    background: #dedede url("../static/bg3-m.jpg");
     background-position: left top;
     background-size: contain;
     background-attachment: fixed;
