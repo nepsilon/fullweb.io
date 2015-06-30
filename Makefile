@@ -18,15 +18,24 @@ stylus-watch:
 
 jade-watch:
 	@# jade files starting with an underscore "_" are considered private.
-	@# They won't be compiled. Use this for includes and extends.
+	@# They won't be compiled. Use them for includes and extends.
 	$(BINS)/jade -w -P -m src/[^_]*.jade -o public/
 
 
-build: jade coffee stylus
+jade:
+	@# jade files starting with an underscore "_" are considered private.
+	@# They won't be compiled. Use them for includes and extends.
+	$(BINS)/jade -P -m src/[^_]*.jade -o public/
+
+
+build: jade
 	@echo ">>> BUILD COMPLETE --------------------"
+	@$(BINS)/minify public/index.html > public/index.min.html
+	@cat public/html-banner.txt public/index.min.html > public/index.html
+	@rm public/index.min.html
 
 
-gh-pages:
+gh-pages: build
 	@git co gh-pages
 	@cp -fr public/* .
 
