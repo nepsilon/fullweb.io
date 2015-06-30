@@ -2,42 +2,110 @@ extends _base.jade
 
 
 block title
-    | Fullweb &middot; Newsletter for Fullstack Engineers
+  | Fullweb &middot; Newsletter for Fullstack Engineers
 
 
 block meta
-    link(rel="canonical", href="http://fullweb.io")
-    link(rel="stylesheet", href="css/index.css")
+  link(rel="canonical", href="http://fullweb.io")
+  style
+    include:stylus css/index.styl
+
+
+block scripts
+  script.
+    /*
+    Zepto(function($) {
+      // Grab the protagonists
+      var $F = $('#newsletter-form');
+      var $E = $('#user-email').get(0);
+      var $B = $('#subscribe-btn');
+      // Handy validation function for email value
+      var validateForm = function (email_str) {
+        if (email_str.length && /w+@[A-z0-9.]+\.net/.test(email_str)) {
+          return true;
+        }
+        else {
+          return false;
+        }
+      };
+      // Form submit event interception + processing
+      $F.on('submit', function(ev) {
+        ev.preventDefault();
+        var is_valid = validateForm($E.value);
+        // Verify for empty state
+        if (!is_valid && !$E.value.length) {
+          console.log($E.value.length, 'empty');
+          $F.get(0).className = 'empty';
+          $B.attr('disabled', 'disabled');
+          $E.focus();
+          setTimeout(function() {
+            $F.get(0).className = '';
+            $B.removeAttr('disabled');
+          }, 2000);
+        }
+        // Verify for invalid email syntax state
+        else if (!is_valid && $E.value.length) {
+          console.log($E.value.length, 'invalid');
+          $F.get(0).className = 'invalid';
+          $B.attr('disabled', 'disabled');
+          $E.focus();
+          setTimeout(function() {
+            $F.get(0).className = '';
+            $B.removeAttr('disabled');
+          }, 2000);
+        }
+        // Subscribe user
+        else {
+          $.ajax({
+            type: 'post',
+            url: "//newsletter.us11.list-manage.com/subscribe/post-json?u=8e9d09ec89c0c4ededef3beab&id=b98e776907&c=?",
+            data: $F.serialize(),
+            dataType: 'jsonp',
+            jsonpCallback: 'c',
+            cache: false,
+            contentType: 'application/json; charset=utf-8',
+            success: function (xhr, status) {
+              console.log(xhr, status);
+              $F.toggleClass('subscribed')
+            },
+            error: function (xhr, status) {
+              console.log(xhr, status);
+              $F.toggleClass('error')
+              setTimeout(function() {
+                $F.toggleClass('error');
+              }, 1000);
+            }
+          });
+        }
+      });
+    });
+    */
 
 
 block content
-    // Use http://schema.org tags to annotate what your page is about,
-    // Google+, Google Search and other search engines use this to know
-    // what your page is about.
     main(itemscope, itemtype="http://schema.org/WebPage")
       meta(itemprop='specialty', content='Full-stack developer')
       meta(itemprop='specialty', content='Web development')
-      meta(itemprop='specialty', content='Tech Entrepreneurship')
       meta(itemprop='specialty', content='DevOps')
+      meta(itemprop='specialty', content='User Experience')
 
       article.content-box
 
         section.desc-box(itemprop='mainContentOfPage')
-          h1(itemprop="publisher", itemscope, itemtype="http://schema.org/Organization")
-            span(itemprop="name") Fullweb
-          h2(itemprop='about') The newsletter for fullstack engineers.
-          p The 5 best links every week, from top sources, about:
+          h1(itemprop="publisher", itemscope)
+            meta(itemprop="name", content="Fullweb Newsletter")
+            img(src='/static/fullweb-logo.svg', itemprop='primaryImageOfPage', title='Fullweb Newsletter', width='100', height='141')
+          h2(itemprop='about') The newsletter for fullstack&nbsp;engineers.
+          p The 5 best links every week about:
           ul
             li
-              strong Web Frontend 
+              strong Web Frontend
             li
               strong Backend Development
             li
               strong DevOps and Automation
             li
               strong User Experience
-            li
-              strong Tech Entrepreneurship
 
         section.sample-box(itemprop='workExample')
           h1 Sample Issue
@@ -70,7 +138,7 @@ block content
         section.faq-box
           h1 F.A.Q.
           h2 What is Fullweb?
-          p Fullweb is a weekly newsletter. It gives you the best 5 links every week about Backend, Web Frontend, DevOps, User Experience and Entrepreneurship.
+          p Fullweb is a weekly newsletter. It gives you the best 5 links every week about Backend, Web Frontend, DevOps and User Experience.
           h2 Who need to read it?
           p Fullweb primarily targets Full-Stack Developers and Engineers, and anybody who need to stay relevant on a wide scope of technologies.
           p Fullweb is also read by non-tech people, working in tech environment, who want to acquire a good general knowledge on what the tech world is about today.
@@ -87,16 +155,21 @@ block content
             a(href='https://fullweb.typeform.com/to/JGSNQ8', target='_blank') this link
             |  to see our feedback form.
 
+
       aside.cta-box
-        fieldset.v-center
-          legend Join 254 subscribers:
-          form.pos-rel(method='post', action="//newsletter.us11.list-manage.com/subscribe/post?u=8e9d09ec89c0c4ededef3beab&amp;id=b98e776907")
-            input#user-email(type="email", placeholder="", x-autocompletetype="email", name='EMAIL', autofocus, required, tabindex='1', spellcheck='false')
+        fieldset
+          legend Join 279 subscribers:
+          form#newsletter-form(method='post', action="//newsletter.us11.list-manage.com/subscribe/post?u=8e9d09ec89c0c4ededef3beab&id=b98e776907&c=?")
+            input#user-email(type="email", placeholder="", x-autocompletetype="email", name='EMAIL', autofocus, tabindex='1', spellcheck='false', required)
             label(for='user-email') Email
             div(style="position: absolute; left: -5000px;")
              input(type="text", name="b_8e9d09ec89c0c4ededef3beab_b98e776907", tabindex="-1", value="")
-            button(type="submit", class="btn", tabindex='2', onclick="_gaq.push(['_trackEvent', 'Newsletter', 'subscribe']);")
+            button#subscribe-btn(type="submit", class="btn", tabindex='2', onclick="_gaq.push(['_trackEvent', 'Newsletter', 'subscribe']);")
               span.label Subscribe
+            br
+            span.error-msg.empty We need an email up here
+            span.error-msg.invalid Hm, this doesn't look like an email
+
 
       footer.w-50p
         p

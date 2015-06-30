@@ -36,11 +36,12 @@ a
     border-radius 2px
     text-align left
     &.desc-box
+      padding-top 1.5rem
       h1
-        margin-bottom 1rem
-        font-size 3rem
+        margin-left -3.236rem
+        text-align center
       h2
-        margin-bottom 2rem
+        margin-bottom 1rem
       p
         margin-bottom .5rem
     &.sample-box
@@ -86,6 +87,23 @@ a
     margin 0 0 0 3rem
   legend
     margin-bottom .5rem
+  form
+    position relative
+    .error-msg
+      position absolute
+      top 3rem
+      left 0
+      display block
+      opacity 0
+    &.empty, &.invalid
+      transition .25s
+      animation-name wobble
+      animation-duration .35s
+      .error-msg.empty
+        opacity 1
+    &.invalid
+      .error-msg.invalid
+        opacity 1
 
   .btn
     position absolute
@@ -186,10 +204,10 @@ footer
       border-radius 2px
       &.desc-box
         h1
-          margin-bottom 1rem
-          font-size 3rem
+          margin 0 0 2rem 0
         h2
           margin-bottom 2rem
+          text-align center
         p
           margin-bottom .5rem
     ul
