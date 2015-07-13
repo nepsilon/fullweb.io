@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width">
 <meta content="telephone=no" name="format-detection">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Fullweb Issue #3</title>
+<title>Fullweb Issue #4</title>
 <meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png" />
-<meta property="og:title" content="Fullweb Newsletter: Issue #3" />
+<meta property="og:title" content="Fullweb Newsletter: Issue #4" />
 
 <style type="text/css">
 		*{
@@ -38,6 +38,14 @@
       padding: 0 3px;
       border-radius: 2px;
       line-height: 1.25;
+     }
+     hr {
+      margin: 5px auto 25px;
+      color: #CCC;
+      background-color: #CCC;
+      height: 1px;
+      border: 0;
+      width: 75px;
      }
 		.btn-primary,.btn-secondary {
 			text-decoration:none;
@@ -71,6 +79,9 @@
 			width:100%;
 			clear:both!important;
 			background-color: #FCFCFA;
+    }
+		table.header-wrap {
+      border-bottom: 2px solid #FFDE00;
     }
 		table.footer-wrap{
       border-top: 2px solid #FFDE00;
@@ -165,7 +176,6 @@
 		}
 		.header {
 			padding: 0;
-      padding-bottom: 5px;
 		}
 		.header h3 {
 			font-size: 13px;
@@ -186,64 +196,108 @@
       line-height: 0;
     }
     .code {
-      background-color: #EBEBEB;
-      padding: 5px;
-      font-family: monospace;
+      background-color: #202020;
+      padding: 10px;
+      font-family: Menlo, monospace;
       margin-top: 3px;
-      color: #222;
+      color: #FFF;
       border-radius: 2px;
       line-height: 1.35;
+      font-size: 15px;
     }
     .code .comment {
-      color: #808085;
-      font-family: monospace;
+      color: #88888E;
+      font-size: 15px;
+      font-family: Menlo, monospace;
+      line-height: 1.35;
       display: block;
-      margin-left: -2px;
     }
-
+    .header-archive-links {
+      margin-top: 1em;
+      font-size: 15px;
+      color: #333;
+    }
+    .header-archive-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: #515151;
+    }
+    .badge {
+      background: #FFDE00;
+      color: #333;
+      border-radius: 2px;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 3px 12px;
+      display:inline-block;
+      margin-bottom: 25px;
+    }
+    .alert {
+      background-color: #ECECEC;
+      padding: 20px;
+      margin-top: 10px;
+      border-radius: 2px;
+      font-size: 15px;
+    }
 </style>
 </head>
 
 <body bgcolor="#fff">
-<div style='opacity:0;font-size:0;color:#FFF;background:#FFF;display:block;height:0;max-height:0;margin-left:-9999px'>The top 5 fullstack links this week.</div>
+<div style='opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px'>The top 5 fullstack links this week.</div>
 
   <!-- header-wrap -->
   <table class="header-wrap">
     <tr>
       <td class="container">
-
         <!-- header -->
         <div class="header" style='min-height: 150px;'>
           <table style="width:100%">
             <tr style="width:100%">
               <td style="width:50%">
                 <h1>
-                  <img src='https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg?new' height='150' width='100' title='Fullweb Weekly' style="display:inline-block;border-left:8px solid #FCFCFA;box-sizing:content-box"/>
+                  <img src='https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg?new' height='150' width='100' title='Fullweb Weekly' style="display:inline-block;border-left:3px solid #FCFCFA;box-sizing:content-box"/>
                 </h1>
               </td>
               <td style="width:50%; text-align:left;">
-                <h2 style='font-size: 18px;font-weight: 600;line-height:1.75;margin-bottom:0'>ISSUE #3</h2>
-                <h3>Tu&#8203;esday 7<sup>th</sup> Jul&#8203;y 2&#8203;015</h3>
+                <h2 style='font-size: 18px;font-weight: 600;line-height:1.75;margin-bottom:0'>ISSUE #4</h2>
+                <h3>Tu&#8203;esday 14<sup>th</sup> Jul&#8203;y 2&#8203;015</h3>
+                <div class='header-archive-links'>
+                  <a href='*|ARCHIVE|*' target='_blank'>View on the web</a>
+                  &thinsp;&middot;&thinsp;
+                  <a href='http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907' target='_blank'>Archives</a>
+                </div>
               </td>
             </tr>
           </table>
         </div>
         <!-- /header -->
-
       </td>
     </tr>
   </table>
 
-  <table style='width: 100%;margin:0;padding:0;background-color:#FDE229' width='100%', cellpadding=0, cellspacing=0>
-    <tr width='100%'>
-      <td style="width: 100%; background-color: #FDE229; height: 30px; line-height: 30px; display: block;color: #333; font-weight: 500; font-size: 14px;" class='container'>
-        <div class='content' style='  padding: 0; line-height: 30px; padding-left: 17px;  padding-top: 0 !important;'>
-          The top 5 fullstack links this week:
-        </div>
+  <table class="body-wrap">
+    <tr>
+      <td class="container" bgcolor="#FFFFFF">
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class='alert'>
+                  <h4 style='font-size: 19px; font-weight: 500; color: #333; padding-bottom: 0.5em;'>
+                    Tell your friends about Fullweb
+                  </h4>
+                  Fullweb only grows thanks to our current readers sharing it.
+                  <br />
+                  Would you mind taking 10 seconds to <a href='https://twitter.com/intent/tweet?text=Check+out+http%3A%2F%2Ffullweb.io+a+free+weekly+newsletter+for+%23fullstack+%23developers+by+%40fullwebio&source=fullweb&related=fullwebio' target='_blank' style='border-bottom: 1px solid;border-bottom: 1px solid #0079DF;font-weight:500'>send out a quick tweet?</a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>    
       </td>
     </tr>
   </table>
-  <!-- /header-wrap -->
+
 
   <!-- body -->
   <table class="body-wrap">
@@ -251,7 +305,9 @@
       <td class="container" bgcolor="#FFFFFF">
 
         <!-- content -->
-        <div class="content">
+        <div class="content" style="padding-top: 30px">
+
+        <div class='badge'>TOP 5 LINKS THIS WEEK</div>
         <table>
 
         <!-- Link snippet -->
@@ -261,36 +317,8 @@
                 <tr>
                   <td>
                     <h3>
-                      <a href="http://www.toptal.com/react/navigating-the-react-ecosystem">
-                        A good overview of the React eco-system&nbsp;&raquo;
-                      </a>
-                    </h3>
-                  </td>
-                </tr>
-                <tr>
-                  <td class='link-desc'>
-                    <small class='domain'>toptal.com</small>
-                    <p>
-                      <a href="http://www.toptal.com/react/navigating-the-react-ecosystem">
-                       A clear big picture of React and its friends.
-                       <br />
-                       Including build, router, frontend lib, rendering, components, stores, etc.
-                      </a>
-                    </p>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        <!-- Link snippet -->
-          <tr>
-            <td class="link-section">
-              <table>
-                <tr>
-                  <td>
-                    <h3>
-                      <a href="https://github.com/mailgun/godebug">
-                        Finally a good debugger for Go&nbsp;&raquo;
+                      <a href="https://github.com/spotify/dh-virtualenv">
+                        Better Python deployments with dh-virtualenv
                       </a>
                     </h3>
                   </td>
@@ -299,17 +327,45 @@
                   <td class='link-desc'>
                     <small class='domain'>github.com</small>
                     <p>
-                      <a href="https://github.com/mailgun/godebug">
-                        A real debugger for Go from the team at Mailgun.
+                      <a href="https://github.com/spotify/dh-virtualenv">
+                       A good alternative to using Git for deployments.
+                       <br />
+                       It combines the power of Debian packaging with the sandboxed nature of virtualenvs.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="https://realpython.com/blog/python/asynchronous-tasks-with-django-and-celery/">
+                        Asynchronous tasks with Django and Celery
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <small class='domain'>realpython.com</small>
+                    <p>
+                      <a href="https://realpython.com/blog/python/asynchronous-tasks-with-django-and-celery/">
+                        A good introduction to using Celery with Django.
                         <br />
-                        Set breakpoints, see stacktrace, list context.
-                        <br />
-                        +1700 stars on Github so far.
+                        Including periodic, local and remote tasks.
                       </a>
                     </p>
                   </td>
                 </tr>
               </table>
+              <hr />
             </td>
           </tr>
         <!-- Link snippet -->
@@ -319,24 +375,26 @@
                 <tr>
                   <td>
                     <h3>
-                      <a href="http://www.sitepoint.com/introduction-css-will-change-property/">
-                        Smoother CSS animations with the <code>will-change</code> property&nbsp;&raquo;
+                      <a href="http://chimera.labs.oreilly.com/books/1230000000545/ch12.html">
+                        Understanding HTTP 2.0
                       </a>
                     </h3>
                   </td>
                 </tr>
                 <tr>
                   <td class='link-desc'>
-                    <small class='domain'>sitepoint.com</small>
+                    <small class='domain'>oreilly.com</small>
                     <p>
-                      <a href="http://www.sitepoint.com/introduction-css-will-change-property/">
-                      This property can get you to +60FPS animations.
-                      Especially relevant for mobile websites and webapps.
+                      <a href="http://chimera.labs.oreilly.com/books/1230000000545/ch12.html">
+                      A chapter from the excellent &ldquo;High Performance Browser Networking&rdquo; from Oreilly Media.
+                      <br/ >
+                      A must read for any web guru.
                       </a>
                     </p>
                   </td>
                 </tr>
               </table>
+              <hr />
             </td>
           </tr>
         <!-- Link snippet -->
@@ -346,25 +404,23 @@
                 <tr>
                   <td>
                     <h3>
-                      <a href="http://www.nngroup.com/articles/about-us-summaries/">
-                        How to engage users and build trust with great &ldquo;About Us&rdquo; pages&nbsp;&raquo;
+                      <a href="">
                       </a>
                     </h3>
                   </td>
                 </tr>
                 <tr>
                   <td class='link-desc'>
-                    <small class='domain'>nngroup.com</small>
+                    <small class='domain'></small>
                     <p>
-                      <a href="http://www.nngroup.com/articles/about-us-summaries/">
-                       Another good piece from the NNGroup addressing credibility issues on the Web.
+                      <a href="">
                       <br />
-                      The Web is very depersonalized, but users like getting a sense of the company behind the website.
                       </a>
                     </p>
                   </td>
                 </tr>
               </table>
+              <hr />
             </td>
           </tr>
         <!-- Link snippet -->
@@ -374,20 +430,17 @@
                 <tr>
                   <td>
                     <h3>
-                      <a href="http://updates.html5rocks.com/2015/06/checkout-faster-with-Autofill">
-                        Using HTML Autofill API for faster form completion&nbsp;&raquo;
+                      <a href="">
                       </a>
                     </h3>
                   </td>
                 </tr>
                 <tr>
                   <td class='link-desc'>
-                    <small class='domain'>html5rocks.com</small>
+                    <small class='domain'></small>
                     <p>
-                      <a href="http://updates.html5rocks.com/2015/06/checkout-faster-with-Autofill">
-                      A simple way to increase conversion rate during checkout process.
+                      <a href="">
                       <br />
-                      Only Chrome support for now, but already part of the HTML standard.
                       </a>
                     </p>
                   </td>
@@ -403,42 +456,59 @@
 
       </td>
     </tr>
+  </table>
 
-    <!-- Tip of the week -->
+  <table class="body-wrap">
     <tr>
-      <td style='padding:5px 0 5px 13px' class='container content'>
-        <span style='background: #FFDE00; color: #333; border-radius: 2px; font-size: 13px; font-weight: 500; padding: 3px 10px;display:inline-block'>TIP OF THE WEEK</span>
-      </td>
-    </tr>
-    <tr>
-      <td style='padding: 5px 0 15px 13px' class='container content'>
-        <p style='line-height: 1.5;color: #222;margin-bottom:0;font-size:15px; padding-right: 5px;'>Not using versioning on your configuration files and editing them with Vim?<br />
-        Use Vim&rsquo;s <code>backup</code> option to automatically keep an archive of past versions:</p>
-      </td>
-    </tr>
-    <tr>
-      <td style='padding: 0 10px 5px 13px;font-size:15px;line-height:1.25;color:#222' class='container content'>
-        In your <code>~/.vimrc</code>:
-        <div class='code'>
-          <span class='comment'>"Turn on backup option</span>
-          set backup
-          <span class='comment'>"Where to store backups</span>
-          set backupdir=~/.vim/backup//
-          <span class='comment'>"Make backup before overwriting</span>
-          set writebackup
-          <span class='comment'>"Overwrite the original file</span>
-          set backupcopy=yes
-          <span class='comment'>"Meaningful backup name</span>
-          au BufWritePre * let &bex = '@' . strftime("%F.%H:%M")
+      <td class="container" bgcolor="#FFFFFF">
+        <!-- content -->
+        <div class="content">
+
+          <table>
+
+            <!-- Tip of the week -->
+            <tr>
+              <td>
+                <span class='badge'>TIP OF THE WEEK</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p style='margin-bottom:5px'>
+                  Need to quickly serve files over the network? Or even a full directory?
+                  <br />
+                  Here is how to do with Python, PHP and NodeJs:
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class='code'>
+                  <span class='comment'># With Python 2.x</span>
+                  python -m SimpleHTTPServer
+                  <span class='comment'># With Python 3.x</span>
+                  python -m http.server
+                  <span class='comment'># With PHP</span>
+                  php -S localhost:8000
+                  <span class='comment'># With NodeJs</span>
+                  npm install -g http-server
+                  <br />
+                  http-server
+                </div>
+                <p>See and discuss <a style='text-decoration: underline;' href='https://gist.github.com/nepsilon/7b6e5ecd051a9318e161' target='_blank'>this Gist on Github&nbsp;&raquo;</a></p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style='text-align:center;  padding: 0 0 30px 0;'>
+              <br />
+                <div style='  letter-spacing: -5px; width: 100%; text-align: center; display: block; line-height: 1;'>🌊 🌊 🌊</div>
+                <strong style='font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;'>See you next week!</strong>
+              </td>
+            </tr>
+
+          </table>
         </div>
-        <p>See and discuss <a style='text-decoration: underline;' href='https://gist.github.com/nepsilon/1c998cd95907ef5d2d29' target='_blank'>this Gist on Github&nbsp;&raquo;</a></p>
-      </td>
-    </tr>
-
-    <tr>
-      <td style='text-align:center;  padding: 0 0 30px 0;'>
-      <br />
-        <strong style='font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;'>☀️ See you next week!</strong>
       </td>
     </tr>
   </table>
@@ -463,9 +533,9 @@
               <td align="center">
                 <p>
                   <br>
-                  <a href="http://fullweb.io">Website</a> &middot;
-                  <a href="https://twitter.com/fullwebio">Follow on Twitter</a> &middot;
-                  <a href="https://www.facebook.com/fullwebio">Follow on Facebook</a>
+                  <a href="http://fullweb.io" target='_blank'>Website</a> &middot;
+                  <a href="https://twitter.com/fullwebio" target='_blank'>Follow on Twitter</a> &middot;
+                  <a href="https://www.facebook.com/fullwebio" target='_blank'>Follow on Facebook</a>
                   <br /><br /><br />
                   *|REWARDS|*
                   <br /><br /><br />
