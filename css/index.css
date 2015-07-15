@@ -740,6 +740,9 @@
   .bold {
     font-weight: 600;
   }
+  .muted {
+    color: #96999b;
+  }
 }
 @media screen {
   [hidden~="screen"] {
