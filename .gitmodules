@@ -1,3 +1,3 @@
 [submodule "hn-comments"]
 	path = hn-comments
-	url = git@github.com:nepsilon/hn-comments.git
+	url = https://github.com/nepsilon/hn-comments.git
