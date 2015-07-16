@@ -2,7 +2,7 @@ extends _base.jade
 
 
 block title
-  | Fullweb &middot; Newsletter for Fullstack Engineers
+  | Fullweb &middot; Newsletter for Fullstack Developers
 
 
 block meta
@@ -95,11 +95,11 @@ block content
           h1(itemprop="publisher", itemscope)
             meta(itemprop="name", content="Fullweb Newsletter")
             img(src='/static/fullweb-logo.svg', itemprop='primaryImageOfPage', title='Fullweb Newsletter', width='100', height='141')
-          h2(itemprop='about') The newsletter for fullstack&nbsp;engineers.
+          h2(itemprop='about') The newsletter for fullstack&nbsp;developers.
           p The 5 best links every week about:
           ul
             li
-              strong Web Frontend
+              strong Web Development
             li
               strong Backend Development
             li
@@ -110,37 +110,45 @@ block content
         section.sample-box(itemprop='workExample')
           h1 Sample Issue
           h2
-            a(href='https://www.quora.com/Why-did-Quora-choose-Python-for-its-development/answer/Adam-DAngelo', target='_blank') Quora CEO on Why did Quora choose Python for its development? &raquo;
+            a(href='https://github.com/spotify/dh-virtualenv', target='_blank') Better Python deployments with dh-virtualenv
           blockquote
-            cite quora.com
-            | We were sure we didn't want to use PHP.
+            cite github.com
+            | A good alternative to using Git for deployments.
+            br
+            | It combines the power of Debian packaging with the sandboxed nature of virtualenvs.
+
           h2
-            a(href='http://highscalability.com/blog/2015/3/16/how-and-why-swiftype-moved-from-ec2-to-real-hardware.html', target='_blank') How And Why Swiftype Moved From EC2 To Real Hardware &raquo;
+            a(href='https://realpython.com/blog/python/asynchronous-tasks-with-django-and-celery/', target='_blank') Asynchronous tasks with Django and Celery
           blockquote
-            cite highscalability.com
-            | This is a guest post by Oleksiy Kovyrin, Head of Technical Operations at Swiftype. Swiftype currently powers search on over 100,000 websites and serves more than 1 billion queries every month.
+            cite realpython.com
+            | A good introduction to using Celery with Django.
+            br
+            | Including periodic, local and remote tasks.
           h2
-            a(href='http://bitsofco.de/2015/the-accessibility-cheatsheet', target='_blank') The Web Accessibility Cheatsheet &raquo;
+            a(href='http://chimera.labs.oreilly.com/books/1230000000545/ch12.html', target='_blank') Understanding HTTP 2.0
           blockquote
-            cite.muted bitsofco.de
-            | We all know that accessibility is important. The problem is, it is not always clear what exactly we can do to make our sites more accessible.
+            cite.muted oreilly.com
+            | A chapter from the excellent “High Performance Browser Networking” from Oreilly Media.
           h2
-            a(href='https://blog.cloudflare.com/how-to-receive-a-million-packets/', target='_blank') How to receive a million packets per second &raquo;
+            a(href='http://www.calltoidea.com', target='_blank') Curated and classified list of UI pattern
           blockquote
-            cite.muted blog.cloudflare.com
-            | On Linux, how hard is it to write a program that receives 1 million UDP packets per second?
-          h2
-            a(href='http://www.nngroup.com/articles/low-contrast/', target='_blank') Low-Contrast Text Is Not the Answer &raquo;
+            cite.muted calltoidea.com
+            | A high quality catalog of UI pattern from the well-designed web. 
+            | Login forms, calendars, footers, pop-ups, pricing tables, etc.
+          h2 
+            a(href='https://github.com/mailgun/godebug', target='_blank') Finally a good debugger for Go
           blockquote
-            cite.muted www.nngroup.com
-            | Low-contrast text may be trendy, but it is also illegible, undiscoverable, and inaccessible. Instead, consider more usable alternatives.
+            cite.muted github.com
+            | A real debugger for Go from the team at Mailgun. 
+            | Set breakpoints, see stacktrace, list context. 
+            | +1700 stars on Github so far.
 
         section.faq-box
           h1 F.A.Q.
           h2 What is Fullweb?
           p Fullweb is a weekly newsletter. It gives you the best 5 links every week about Backend, Web Frontend, DevOps and User Experience.
           h2 Who need to read it?
-          p Fullweb primarily targets Full-Stack Developers and Engineers, and anybody who need to stay relevant on a wide scope of technologies.
+          p Fullweb primarily targets Full-Stack Developers, and anybody who need to stay relevant on a wide scope of technologies.
           p Fullweb is also read by non-tech people, working in tech environment, who want to acquire a good general knowledge on what the tech world is about today.
           h2 Where are the links curated from?
           p The links are curated from social sites like HN, DN, Reddit, Quora, tech blogs like TechCrunch, PandoDaily, and also other newsletters and podcasts.
@@ -181,7 +189,7 @@ block content
           |  &middot; 
           a(href='http://us11.campaign-archive1.com/feed?u=8e9d09ec89c0c4ededef3beab&id=b98e776907', target='_blank') RSS Feed
           |  &middot; 
-          a(href='http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907', target='_blank') Archives
-          |  &middot; 
+          a(href='http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907', target='_blank') Archives 
+          |  &middot;  
           a(href='/humans.txt', target='_blank') Credits
           span.muted &nbsp; &copy; 2015
