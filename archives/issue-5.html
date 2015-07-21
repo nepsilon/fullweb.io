@@ -1,0 +1,553 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta content="telephone=no" name="format-detection">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Fullweb Issue #5</title>
+<meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png" />
+<meta property="og:title" content="Fullweb Newsletter: Issue #5" />
+
+<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+			font-size:100%;
+			line-height:1.6;
+      box-sizing: border-box;
+		}
+		img{
+			max-width:100%;
+		}
+		body{
+			-webkit-font-smoothing:antialiased;
+			-webkit-text-size-adjust:none;
+			width:100%!important;
+			height:100%;
+		}
+		a{
+			color:#0079DF;
+			text-decoration:none;
+		}
+    code {
+      display: inline;
+      font-family: monospace;
+      background-color: #EBEBEB;
+      padding: 0 3px;
+      border-radius: 2px;
+      line-height: 1.25;
+     }
+     hr {
+      margin: 5px auto 25px;
+      color: #CCC;
+      background-color: #CCC;
+      height: 1px;
+      border: 0;
+      width: 75px;
+     }
+		.btn-primary,.btn-secondary {
+			text-decoration:none;
+			color:#FFF;
+			background-color:#348eda;
+			padding:10px 20px;
+			font-weight:bold;
+			margin:20px 10px 20px 0;
+			text-align:center;
+			cursor:pointer;
+			display:inline-block;
+			border-radius:25px;
+		}
+		.btn-secondary{
+			background:#aaa;
+		}
+		.last{
+			margin-bottom:0;
+		}
+		.first{
+			margin-top:0;
+		}
+		table.body-wrap{
+			width:100%;
+		}
+		table.body-wrap .container {
+		  margin-top: 10px;
+		}
+		table.header-wrap,
+		table.footer-wrap{
+			width:100%;
+			clear:both!important;
+			background-color: #FCFCFA;
+    }
+		table.header-wrap {
+      border-bottom: 2px solid #FFDE00;
+    }
+		table.footer-wrap{
+      border-top: 2px solid #FFDE00;
+		}
+		.footer-wrap .container p{
+			font-size:12px;
+			color:#666;
+		}
+		table.footer-wrap a{
+			color:#999;
+		}
+		h1,h2,h3{
+			font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			line-height:1.2;
+			margin-bottom:15px;
+			color:#333;
+			margin:0;
+			font-weight:500;
+		}
+		h1 {
+			font-size:22px;
+      font-family: Avenir;
+      text-transform: uppercase;
+      margin-bottom: 0;
+		}
+		h2 {
+			font-size: 22px;
+      font-family: Avenir;
+      text-align: left;
+		}
+		h3, h3 a {
+			font-size: 19px;
+      margin-bottom: 0;
+		}
+
+		.link-section{
+			padding-bottom: 0;
+			font-family:Georgia, sans-serif;
+		}
+		.link-section h3 a {
+      display: inline-block;
+			font-size: 19px;
+			color: #1374DA;
+      line-height: 1.25;
+      text-decoration: none !important;
+		}
+		.link-section h3 {
+			text-decoration:underline;
+      line-height: 1.25;
+			font-family:Georgia, sans-serif;
+		}
+		.link-section p a {
+			color:#222;
+			text-decoration:none;
+      font-family:Georgia, sans-serif;
+      font-size: 15px;
+      display: block;
+      line-height: 1.5;
+		}
+		.link-section .link-desc small {
+      font-size: 12px;
+      font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			color:#888;
+      text-decoration: none;
+		}
+		.link-section .link-desc small a {
+			color:#888;
+      text-decoration: none;
+		}
+		p,ul {
+			margin-bottom:25px;
+			font-weight:normal;
+			font-size:15px;
+		}
+		ul li {
+			margin-left:5px;
+			list-style-position:inside;
+		}
+		.container{
+			display:block!important;
+			max-width:650px!important;
+			width:100%!important;
+			margin:0 auto!important;
+			clear:both!important;
+		}
+		.content,.header{
+			padding:20px;
+			max-width:650px;
+			width:100%!important;
+			margin:0 auto;
+			display:block;
+		}
+		.header {
+			padding: 0;
+		}
+		.header h3 {
+			font-size: 13px;
+      color: #515151;
+		}
+		.header p {
+			margin-bottom:10px;
+		}
+    .content {
+      padding-bottom: 0;
+      padding-left: 10px;
+    }
+		.content table {
+			width:100%;
+		}
+    sup {
+      font-size: 9px;
+      line-height: 0;
+    }
+    .code {
+      background-color: #202020;
+      padding: 10px;
+      font-family: Menlo, monospace;
+      margin-top: 3px;
+      color: #FFF;
+      border-radius: 2px;
+      line-height: 1.35;
+      font-size: 15px;
+    }
+    .code .comment {
+      color: #88888E;
+      font-size: 15px;
+      font-family: Menlo, monospace;
+      line-height: 1.35;
+      display: block;
+    }
+    .header-archive-links {
+      margin-top: 1em;
+      font-size: 15px;
+      color: #333;
+    }
+    .header-archive-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: #515151;
+    }
+    .badge {
+      background: #FFDE00;
+      color: #333;
+      border-radius: 2px;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 3px 12px;
+      display:inline-block;
+      margin-bottom: 25px;
+    }
+    .alert {
+      background-color: #ECECEC;
+      padding: 20px;
+      margin-top: 10px;
+      border-radius: 2px;
+      font-size: 15px;
+    }
+</style>
+</head>
+
+<body bgcolor="#fff">
+<div style='opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px'>The top 5 fullstack links this week.</div>
+
+  <!-- header-wrap -->
+  <table class="header-wrap">
+    <tr>
+      <td class="container">
+        <!-- header -->
+        <div class="header" style='min-height: 150px;'>
+          <table style="width:100%">
+            <tr style="width:100%">
+              <td style="width:50%">
+                <h1>
+                  <img src='https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg?new' height='150' width='100' title='Fullweb Weekly' style="display:inline-block;border-left:3px solid #FCFCFA;box-sizing:content-box"/>
+                </h1>
+              </td>
+              <td style="width:50%; text-align:left;">
+                <h2 style='font-size: 18px;font-weight: 600;line-height:1.75;margin-bottom:0'>ISSUE #5</h2>
+                <h3>Tu&#8203;esday 21<sup>th</sup> Jul&#8203;y 2&#8203;015</h3>
+                <div class='header-archive-links'>
+                  <a href='*|ARCHIVE|*' target='_blank'>View on the web</a>
+                  &thinsp;&middot;&thinsp;
+                  <a href='http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907' target='_blank'>Archives</a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- /header -->
+      </td>
+    </tr>
+  </table>
+
+  <table class="body-wrap">
+    <tr>
+      <td class="container" bgcolor="#FFFFFF">
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class='alert'>
+                  <h4 style='font-size: 19px; font-weight: 500; color: #333; padding-bottom: 0.5em;'>
+                  Fullweb only grows thanks to you
+                  </h4>
+                  Please tell your friends you&rsquo;re reading Fullweb by <a href='https://twitter.com/fullwebio/status/621263896314155008' target='_blank' style='border-bottom: 1px solid;border-bottom: 1px solid #0079DF;font-weight:500'>retweeting this</a> and sharing <a href='http://fullweb.io/?utm_campaign=email_issue_5&utm_medium=email' style='border-bottom: 1px solid;border-bottom: 1px solid #0079DF;font-weight:500' target='_blank'>this link</a> on WeChat. Thanks!
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+
+  <!-- body -->
+  <table class="body-wrap">
+    <tr>
+      <td class="container" bgcolor="#FFFFFF">
+
+        <!-- content -->
+        <div class="content" style="padding-top: 30px">
+
+        <div class='badge'>TOP 5 LINKS THIS WEEK</div>
+        <table>
+
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="http://www.sitepoint.com/12-little-known-css-facts-the-sequel/">
+                      12 Little-Known CSS Facts
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <small class='domain'>sitepoint&#8203;.com</small>
+                    <p>
+                      <a href="http://www.sitepoint.com/12-little-known-css-facts-the-sequel/">
+                      Going deeper on 12 CSS properties you already know.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="http://socket.io/blog/socket.io-p2p/">
+                        SocketIO goes peer-to-peer!
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <small class='domain'>socket&#8203;.io</small>
+                    <p>
+                      <a href="http://socket.io/blog/socket.io-p2p/">
+                        And yes it uses WebRTC.
+                        <br />
+                        A great addition to their existing websocket lib.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="http://www.nateberkopec.com/2015/07/15/the-complete-guide-to-rails-caching.html">
+                        The complete guide to Rails caching
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <small class='domain'>nateberkopec&#8203;.com</small>
+                    <p>
+                      <a href="http://www.nateberkopec.com/2015/07/15/the-complete-guide-to-rails-caching.html">
+                      Because caching is what you do when you need to scale your app.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="https://www.joyent.com/developers/node/design/errors">
+                      Error Handling in Node.js
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <small class='domain'>joyent&#8203;.com</small>
+                    <p>
+                      <a href="https://www.joyent.com/developers/node/design/errors">
+                      A good guide to better error handling by Joyent.
+                      <br />
+                      To keep under your pillow.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="http://highscalability.com/blog/2015/7/13/algolias-fury-road-to-a-worldwide-api.html">
+                      Algolia&rsquo;s Fury Road To A Worldwide API
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <small class='domain'>highscalability&#8203;.com</small>
+                    <p>
+                      <a href="http://highscalability.com/blog/2015/7/13/algolias-fury-road-to-a-worldwide-api.html">
+                      An article from Julien Lemoine, co-founder and CTO at Algolia, the YC backed Search as a Service startup.
+                      <br />
+                      Part of a 15 parts blog series. Great insights about scaling resource intensive services.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+        </div>
+
+        <!-- /content -->
+
+      </td>
+    </tr>
+  </table>
+
+  <table class="body-wrap">
+    <tr>
+      <td class="container" bgcolor="#FFFFFF">
+        <!-- content -->
+        <div class="content">
+
+          <table>
+
+            <!-- Tip of the week -->
+            <tr>
+              <td>
+                <span class='badge'>TIP OF THE WEEK</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p style='margin-bottom:5px'>
+                  A mix of bash/zsh goodies for this week!
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class='code'>
+                  <span class='comment'># Expansion: same as mv file.txt file.md</span>
+                  mv file.{txt,md} 
+                  <span class='comment'># Back to your previous working directory</span>
+                  cd -
+                  <span class='comment'># Jump to your home directory</span>
+                  cd
+                  <span class='comment'># Use previous arguments value with !$ </span>
+                  mkdir -p /var/www/site&#8203;.com/very/long/path/folder
+                  <br />
+                  cd !$
+                </div>
+                <p>Do you know some more? Share them with us on <a style='text-decoration: underline;' href='https://gist.github.com/nepsilon/8b18f20eafd7fed601a4' target='_blank'>this Gist&nbsp;&raquo;</a></p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style='text-align:center;  padding: 0 0 30px 0;'>
+              <br />
+                <div style='width: 100%; text-align: center; display: block; line-height: 1;'>✌️ ✌️ ✌️ </div>
+                <strong style='font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;'>See you next week!</strong>
+              </td>
+            </tr>
+
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <!-- /body -->
+
+  <!-- footer -->
+  <table class="footer-wrap">
+    <tr>
+      <td class="container">
+
+        <!-- content -->
+        <div class="content" style='padding-top:10px'>
+          <table>
+            <tr>
+              <td align="center">
+                <p>💬<br />
+                  <strong> Got feedback? Just hit reply.</strong>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <p>
+                  <br>
+                  <a href="http://fullweb.io" target='_blank'>Website</a> &middot;
+                  <a href="https://twitter.com/fullwebio" target='_blank'>Follow on Twitter</a> &middot;
+                  <a href="https://www.facebook.com/fullwebio" target='_blank'>Follow on Facebook</a>
+                  <br /><br /><br />
+                  *|REWARDS|*
+                  <br /><br /><br />
+                  <a href="*|UNSUB|*">Unsubscribe</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </div><!-- /content -->
+
+      </td>
+    </tr>
+  </table>
+  <!-- /footer -->
+
+</body>
+</html>
