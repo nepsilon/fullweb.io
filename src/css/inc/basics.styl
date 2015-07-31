@@ -73,6 +73,8 @@ a
     margin-bottom .15rem
 
 .cta-box
+  -webkit-perspective 800
+  perspective 800
   position: fixed;
   top: 30%
   right: 0;
@@ -90,21 +92,80 @@ a
       left 0
       display block
       opacity 0
+      color #FF2A2A
     &.empty, &.invalid
-      transition .25s
-      animation-name wobble
-      animation-duration .35s
-      .error-msg.empty
-        opacity 1
+      -webkit-animation-duration: 400ms;
+      -webkit-animation-timing-function: ease-in-out;
+      -webkit-animation-name: wobble;
     &.invalid
+      .error-msg.empty
+        opacity 0
       .error-msg.invalid
         opacity 1
-
+    &.empty
+      .error-msg.empty
+        opacity 1
+      .error-msg.invalid
+        opacity 0
+  #subscribe-box
+    position relative
+    z-index 100
+    &.hide
+      -webkit-animation-name: bounceOutDown;
+      animation-name: bounceOutDown;
+      animation-duration: .5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+  #thanks-box
+    position absolute
+    z-index 1
+    opacity 0
+    transition opacity .3s
+    top -10%
+    left 0
+    padding-left 3rem
+    &.show
+      opacity 1
+    h4
+      font-weight: 600;
+      font-size: 24px;
+      font-style: italic;
+    figure
+      display inline-block
+      width 360px
+      img
+        float left
+      figcaption
+        float: right;
+        margin: 2.5rem 1rem;
+        width: 200px;
+    .btn.twitter
+      position: initial;
+      margin: 1rem 0;
+      display: block;
+      border-radius: 3px;
+      width: 150px;
+      background-color: #55ACEE;
+      color: #FFF;
+      text-shadow: none;
+      text-decoration: none;
+      border: 0;
+      background-image: none;
+      line-height: 40px;
+      height: 40px;
+      padding: 0;
+      text-align: center;
+      font-size: 17px;
+      &:hover
+        box-shadow none
+      &:active
+        box-shadow none
   .btn
     position absolute
     top 0
     left 240px
     height 42px
+    width 110px
     padding 8px 18px 10px
     border-radius: 3px;
     background-color: active-color
@@ -131,6 +192,16 @@ a
       outline: none;
     .label
       vertical-align 1px
+    .spinner
+      display none
+      svg
+        max-height: 100%;
+    &.processing
+      padding 0 0 1px 0
+      .label
+        display none
+      .spinner
+        display block
 
   input + label
     position: absolute
@@ -223,7 +294,7 @@ footer
     z-index: 1000;
     width 100%
     background-color: #FCFCFA;
-    height: 100px;
+    height: 110px;
     padding: 1rem 0;
     &:before
       content ' '
@@ -242,6 +313,11 @@ footer
       margin: 0 auto;
       height: 100px;
       width: 340px;
+      &[disabled]
+        input
+          background-color #FFEF7F
+      .error-msg
+        top 42px
     legend
       margin-bottom .25rem
     input[type='email']
@@ -256,6 +332,11 @@ footer
       left 65%
       min-width 80px
       padding 8px 12px 10px
+    #thanks-box 
+      top 15px
+  .hide-mobile
+    display none !important
+
 
   footer
     display none

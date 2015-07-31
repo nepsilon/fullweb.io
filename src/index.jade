@@ -7,79 +7,76 @@ block title
 
 block meta
   link(rel="canonical", href="http://fullweb.io")
-  style
+  link(rel='stylesheet', href='css/index.css')
+  //style
     include:stylus css/index.styl
 
 
 block scripts
+  script(src='zepto.min.js')
   script.
-    /*
     Zepto(function($) {
       // Grab the protagonists
       var $F = $('#newsletter-form');
       var $E = $('#user-email').get(0);
       var $B = $('#subscribe-btn');
+      var $SUBS_BOX = $('#subscribe-box')
       // Handy validation function for email value
-      var validateForm = function (email_str) {
-        if (email_str.length && /w+@[A-z0-9.]+\.net/.test(email_str)) {
-          return true;
-        }
-        else {
-          return false;
-        }
+      var validateEmail = function (email_str) {
+        return /[\w+-_]+@[\w.]+\.[\w|.]{2,}/i.test(email_str)
       };
       // Form submit event interception + processing
       $F.on('submit', function(ev) {
         ev.preventDefault();
-        var is_valid = validateForm($E.value);
+        var is_valid = validateEmail($E.value);
         // Verify for empty state
-        if (!is_valid && !$E.value.length) {
-          console.log($E.value.length, 'empty');
+        if (!$E.value.length) {
           $F.get(0).className = 'empty';
-          $B.attr('disabled', 'disabled');
           $E.focus();
           setTimeout(function() {
             $F.get(0).className = '';
-            $B.removeAttr('disabled');
-          }, 2000);
+          }, 5000);
         }
         // Verify for invalid email syntax state
-        else if (!is_valid && $E.value.length) {
-          console.log($E.value.length, 'invalid');
+        else if (!is_valid) {
           $F.get(0).className = 'invalid';
-          $B.attr('disabled', 'disabled');
           $E.focus();
           setTimeout(function() {
             $F.get(0).className = '';
-            $B.removeAttr('disabled');
-          }, 2000);
+          }, 5000);
         }
         // Subscribe user
         else {
+          $B.get(0).className = 'btn processing';
+          $SUBS_BOX.disabled = 'disabled';
+          $('#subscribe-box legend').text('Talking to a computer...');
           $.ajax({
-            type: 'post',
+            type: 'get',
             url: "//newsletter.us11.list-manage.com/subscribe/post-json?u=8e9d09ec89c0c4ededef3beab&id=b98e776907&c=?",
             data: $F.serialize(),
-            dataType: 'jsonp',
-            jsonpCallback: 'c',
+            dataType: 'json',
             cache: false,
             contentType: 'application/json; charset=utf-8',
-            success: function (xhr, status) {
-              console.log(xhr, status);
-              $F.toggleClass('subscribed')
-            },
-            error: function (xhr, status) {
-              console.log(xhr, status);
-              $F.toggleClass('error')
-              setTimeout(function() {
-                $F.toggleClass('error');
-              }, 1000);
+            success: function (data, xhr, status) {
+              console.log(data, xhr, status, 'successssssssssssss');
+              if (data && data.result === 'success') {
+                $SUBS_BOX.get(0).className = 'hide'
+                setTimeout(function() {
+                  $THANKS_BOX = $('#thanks-box')
+                  $THANKS_BOX.get(0).className = 'show'
+                }, 500);
+              }
+              else {
+              }
+              $B.get(0).className = 'btn';
+              $SUBS_BOX.disabled = '';
+              $('#subscribe-box legend').text('Join 282 subscribers:');
+              $E.value = ''
             }
           });
         }
       });
     });
-    */
 
 
 block content
@@ -165,18 +162,46 @@ block content
 
 
       aside.cta-box
-        fieldset
-          legend Join 279 subscribers:
-          form#newsletter-form(method='post', action="//newsletter.us11.list-manage.com/subscribe/post?u=8e9d09ec89c0c4ededef3beab&id=b98e776907&c=?")
-            input#user-email(type="email", placeholder="", x-autocompletetype="email", name='EMAIL', autofocus, tabindex='1', spellcheck='false', required)
+        fieldset#subscribe-box
+          legend Join 282 subscribers:
+          form#newsletter-form(method='post', action="//newsletter.us11.list-manage.com/subscribe/post?u=8e9d09ec89c0c4ededef3beab&id=b98e776907&c=?", novalidate)
+            input#user-email(type="email", placeholder="", x-autocompletetype="email", name='EMAIL', autofocus, tabindex='1', spellcheck='false', required, pattern='[\\w+-_]+@[\\w.]+\\.[\\w|.]{2,}')
             label(for='user-email') Email
             div(style="position: absolute; left: -5000px;")
              input(type="text", name="b_8e9d09ec89c0c4ededef3beab_b98e776907", tabindex="-1", value="")
-            button#subscribe-btn(type="submit", class="btn", tabindex='2', onclick="_gaq.push(['_trackEvent', 'Newsletter', 'subscribe']);")
+            button#subscribe-btn(type="submit", class="btn", tabindex='2')
               span.label Subscribe
-            //br
-            //span.error-msg.empty We need an email up here
-            //span.error-msg.invalid Hm, this doesn't look like an email
+              span.spinner.
+                <svg width="25" height="25" viewBox="-2 0 48 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+                    <g fill="none" fill-rule="evenodd">
+                        <g transform="translate(1 1)" stroke-width="6">
+                            <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+                            <path d="M36 18c0-9.94-8.06-18-18-18">
+                                <animateTransform
+                                    attributeName="transform"
+                                    type="rotate"
+                                    from="0 18 18"
+                                    to="360 18 18"
+                                    dur=".7s"
+                                    repeatCount="indefinite"/>
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            br
+            span.error-msg.empty We need an email up here
+            span.error-msg.invalid Hmm, this doesn&rsquo;t look like an email
+        section#thanks-box
+          h4 Thanks for subscribing!  
+          p Please share on Twitter or Wechat
+          p.hide-mobile 
+            a.btn.twitter(href='https://twitter.com/intent/tweet?url=http://fullweb.io&via=fullwebio&text=I%20just%20subscribed%20to%20Fullweb%20Weekly,%20the%20newsletter%20for%20%23fullstack%20%23developer', target='_blank')
+              | Tweet this Page
+          figure.hide-mobile
+            figcaption Scan with Wechat to share
+              br
+              | on your Moments
+            img(src='/static/fullweb_thanks.gif', height='120', width='120')
 
 
       footer.w-50p
