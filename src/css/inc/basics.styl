@@ -11,6 +11,8 @@ a
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0);
   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 49%, text-color 50%);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 49%, text-color 50%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 49%, text-color 50%);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 49%, text-color 50%);
   background-repeat: repeat-x;
   background-size: 2px 2px;
@@ -73,8 +75,6 @@ a
     margin-bottom .15rem
 
 .cta-box
-  -webkit-perspective 800
-  perspective 800
   position: fixed;
   top: 30%
   right: 0;
@@ -94,9 +94,10 @@ a
       opacity 0
       color #FF2A2A
     &.empty, &.invalid
-      -webkit-animation-duration: 400ms;
-      -webkit-animation-timing-function: ease-in-out;
-      -webkit-animation-name: wobble;
+      -webkit-animation: wobble 400ms ease-in-out
+      -moz-animation: wobble 400ms ease-in-out
+      -o-animation: wobble 400ms ease-in-out
+      animation: wobble 400ms ease-in-out
     &.invalid
       .error-msg.empty
         opacity 0
@@ -112,9 +113,20 @@ a
     z-index 100
     &.hide
       -webkit-animation-name: bounceOutDown;
+      -moz-animation-name: bounceOutDown;
+      -o-animation-name: bounceOutDown;
       animation-name: bounceOutDown;
+      -webkit-animation-duration: .5s;
+      -moz-animation-duration: .5s;
+      -o-animation-duration: .5s;
       animation-duration: .5s;
+      -moz-animation-iteration-count: 1;
+      -o-animation-iteration-count: 1;
+      -webkit-animation-iteration-count: 1;
       animation-iteration-count: 1;
+      -webkit-animation-fill-mode: forwards;
+      -o-animation-fill-mode: forwards;
+      -moz-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
   #thanks-box
     position absolute
@@ -127,9 +139,15 @@ a
     &.show
       opacity 1
     h4
-      font-weight: 600;
-      font-size: 24px;
-      font-style: italic;
+      font-size: 32px;
+      font-family Satisfy, cursive
+      color: #FEAB3A;
+    hr
+      display: block;
+      height: 1px;
+      width: 400px;
+      background-color: #D1D1D1;
+      margin: 1rem 0;
     figure
       display inline-block
       width 360px
@@ -192,7 +210,7 @@ a
       outline: none;
     .label
       vertical-align 1px
-    .spinner
+    .loader
       display none
       svg
         max-height: 100%;
@@ -200,7 +218,7 @@ a
       padding 0 0 1px 0
       .label
         display none
-      .spinner
+      .loader
         display block
 
   input + label
@@ -332,7 +350,7 @@ footer
       left 65%
       min-width 80px
       padding 8px 12px 10px
-    #thanks-box 
+    #thanks-box
       top 15px
   .hide-mobile
     display none !important

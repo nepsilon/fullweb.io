@@ -62,8 +62,9 @@ block scripts
               if (data && data.result === 'success') {
                 $SUBS_BOX.get(0).className = 'hide'
                 setTimeout(function() {
-                  $THANKS_BOX = $('#thanks-box')
-                  $THANKS_BOX.get(0).className = 'show'
+                  $THANKS_BOX = $('#thanks-box');
+                  $THANKS_BOX.get(0).style.opacity = '';
+                  $THANKS_BOX.get(0).className = 'show';
                 }, 500);
               }
               else {
@@ -171,34 +172,20 @@ block content
              input(type="text", name="b_8e9d09ec89c0c4ededef3beab_b98e776907", tabindex="-1", value="")
             button#subscribe-btn(type="submit", class="btn", tabindex='2')
               span.label Subscribe
-              span.spinner.
-                <svg width="25" height="25" viewBox="-2 0 48 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
-                    <g fill="none" fill-rule="evenodd">
-                        <g transform="translate(1 1)" stroke-width="6">
-                            <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
-                            <path d="M36 18c0-9.94-8.06-18-18-18">
-                                <animateTransform
-                                    attributeName="transform"
-                                    type="rotate"
-                                    from="0 18 18"
-                                    to="360 18 18"
-                                    dur=".7s"
-                                    repeatCount="indefinite"/>
-                            </path>
-                        </g>
-                    </g>
-                </svg>
+              span.loader Subscribing...
             br
             span.error-msg.empty We need an email up here
             span.error-msg.invalid Hmm, this doesn&rsquo;t look like an email
-        section#thanks-box
+        section#thanks-box(style='opacity:0')
           h4 Thanks for subscribing!  
-          p Please share on Twitter or Wechat
+          p We just sent you a confirmation email.
+          hr.hide-mobile
+          p.hide-mobile.bold Let the world know you subscribed to this awesome newsletter!
           p.hide-mobile 
             a.btn.twitter(href='https://twitter.com/intent/tweet?url=http://fullweb.io&via=fullwebio&text=I%20just%20subscribed%20to%20Fullweb%20Weekly,%20the%20newsletter%20for%20%23fullstack%20%23developer', target='_blank')
               | Tweet this Page
           figure.hide-mobile
-            figcaption Scan with Wechat to share
+            figcaption.muted Scan with Wechat to share
               br
               | on your Moments
             img(src='/static/fullweb_thanks.gif', height='120', width='120')
