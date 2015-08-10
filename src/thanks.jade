@@ -1,0 +1,35 @@
+extends _base.jade
+
+
+block title
+  | Thanks for subscribing to Fullweb Weekly!
+
+
+block meta
+  style
+    include:stylus css/thanks.styl
+
+
+block content
+  main(itemscope, itemtype="http://schema.org/WebPage")
+    meta(itemprop='specialty', content='Full-stack developer')
+    meta(itemprop='specialty', content='Web development')
+    meta(itemprop='specialty', content='DevOps')
+    meta(itemprop='specialty', content='User Experience')
+
+    article.content-box
+
+      img(src='/static/fullweb-logo.svg', itemprop='image', title='Fullweb Weekly', width='100', height='141')
+      h1(itemprop="name", content="Fullweb Newsletter")
+        | Welcome to Fullweb!
+      h2(itemprop='about') The newsletter for fullstack&nbsp;developers
+
+      br
+      p The next issue is due this coming Tuesday.
+      p Only the top 5 links make it to the newsletter.
+        br
+        | To receive the other links and tips, follow Fullweb on Twitter:
+      p(style='text-align:center')
+        a.btn-twitter-follow(href='https://twitter.com/fullwebio', target='_blank') 
+          i.twitter-icon
+          span.label Follow @fullwebio
