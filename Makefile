@@ -13,7 +13,7 @@ coffee:
 
 
 stylus-watch:
-	$(BINS)/stylus -w -o public/css/ -m src/css/index.styl
+	$(BINS)/stylus -w -o public/css/ -m src/css/*.styl
 
 
 jade-watch:
@@ -29,10 +29,13 @@ jade:
 
 
 build: jade
-	@echo ">>> BUILD COMPLETE --------------------"
 	@$(BINS)/minify public/index.html > public/index.min.html
 	@cat public/html-banner.txt public/index.min.html > public/index.html
 	@rm public/index.min.html
+	@$(BINS)/minify public/thanks.html > public/thanks.min.html
+	@cat public/html-banner.txt public/thanks.min.html > public/thanks.html
+	@rm public/thanks.min.html
+	@echo ">>> BUILD COMPLETE --------------------"
 
 
 gh-pages: build
