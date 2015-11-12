@@ -1,30 +1,406 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Fullweb Blog</title>
+    <description>A collection of useful tips for fullstack developers.
+</description>
+    <link>http://fullweb.io/blog/</link>
+    <atom:link href="http://fullweb.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 12 Nov 2015 16:04:27 +0800</pubDate>
+    <lastBuildDate>Thu, 12 Nov 2015 16:04:27 +0800</lastBuildDate>
+    <generator>Jekyll v3.0.0</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>5 Git tips for intermediate users</title>
+        <description>&lt;p&gt;5 tips to show (once again) that Git is amazing:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Fetch a file from another branch&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# without changing your current branch&lt;/span&gt;
+git checkout other_branch -- path/to/file 
+
+&lt;span class=&quot;c&quot;&gt;# See what branches are merged&lt;/span&gt;
+git checkout master 
+git branch --merged
+&lt;span class=&quot;c&quot;&gt;# Use --no-merged to see the branches&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# not yet merged&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Have Git auto-correct you&lt;/span&gt;
+git config --global help.autocorrect 1
+&lt;span class=&quot;c&quot;&gt;# Example:&lt;/span&gt;
+git commti 
+WARNING: You called a Git &lt;span class=&quot;nb&quot;&gt;command &lt;/span&gt;named &lt;span class=&quot;s1&quot;&gt;&#39;commti&#39;&lt;/span&gt;, which does not exist. 
+Continuing under the assumption that you meant &lt;span class=&quot;s1&quot;&gt;&#39;commit&#39;&lt;/span&gt; 
+
+&lt;span class=&quot;c&quot;&gt;# Show word changes in diff&lt;/span&gt;
+git diff --word-diff 
+
+&lt;span class=&quot;c&quot;&gt;# Set remote branch tracking by default&lt;/span&gt;
+git config --global push.default tracking&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Tue, 10 Nov 2015 13:15:03 +0800</pubDate>
+        <link>http://fullweb.io/blog/git-tips-indermediate-users</link>
+        <guid isPermaLink="true">http://fullweb.io/blog/git-tips-indermediate-users</guid>
+        
+        
+        <category>shell,</category>
+        
+        <category>git,</category>
+        
+        <category>tips</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Batch rename files with the shell</title>
+        <description>&lt;p&gt;A short script this week to replace spaces in filenames in a given folder.&lt;/p&gt;
+
+&lt;p&gt;Spaces will be replaced by underscores &lt;code&gt;_&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Looping over files,&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# forging new filename&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# and then renaming it.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;oldname &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;do 
+  &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;newname&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$oldname&lt;/span&gt; | sed -e &lt;span class=&quot;s1&quot;&gt;&#39;s/ /_/g&#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; 
+  mv &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$oldname&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$newname&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This one remove the spaces, only the sed expression is different:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;oldname &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;do 
+  &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;newname&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$oldname&lt;/span&gt; | sed -e &lt;span class=&quot;s1&quot;&gt;&#39;s/ //g&#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; 
+  mv &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$oldname&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$newname&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And this one lowercase all letters in addition to removing spaces:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;oldname &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;do 
+  &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;newname&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$oldname&lt;/span&gt; | sed -e &lt;span class=&quot;s1&quot;&gt;&#39;s/ //g&#39;&lt;/span&gt; | tr &lt;span class=&quot;s1&quot;&gt;&#39;[:upper:]&#39;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;[:lower:]&#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; 
+  mv &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$oldname&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$newname&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This script is not recursive and will not rename files inside sub-directories.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 02 Nov 2015 13:15:03 +0800</pubDate>
+        <link>http://fullweb.io/blog/shell-script-rename-files</link>
+        <guid isPermaLink="true">http://fullweb.io/blog/shell-script-rename-files</guid>
+        
+        
+        <category>shell,</category>
+        
+        <category>rename,</category>
+        
+        <category>tips</category>
+        
+      </item>
+    
+      <item>
+        <title>Importing and exporting CSV in PostgreSQL</title>
+        <description>&lt;p&gt;Let’s see how to use PostgreSQL to import and export CSV files painlessly with the &lt;a href=&quot;http://www.postgresql.org/docs/9.4/static/sql-copy.html&quot;&gt;COPY command&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;c1&quot;&gt;-- Import CSV into table t_words
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t_words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;/path/to/file.csv&#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;DELIMITER&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;,&#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CSV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- You can tell quote char with QUOTE
+-- and change delimiter with DELIMITER
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- Import CSV into table t_words,
+-- telling what columns to use
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t_words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;&quot;count&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;&quot;def&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;file.csv&#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;DELIMITER&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;,&#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CSV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+
+&lt;span class=&quot;c1&quot;&gt;-- Export table to a CSV file
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t_words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TO&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;file.csv&#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;DELIMITER&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;,&#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CSV&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HEADER&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+
+&lt;span class=&quot;c1&quot;&gt;-- Export custom results to a CSV file
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t_words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TO&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;file.csv&#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CSV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Tue, 27 Oct 2015 13:15:03 +0800</pubDate>
+        <link>http://fullweb.io/blog/postgres-import-export-csv-copy</link>
+        <guid isPermaLink="true">http://fullweb.io/blog/postgres-import-export-csv-copy</guid>
+        
+        
+        <category>postgresql,</category>
+        
+        <category>csv,</category>
+        
+        <category>copy,</category>
+        
+        <category>tips</category>
+        
+      </item>
+    
+      <item>
+        <title>Make your webpages faster with Resource Hints</title>
+        <description>&lt;p&gt;Make your web pages faster with &lt;a href=&quot;http://www.w3.org/TR/resource-hints/&quot;&gt;Resource Hints&lt;/a&gt; link tags!&lt;/p&gt;
+
+&lt;p&gt;They are a great and simple way to tell the browser you need other resources for an optimal user experience.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://caniuse.com/#search=resource%20hints&quot;&gt;browser support&lt;/a&gt; is already pretty good to start using them today.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- pre-DNS resolve a domain --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dns-prefetch&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//widget.com&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- pre-connect to a domain HTTP endpoint --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;preconnect&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//cdn.example.com&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- pre-fetch a resource, here an
+     image needed on the page --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;prefetch&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//example.com/logo.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;as=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- pre-render a web page, here for
+     the next page of an article --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;prerender&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//example.com/next-page.html&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Tue, 20 Oct 2015 13:15:03 +0800</pubDate>
+        <link>http://fullweb.io/blog/fast-webpage-resource-hints</link>
+        <guid isPermaLink="true">http://fullweb.io/blog/fast-webpage-resource-hints</guid>
+        
+        
+        <category>web,</category>
+        
+        <category>html,</category>
+        
+        <category>tips</category>
+        
+      </item>
+    
+      <item>
+        <title>Productivity boost with shell aliases</title>
+        <description>&lt;p&gt;Using aliases to give commands useful options by default is a good way to boost productivity. Here are 5 aliases to put in your &lt;code&gt;~/.bashrc&lt;/code&gt; or &lt;code&gt;~/.zshrc&lt;/code&gt; to keep them permanently.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;# ls: adding colors, verbose listing&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# and humanize the file sizes:&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ls&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ls --color -l -h&quot;&lt;/span&gt; 
+
+&lt;span class=&quot;c&quot;&gt;# grep: color and show the line&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# number for each match:&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;grep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;grep -n --color&quot;&lt;/span&gt; 
+
+&lt;span class=&quot;c&quot;&gt;# mkdir: create parent directories:&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;mkdir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mkdir -pv&quot;&lt;/span&gt; 
+
+&lt;span class=&quot;c&quot;&gt;# ping: stop after 5 pings:&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ping -c 5&quot;&lt;/span&gt; 
+
+&lt;span class=&quot;c&quot;&gt;# curl: only display HTTP header:&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;HEAD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;curl -I&quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# this create a new HEAD command&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Tue, 13 Oct 2015 13:15:03 +0800</pubDate>
+        <link>http://fullweb.io/blog/shell-alias</link>
+        <guid isPermaLink="true">http://fullweb.io/blog/shell-alias</guid>
+        
+        
+        <category>shell,</category>
+        
+        <category>bash,</category>
+        
+        <category>zsh,</category>
+        
+        <category>alias,</category>
+        
+        <category>tips</category>
+        
+      </item>
+    
+      <item>
+        <title>Use Git archive to export your repository</title>
+        <description>&lt;p&gt;See how to use git archive to export your repository.&lt;/p&gt;
+
+&lt;p&gt;For instance to get a copy of the code at a given commit, tag or branch.&lt;/p&gt;
+
+&lt;p&gt;Note: it will not include the .git folder, just the code.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Create a Zip archive of the latest&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# commit on the current branch.&lt;/span&gt;
+git archive -o latest.zip HEAD 
+
+&lt;span class=&quot;c&quot;&gt;# Exporting the branch pouet&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# as a tarball&lt;/span&gt;
+git archive -o branch_pouet.tar pouet
+&lt;span class=&quot;c&quot;&gt;# The filetype is inferred from the&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# filename, one of tar, tgz, tar.gz, zip&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# By default git outputs on stdout&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Convenient for piping to anything:&lt;/span&gt;
+git archive master | bzip2 | ssh user@host &lt;span class=&quot;s2&quot;&gt;&quot;cat &amp;gt; master.bz&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Tue, 06 Oct 2015 13:15:03 +0800</pubDate>
+        <link>http://fullweb.io/blog/git-archive-export-repo</link>
+        <guid isPermaLink="true">http://fullweb.io/blog/git-archive-export-repo</guid>
+        
+        
+        <category>shell,</category>
+        
+        <category>git,</category>
+        
+        <category>tips</category>
+        
+      </item>
+    
+      <item>
+        <title>Using Gulp with custom flags</title>
+        <description>&lt;p&gt;If you use Gulp as build tool for your web projects, you might have wondered how to pass custom flags to your tasks from CLI.&lt;/p&gt;
+
+&lt;p&gt;Well, with a little help from the node package &lt;code&gt;minimist&lt;/code&gt;, you can add this neat feature!&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// gulpfile.js&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;gulp&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;minimist&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;show-flags&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;# &#39;_&#39; contains unparsed arg&lt;/span&gt;
+gulp show-flags -abc --foo bar --bar&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;foo --zoo 
+&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; _: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;...],   a: &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;, 
+  b: &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;, 
+  c: &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;, 
+  foo: &lt;span class=&quot;s1&quot;&gt;&#39;bar&#39;&lt;/span&gt;, 
+  bar: &lt;span class=&quot;s1&quot;&gt;&#39;foo&#39;&lt;/span&gt;, 
+  zoo: &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Usage of flag options is up to you to define your tasks. It’s now time to substitute your old:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gulp build-dev with gulp build --env=dev&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Post contributed by &lt;a href=&quot;https://github.com/happiefire&quot;&gt;Vincent Zhang&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 29 Sep 2015 13:15:03 +0800</pubDate>
+        <link>http://fullweb.io/blog/gulp-custom-flags</link>
+        <guid isPermaLink="true">http://fullweb.io/blog/gulp-custom-flags</guid>
+        
+        
+        <category>web,</category>
+        
+        <category>gulp,</category>
+        
+        <category>tips</category>
+        
+      </item>
+    
+      <item>
+        <title>3 useful ways to use Wget</title>
+        <description>&lt;p&gt;GNU’s &lt;code&gt;wget&lt;/code&gt; is a command line tool to download files over HTTP(S) and FTP.&lt;/p&gt;
+
+&lt;p&gt;While &lt;code&gt;curl&lt;/code&gt; is great to send custom requests, it lacks a recursive mode to download all the resources linked to a page or domain.&lt;/p&gt;
+
+&lt;p&gt;This is where Wget is much useful.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Copy a whole site locally,&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# including images, css, js&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# and converting links&lt;/span&gt;
+wget -p -m -k fullweb​.io
+ 
+&lt;span class=&quot;c&quot;&gt;# Check for 404 links&lt;/span&gt;
+wget --spider your-url-list.txt
+&lt;span class=&quot;c&quot;&gt;# give it an HTML page with -F&lt;/span&gt;
+wget --spider -F you-webpage.html
+ 
+&lt;span class=&quot;c&quot;&gt;# Accept (-A) or reject (-R) some files&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# here only keeping images from the site&lt;/span&gt;
+wget -p -A png,jpg,jpeg,gif &lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;
+        -R html,css,js &lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;
+        wikipedia​.org&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Tue, 22 Sep 2015 13:15:03 +0800</pubDate>
+        <link>http://fullweb.io/blog/smart-wget-usage</link>
+        <guid isPermaLink="true">http://fullweb.io/blog/smart-wget-usage</guid>
+        
+        
+        <category>shell,</category>
+        
+        <category>wget,</category>
+        
+        <category>tips</category>
+        
+      </item>
+    
+      <item>
+        <title>Network Power Tool: netcat</title>
+        <description>&lt;p&gt;Ever heard of &lt;code&gt;netcat&lt;/code&gt;? It’s a small network utility to create TCP and UDP connections.&lt;/p&gt;
+
+&lt;p&gt;Le’s see how to transfer files with it:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Simple file transfer over network:&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# run the server with&lt;/span&gt;
+nc -l 8000 &amp;gt; file_you_receive
+&lt;span class=&quot;c&quot;&gt;# send the file on the client with&lt;/span&gt;
+cat file_you_send | nc server_ip 8000
+ 
+&lt;span class=&quot;c&quot;&gt;# Getting fancy, transferring lots of&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# small/medium files efficiently:&lt;/span&gt;
+tar -cf - . | pigz | nc -l 8000
+&lt;span class=&quot;c&quot;&gt;# On the receiving machine:&lt;/span&gt;
+nc server_ip 8000 &amp;gt; all_your_files.tar.gz
+&lt;span class=&quot;c&quot;&gt;# (pigz is a parallel gzip)&lt;/span&gt;
+ 
+&lt;span class=&quot;c&quot;&gt;# By default netcat uses TCP,&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# use UDP with -u&lt;/span&gt;
+netcat -u -l 8000&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Tue, 15 Sep 2015 13:15:03 +0800</pubDate>
+        <link>http://fullweb.io/blog/netcat-network-tips</link>
+        <guid isPermaLink="true">http://fullweb.io/blog/netcat-network-tips</guid>
+        
+        
+        <category>shell,</category>
+        
+        <category>netcat,</category>
+        
+        <category>linux,</category>
+        
+        <category>tips</category>
+        
+      </item>
+    
+      <item>
+        <title>Understand your machine network with netstat</title>
+        <description>&lt;p&gt;&lt;code&gt;netstat&lt;/code&gt; has some very neat features we could make use of more often.&lt;/p&gt;
+
+&lt;p&gt;Note: Examples here may not apply to BSD based systems.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;# The classic: list local listening&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# TCP/UDP ports and their process&lt;/span&gt;
+sudo netstat -tulpn
+
+&lt;span class=&quot;c&quot;&gt;# Get a tail -f behaviour with&lt;/span&gt;
+sudo netstat -c
+
+&lt;span class=&quot;c&quot;&gt;# Show network transactions including RX/TX and MTU&lt;/span&gt;
+sudo netstat -i
+
+&lt;span class=&quot;c&quot;&gt;# Display the routing table&lt;/span&gt;
+sudo netstat -r
+
+&lt;span class=&quot;c&quot;&gt;# Show statistics by protocol&lt;/span&gt;
+sudo netstat -s&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Tue, 08 Sep 2015 13:15:03 +0800</pubDate>
+        <link>http://fullweb.io/blog/network-netstat-tips</link>
+        <guid isPermaLink="true">http://fullweb.io/blog/network-netstat-tips</guid>
+        
+        
+        <category>shell,</category>
+        
+        <category>netstat,</category>
+        
+        <category>linux,</category>
+        
+        <category>tips</category>
+        
+      </item>
+    
   </channel>
 </rss>
