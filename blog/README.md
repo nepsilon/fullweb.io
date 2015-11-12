@@ -1,9 +1,14 @@
-# Fullweb Weekly
+# Fullweb Blog
 
-The code used to maintain the [Fullweb Weekly](http://fullweb.io) newsletter.
+The code used to maintain the [Fullweb Blog](http://fullweb.io/blog).
 
+This blog uses [Jekyll](http://jekyllrb.com/docs/posts/).
 
-## License
+# License
+
+All articles &copy; Julien Buty 2015
+
+All code MIT license:
 
 The MIT License (MIT)
 
