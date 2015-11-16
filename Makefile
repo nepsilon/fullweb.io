@@ -43,8 +43,12 @@ gh-pages: build
 	@cp -fr public/* .
 
 
-serve:
-	$(BINS)/http-server public -c-1 -o
+serve-site:
+	$(BINS)/http-server public -c 1 -o
+
+
+serve-issue:
+	$(BINS)/http-server . -c 1 -o
 
 
 watch: serve
