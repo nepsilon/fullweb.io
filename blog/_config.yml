@@ -10,7 +10,7 @@ title: Fullweb Blog
 email: hi@fullweb.io
 description: > # this means to ignore newlines until "baseurl:"
   A collection of useful tips for fullstack developers.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://fullweb.io" # the base hostname & protocol for your site
 twitter_username: fullwebio
 github_username:  nepsilon
@@ -20,4 +20,4 @@ timezone: Asia/Shanghai
 # Build settings
 markdown: kramdown
 
-permalink: /blog/:title
+#permalink: /blog/:title
