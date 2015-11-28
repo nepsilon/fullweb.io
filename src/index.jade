@@ -23,7 +23,7 @@ block scripts
       var $SUBS_BOX = $('#subscribe-box')
       // Handy validation function for email value
       var validateEmail = function (email_str) {
-        return /[\w+-_]+@[\w.]+\.[\w|.]{2,}/i.test(email_str)
+        return /[\w+-_]+@[\w\-.]+\.[\w|.]{2,}/i.test(email_str)
       };
       // Form submit event interception + processing
       $F.on('submit', function(ev) {
@@ -166,7 +166,7 @@ block content
         fieldset#subscribe-box
           legend Join 957 fullstack developers:
           form#newsletter-form(method='post', action="//newsletter.us11.list-manage.com/subscribe/post?u=8e9d09ec89c0c4ededef3beab&id=b98e776907&c=?", novalidate)
-            input#user-email(type="email", placeholder="", x-autocompletetype="email", name='EMAIL', autofocus, tabindex='1', spellcheck='false', required, pattern='[\\w+-_]+@[\\w.]+\\.[\\w|.]{2,}')
+            input#user-email(type="email", placeholder="", x-autocompletetype="email", name='EMAIL', autofocus, tabindex='1', spellcheck='false', required, pattern='[\\w+-_]+@[\\w\\-.]+\\.[\\w|.]{2,}')
             label(for='user-email') Email
             div(style="position: absolute; left: -5000px;")
              input(type="text", name="b_8e9d09ec89c0c4ededef3beab_b98e776907", tabindex="-1", value="")
