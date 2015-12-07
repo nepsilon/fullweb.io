@@ -150,7 +150,7 @@
     src: local('Satisfy'), url("http://fonts.gstatic.com/l/font?kit=tcv0Aibm9As-KQnUe452nwHXwqeCHOyb2YcW-2ByC3g&skey=b02738efc6e9caf3") format('truetype');
   }
   body {
-    font: 400 0.9375rem/1.5 Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: 400 0.9375rem/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
   h1 {
@@ -384,9 +384,10 @@
     margin: 0 2rem 3rem 0.5rem;
     padding: 2rem 1.236rem 2rem 3.236rem;
     background: #fcfcfa;
-    text-shadow: 0 1px 1px #fff;
     border-radius: 2px;
     text-align: left;
+    vertical-align: top;
+    float: right;
   }
   .content-box section.desc-box {
     padding-top: 1.5rem;
@@ -415,7 +416,7 @@
     font-family: Georgia, serif;
   }
   .content-box section.sample-box cite {
-    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     display: block;
     margin-bottom: 0.25rem;
     font-style: normal;
@@ -573,7 +574,6 @@
     font-weight: 500;
     line-height: 1;
     font-size: 1rem;
-    text-shadow: 0 0px 1px #fff;
     color: #313233;
     cursor: pointer;
     border-top-left-radius: 0;
@@ -778,11 +778,14 @@
     max-width: 400px;
     min-width: initial;
     width: 95%;
-    margin: 3rem auto;
+    margin: 1rem auto 0;
     padding: 2rem 1.25rem;
     background: #fcfcfa;
-    text-shadow: 0 1px 1px #fff;
     border-radius: 2px;
+    float: none;
+  }
+  .content-box section.faq-box {
+    margin-bottom: 3rem;
   }
   .content-box section.desc-box h1 {
     margin: 0 0 2rem 0;

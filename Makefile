@@ -38,6 +38,15 @@ build: jade
 	@echo ">>> BUILD COMPLETE --------------------"
 
 
+issue:
+	@# Check issue JSON format
+	jq issues/24.json
+	@# Ensure we have 5 links
+	@#jq '.links[]' issues/24.json 
+	@# Render template
+	$(BINS)/jade email-template.jade -O issue -o public/
+
+
 gh-pages: build
 	@git co gh-pages
 	@cp -fr public/* .
