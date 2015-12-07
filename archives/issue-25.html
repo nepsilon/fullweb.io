@@ -1,0 +1,619 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+  <meta name="viewport" content="width=device-width">
+  <meta content="telephone=no" name="format-detection">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Fullweb Issue #25</title>
+  <meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png" />
+  <meta property="og:title" content="Fullweb Newsletter: Issue #25" />
+
+  <style type="text/css">
+      *{
+        margin:0;
+        padding:0;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        font-size:100%;
+        line-height:1.6;
+        box-sizing: border-box;
+      }
+      img{
+        max-width:100%;
+      }
+      body{
+        -webkit-font-smoothing:antialiased;
+        -webkit-text-size-adjust:none;
+        width:100%!important;
+        height:100%;
+      }
+      a{
+        color:#0079DF;
+        text-decoration:none;
+      }
+      code {
+        display: inline;
+        font-family: monospace;
+        background-color: #EBEBEB;
+        padding: 0 3px;
+        border-radius: 2px;
+        line-height: 1.25;
+       }
+       hr {
+        margin: 25px auto 25px;
+        color: #CCC;
+        background-color: #CCC;
+        height: 1px;
+        border: 0;
+        width: 75px;
+       }
+      .btn-primary,.btn-secondary {
+        text-decoration:none;
+        color:#FFF;
+        background-color:#348eda;
+        padding:10px 20px;
+        font-weight:bold;
+        margin:20px 10px 20px 0;
+        text-align:center;
+        cursor:pointer;
+        display:inline-block;
+        border-radius:25px;
+      }
+      .btn-secondary{
+        background:#aaa;
+      }
+      .last{
+        margin-bottom:0;
+      }
+      .first{
+        margin-top:0;
+      }
+      table.body-wrap{
+        width:100%;
+      }
+      table.body-wrap .container {
+        margin-top: 10px;
+      }
+      table.header-wrap,
+      table.footer-wrap{
+        width:100%;
+        clear:both!important;
+        background-color: #FCFCFA;
+      }
+      table.header-wrap {
+        border-bottom: 2px solid #FFDE00;
+      }
+      table.footer-wrap{
+        border-top: 2px solid #FFDE00;
+      }
+      .footer-wrap .container p{
+        font-size:12px;
+        color:#666;
+      }
+      table.footer-wrap a{
+        color:#999;
+      }
+      h1,h2,h3{
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        line-height:1.2;
+        margin-bottom:15px;
+        color:#333;
+        margin:0;
+        font-weight:500;
+      }
+      h1 {
+        font-size: 19px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 22px;
+        text-align: left;
+      }
+      h3, h3 a {
+        font-size: 19px;
+        margin-bottom: 0;
+      }
+      .link-section{
+        padding-bottom: 0;
+        font-family:Georgia, sans-serif;
+      }
+      .link-section h3 a {
+        display: inline-block;
+        font-size: 19px;
+        color: #1374DA;
+        line-height: 1.25;
+        text-decoration: none !important;
+      }
+      .link-section h3 {
+        text-decoration:underline;
+        line-height: 1.25;
+        font-family:Georgia, sans-serif;
+      }
+      .link-section p a {
+        color:#222;
+        text-decoration:none;
+        font-family:Georgia, sans-serif;
+        font-size: 15px;
+        display: block;
+        line-height: 1.5;
+      }
+      .link-section .link-desc .meta {
+        font-size: 13px;
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        color: #888;
+        text-transform: lowercase;
+      }
+      p,ul {
+        margin-bottom:25px;
+        font-weight:normal;
+        font-size:15px;
+      }
+      p {
+        margin-bottom:0;
+      }
+      ul li {
+        margin-left:5px;
+        list-style-position:inside;
+      }
+      .container{
+        display:block!important;
+        max-width:650px!important;
+        width:100%!important;
+        margin:0 auto!important;
+        clear:both!important;
+      }
+      .content,.header{
+        padding:20px;
+        max-width:650px;
+        width:100%!important;
+        margin:0 auto;
+        display:block;
+      }
+      .header {
+        padding: 0;
+      }
+      .header h3 {
+        font-size: 13px;
+        color: #515151;
+      }
+      .header p {
+        margin-bottom:10px;
+      }
+      .content {
+        padding-bottom: 0;
+        padding-left: 10px;
+      }
+      .content table {
+        width:100%;
+      }
+      sup {
+        font-size: 9px;
+        line-height: 0;
+      }
+      .code {
+        background-color: #202020;
+        padding: 10px;
+        font-family: Menlo, monospace;
+        margin-top: 3px;
+        color: #FFF;
+        border-radius: 2px;
+        line-height: 1.35;
+        font-size: 13px;
+      }
+      .code pre {
+        color: #FFF;
+        font-size: 13px;
+        font-family: Menlo, monospace;
+        line-height: 1.35;
+        display: block;
+      }
+      .code .comment {
+        color: #88888E;
+        font-size: 13px;
+        font-family: Menlo, monospace;
+        line-height: 1.35;
+        display: block;
+      }
+      .header-archive-links {
+        margin-top: 1em;
+        font-size: 15px;
+        color: #333;
+      }
+      .header-archive-links a {
+        font-size: 13px;
+        font-weight: 500;
+        color: #515151;
+      }
+      .badge {
+        background: #FFDE00;
+        color: #333;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 3px 12px;
+        display:inline-block;
+        margin-bottom: 25px;
+      }
+      .alert {
+        background-color: #ECECEC;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 2px;
+        font-size: 15px;
+      }
+      .author-line {
+        font-size: 12px;
+        color: #3A3A3A;
+        font-weight: 500;
+        display: inline-block;
+        padding: 0px 2px 1px;
+        background-color: #FFF089;
+        border-radius: 2px;
+      }
+  </style>
+
+  </head>
+
+<body bgcolor="#fff">
+<div style='opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px'>The top 5 fullstack links this week.</div>
+  <!-- header-wrap -->
+  <table class="header-wrap">
+    <tr>
+      <td class="container">
+        <!-- header -->
+        <div class="header" style='min-height: 150px;'>
+          <table style="width:100%">
+            <tr style="width:100%">
+              <td style="width:50%">
+                <h1>
+                  <img src='https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg?new' height='150' width='100' title='Fullweb Weekly' style="text-align:center;display:inline-block;border-left:3px solid #FCFCFA;box-sizing:content-box"/>
+                </h1>
+              </td>
+              <td style="width:50%; text-align:left;">
+                <h2 style='font-size: 18px;font-weight: 600;line-height:1.75;margin-bottom:0'>ISSUE #25</h2>
+                <h3>Tu&#8203;esday 8<sup>th</sup> Decembe&#8203;r 2&#8203;015</h3>
+                <div class='header-archive-links'>
+                  <a href='*|ARCHIVE|*' target='_blank'>View on the web</a>
+                  &thinsp;&middot;&thinsp;
+                  <a href='http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907' target='_blank'>Archives</a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- /header -->
+      </td>
+    </tr>
+  </table>
+
+<!--     <table class="body-wrap">   -->
+<!--       <tr>   -->
+<!--         <td class="container" bgcolor="#FFFFFF">   -->
+<!--           <div class="content">   -->
+<!--             <table>   -->
+<!--               <tr>   -->
+<!--                 <td>   -->
+<!--                   <div class='alert'>   -->
+<!--                     <h4 style='font-size: 19px; font-weight: 500; color: #333; margin-bottom: 0.5em;'>   -->
+<!--                     Add hi@fullweb.io to your contacts for a better experience -->
+<!--                     </h4>   -->
+<!--                     Some email clients will block the content when the sender is not in your contact list 😟 -->
+<!--                   </div>   -->
+<!--                 </td>   -->
+<!--               </tr>   -->
+<!--             </table>   -->
+<!--           </div>   -->
+<!--         </td>   -->
+<!--       </tr>   -->
+<!--     </table>   -->
+
+  <!-- body -->
+  <table class="body-wrap">
+    <tr>
+      <td class="container" bgcolor="#FFFFFF">
+
+        <!-- content -->
+        <div class="content" style="padding-top: 30px">
+
+        <div class='badge'>TOP 5 LINKS THIS WEEK</div>
+        <table>
+
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="https://www.djangoproject.com/weblog/2015/dec/01/django-19-released/">
+                      Django 1.9 has been released 🎉
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>djangoproject&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=Django 1.9 has been released&url=https://www.djangoproject.com/weblog/2015/dec/01/django-19-released/'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="https://www.djangoproject.com/weblog/2015/dec/01/django-19-released/">
+                      After 10 and a half months of development, the Django team is happy to announce the release of Django 1.9.
+                      </a>
+                      <a style='text-decoration:underline' href="http://php.net/archive/2015.php#id2015-12-03-1">PHP 7.0 is also out</a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>Suggested by </span>
+                      <a href='https://twitter.com/jbuty'>Julien Buty</a>, Director of Eng. at LLVision
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="http://www.sitepoint.com/dom-tips-techniques-parent-child-siblings/">
+                      7 DOM tips and techniques: Handling parent, child and siblings
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>sitepoint&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=7 DOM tips and techniques for handling parent, child and siblings&url=http://www.sitepoint.com/dom-tips-techniques-parent-child-siblings/'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="http://www.sitepoint.com/dom-tips-techniques-parent-child-siblings/">
+                      Always a good idea to pause the jQuery frenzy and to see how to do things via native DOM APIs. Especially as the browser support is getting better and better.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>From </span>
+                      <a href='https://twitter.com/ImpressiveWebs'>Louis Lazaris</a>, Developer and blogger
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="http://code.tutsplus.com/tutorials/html5-mastery-encoding--cms-24841">
+                      Understanding encoding in HTML5
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>tutsplus&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=Understanding encoding in HTML5&url=http://code.tutsplus.com/tutorials/html5-mastery-encoding--cms-24841'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="http://code.tutsplus.com/tutorials/html5-mastery-encoding--cms-24841">
+                      We all at some point had some funny characters in our web browsers. This article explains why and how to fix this.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>From </span>
+                      <a href='https://twitter.com/FlorianRappl'>Florian Rappl</a>, IT consultant
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="https://blog.8thlight.com/colin-jones/2015/12/01/ask-dtrace-why-are-my-tests-so-slow.html">
+                      Ask DTrace: Why are my tests so slow?
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>8thlight&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=Ask DTrace: Why are my tests so slow?&url=https://blog.8thlight.com/colin-jones/2015/12/01/ask-dtrace-why-are-my-tests-so-slow.html'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="https://blog.8thlight.com/colin-jones/2015/12/01/ask-dtrace-why-are-my-tests-so-slow.html">
+                      We were in pain. We'd just joined a new Rails project, and the test suite took over 10 minutes to run. I've seen worse, but that was before I knew anything about DTrace. I wanted to know why it was so slow, and what it'd take to make it fast.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>Suggested by </span>
+                      <a href='https://twitter.com/jbuty'>Julien Buty</a>, Director of Eng. at LLVision
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="http://scotthurff.com/posts/why-your-user-interface-is-awkward-youre-ignoring-the-ui-stack">
+                      How to fix a bad user interface
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>scotthurff&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=How to fix a bad user interface&url=http://scotthurff.com/posts/why-your-user-interface-is-awkward-youre-ignoring-the-ui-stack'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="http://scotthurff.com/posts/why-your-user-interface-is-awkward-youre-ignoring-the-ui-stack">
+                      An excerpt from the book Designing Products People Love, published by O’Reilly. Explaining the concept of UI stack.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>From </span>
+                      <a href='https://twitter.com/scotthurff'>Scott Hurff</a>, Product Manager at Tinder
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+        </div>
+
+        <!-- /content -->
+
+      </td>
+    </tr>
+  </table>
+
+  <br />
+  <table class="body-wrap">
+    <tr>
+      <td class="container" bgcolor="#FFFFFF">
+        <!-- content -->
+        <div class="content">
+
+          <table>
+
+            <!-- Tip of the week -->
+            <tr>
+              <td>
+                <span class='badge'>TIP OF THE WEEK</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h2>How to force <code>UNIQUE</code> on a combination of columns, with PostgreSQL?</h2>
+                <p style='margin-bottom:2px;margin-top:15px;line-height:1.45'>
+                Sometimes you want 2 columns to be <code>UNIQUE</code>, but together, not each on their side.
+                <br />
+                Here is how to add this constraint with PostgreSQL:
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class='code'>
+                  <span class='comment'>-- Given the following table:</span>
+                  <pre>
+CREATE TABLE t_word (
+  id serial primary key,
+  col1 int NOT NULL,
+  col2 int NOT NULL
+);
+                  </pre>
+                  <span class='comment'>-- Add UNIQUE constraint on </span>
+                  <span class='comment'>-- col1 + col2 with:</span>
+                  ALTER TABLE t_word ADD UNIQUE (col1, col2);
+                  <br />
+                  <br />
+                  <span class='comment'>-- Bonus: if they can't be NULL either</span>
+                  <span class='comment'>-- just make them a PRIMARY KEY with:</span>
+                  ALTER TABLE t_word ADD PRIMARY KEY (col1, col2);
+                  </div>
+                <p><strong>Star or fork this <a style='text-decoration: underline;' href='https://gist.github.com/nepsilon/00de8a339d0348a53b7c'>Gist on Github &raquo;</a></strong></p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style='text-align:center;  padding: 0 0 30px 0;'>
+              <br />
+              <br />
+                <strong style='font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;'>See you next week!</strong>
+              </td>
+            </tr>
+
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <!-- /body -->
+
+  <!-- footer -->
+  <table class="footer-wrap">
+    <tr>
+      <td class="container">
+
+        <!-- content -->
+        <div class="content" style='padding-top:10px'>
+          <table>
+            <tr>
+              <td align="center">
+                <p>💬<br />
+                  <strong> Got feedback? Just hit reply.</strong>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <p>
+                  <br>
+                  <a href="http://fullweb.io" target='_blank'>Website</a> &middot;
+                  <a href="https://twitter.com/fullwebio" target='_blank'>Follow on Twitter</a> &middot;
+                  <a href="https://www.facebook.com/fullwebio" target='_blank'>Follow on Facebook</a>
+                  <br /><br /><br />
+                  *|REWARDS|*
+                  <br /><br /><br />
+                  <a href="*|UNSUB|*">Unsubscribe</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </div><!-- /content -->
+
+      </td>
+    </tr>
+  </table>
+  <!-- /footer -->
+
+</body>
+</html>
