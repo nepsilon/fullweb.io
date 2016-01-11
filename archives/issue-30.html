@@ -1,0 +1,639 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+  <meta name="viewport" content="width=device-width">
+  <meta content="telephone=no" name="format-detection">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Fullweb Issue #30</title>
+  <meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png" />
+  <meta property="og:title" content="Fullweb Newsletter: Issue #30" />
+
+  <style type="text/css">
+      *{
+        margin:0;
+        padding:0;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        font-size:100%;
+        line-height:1.6;
+        box-sizing: border-box;
+      }
+      img{
+        max-width:100%;
+      }
+      body{
+        -webkit-font-smoothing:antialiased;
+        -webkit-text-size-adjust:none;
+        width:100%!important;
+        height:100%;
+      }
+      a{
+        color:#0079DF;
+        text-decoration:none;
+      }
+      code {
+        display: inline;
+        font-family: monospace;
+        background-color: #EBEBEB;
+        padding: 0 3px;
+        border-radius: 2px;
+        line-height: 1.25;
+       }
+       hr {
+        margin: 25px auto 25px;
+        color: #CCC;
+        background-color: #CCC;
+        height: 1px;
+        border: 0;
+        width: 75px;
+       }
+      .btn-primary,.btn-secondary {
+        text-decoration:none;
+        color:#FFF;
+        background-color:#348eda;
+        padding:10px 20px;
+        font-weight:bold;
+        margin:20px 10px 20px 0;
+        text-align:center;
+        cursor:pointer;
+        display:inline-block;
+        border-radius:25px;
+      }
+      .btn-secondary{
+        background:#aaa;
+      }
+      .last{
+        margin-bottom:0;
+      }
+      .first{
+        margin-top:0;
+      }
+      table.body-wrap{
+        width:100%;
+      }
+      table.body-wrap .container {
+        margin-top: 10px;
+      }
+      table.header-wrap,
+      table.footer-wrap{
+        width:100%;
+        clear:both!important;
+        background-color: #FCFCFA;
+      }
+      table.header-wrap {
+        border-bottom: 2px solid #FFDE00;
+      }
+      table.footer-wrap{
+        border-top: 2px solid #FFDE00;
+      }
+      .footer-wrap .container p{
+        font-size:12px;
+        color:#666;
+      }
+      table.footer-wrap a{
+        color:#999;
+      }
+      h1,h2,h3{
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        line-height:1.2;
+        margin-bottom:15px;
+        color:#333;
+        margin:0;
+        font-weight:500;
+      }
+      h1 {
+        font-size: 19px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 22px;
+        text-align: left;
+      }
+      h3, h3 a {
+        font-size: 19px;
+        margin-bottom: 0;
+      }
+      .link-section{
+        padding-bottom: 0;
+        font-family:Georgia, sans-serif;
+      }
+      .link-section h3 a {
+        display: inline-block;
+        font-size: 19px;
+        color: #1374DA;
+        line-height: 1.25;
+        text-decoration: none !important;
+      }
+      .link-section h3 {
+        text-decoration:underline;
+        line-height: 1.25;
+        font-family:Georgia, sans-serif;
+      }
+      .link-section p a {
+        color:#222;
+        text-decoration:none;
+        font-family:Georgia, sans-serif;
+        font-size: 15px;
+        display: block;
+        line-height: 1.5;
+      }
+      .link-section .link-desc .meta {
+        font-size: 13px;
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        color: #888;
+        text-transform: lowercase;
+      }
+      p,ul {
+        margin-bottom:25px;
+        font-weight:normal;
+        font-size:15px;
+      }
+      p {
+        margin-bottom:0;
+      }
+      ul li {
+        margin-left:5px;
+        list-style-position:inside;
+      }
+      .container{
+        display:block!important;
+        max-width:650px!important;
+        width:100%!important;
+        margin:0 auto!important;
+        clear:both!important;
+      }
+      .content,.header{
+        padding:20px;
+        max-width:650px;
+        width:100%!important;
+        margin:0 auto;
+        display:block;
+      }
+      .header {
+        padding: 0;
+      }
+      .header h3 {
+        font-size: 13px;
+        color: #515151;
+      }
+      .header p {
+        margin-bottom:10px;
+      }
+      .content {
+        padding-bottom: 0;
+        padding-left: 10px;
+      }
+      .content table {
+        width:100%;
+      }
+      sup {
+        font-size: 9px;
+        line-height: 0;
+      }
+      .code {
+        background-color: #202020;
+        padding: 10px;
+        font-family: Menlo, monospace;
+        margin-top: 3px;
+        color: #FFF;
+        border-radius: 2px;
+        line-height: 1.35;
+        font-size: 13px;
+      }
+      .code pre {
+        color: #FFF;
+        font-size: 13px;
+        font-family: Menlo, monospace;
+        line-height: 1.35;
+        display: block;
+      }
+      .code .comment {
+        color: #88888E;
+        font-size: 13px;
+        font-family: Menlo, monospace;
+        line-height: 1.35;
+        display: block;
+      }
+      .header-archive-links {
+        margin-top: 1em;
+        font-size: 15px;
+        color: #333;
+      }
+      .header-archive-links a {
+        font-size: 13px;
+        font-weight: 500;
+        color: #515151;
+      }
+      .badge {
+        background: #FFDE00;
+        color: #333;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 3px 12px;
+        display:inline-block;
+        margin-bottom: 25px;
+      }
+      .alert {
+        background-color: #ECECEC;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 2px;
+        font-size: 15px;
+      }
+      .author-line {
+        font-size: 12px;
+        color: #3A3A3A;
+        font-weight: 500;
+        display: inline-block;
+        padding: 0px 2px 1px;
+        background-color: #FFF089;
+        border-radius: 2px;
+      }
+  </style>
+
+  </head>
+
+<body bgcolor="#fff">
+<div style='opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px'>The top 5 fullstack links this week.</div>
+  <!-- header-wrap -->
+  <table class="header-wrap">
+    <tr>
+      <td class="container">
+        <!-- header -->
+        <div class="header" style='min-height: 150px;'>
+          <table style="width:100%">
+            <tr style="width:100%">
+              <td style="width:50%">
+                <h1>
+                  <img src='https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg?new' height='150' width='100' title='Fullweb Weekly' style="text-align:center;display:inline-block;border-left:3px solid #FCFCFA;box-sizing:content-box"/>
+                </h1>
+              </td>
+              <td style="width:50%; text-align:left;">
+                <h2 style='font-size: 18px;font-weight: 600;line-height:1.75;margin-bottom:0'>ISSUE #30</h2>
+                <h3>Tu&#8203;esday 12<sup>th</sup> Januar&#8203;y 2&#8203;016</h3>
+                <div class='header-archive-links'>
+                  <a href='*|ARCHIVE|*' target='_blank'>View on the web</a>
+                  &thinsp;&middot;&thinsp;
+                  <a href='http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907' target='_blank'>Archives</a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- /header -->
+      </td>
+    </tr>
+  </table>
+
+<!--       <table class="body-wrap"> -->
+<!--         <tr> -->
+<!--           <td class="container" bgcolor="#FFFFFF"> -->
+<!--             <div class="content"> -->
+<!--               <table> -->
+<!--                 <tr> -->
+<!--                   <td> -->
+<!--                     <div class=''> -->
+<!--                       <h4 style='font-size: 19px; font-weight: 500; color: #333; margin-bottom: 0.5em;'> -->
+<!--                       Happy new year to you! -->
+<!--                       </h4> -->
+<!--                       This is the first issue of 2016 and I wanted to be sure to wish you a new year full of great and bug-free code 😀 -->
+<!--                       <br /> -->
+<!--                       <span style='color:#555'>&mdash; Julien</span> -->
+<!--                     </div> -->
+<!--                   </td> -->
+<!--                 </tr> -->
+<!--               </table> -->
+<!--               <hr /> -->
+<!--             </div> -->
+<!--           </td> -->
+<!--         </tr> -->
+<!--       </table> -->
+
+  <!-- body -->
+  <table class="body-wrap">
+    <tr>
+      <td class="container" bgcolor="#FFFFFF">
+
+        <!-- content -->
+        <div class="content" style="padding-top: 30px">
+
+        <div class='badge'>TOP 5 LINKS THIS WEEK</div>
+        <table>
+
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support">
+                      End of support for Internet Explorer 10 and older 🎉
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>microsoft&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=End of support for Internet Explorer 10 and older&url=https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support">
+                      THE link to show to your boss, client or anybody asking you to support IE 10 or older.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>Suggested by </span>
+                      <a href='https://twitter.com/jbuty'>Julien Buty</a>, Director of Eng. at LLVision
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="http://www.postgresql.org/about/news/1636/">
+                      PostgreSQL 9.5 released: UPSERT, row level security and big data
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>postgresql&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=PostgreSQL 9.5 released: UPSERT, row level security and big data&url=http://www.postgresql.org/about/news/1636/'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="http://www.postgresql.org/about/news/1636/">
+                      UPSERT: A most-requested feature, is shorthand for "INSERT, ON CONFLICT UPDATE", allowing new and updated rows to be treated the same. UPSERT simplifies web and mobile application development by enabling the database to handle conflicts between concurrent data changes.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>Suggested by </span>
+                      <a href='https://twitter.com/jbuty'>Julien Buty</a>, Director of Eng. at LLVision
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="http://blog.andrebarbosa.co/upsert-on-postgres-9-5/">
+                      How to use UPSERT on Postgres 9.5 in practice
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>andrebarbosa&#8203;.co</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=How to use UPSERT on Postgres 9.5 in practice&url=http://blog.andrebarbosa.co/upsert-on-postgres-9-5/'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="http://blog.andrebarbosa.co/upsert-on-postgres-9-5/">
+                      UPSERT allows you to perform an action like "create or update" in a very easy and thread safe manner.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>From </span>
+                      <a href='https://twitter.com/AndreBarbosa88'>André Barbosa</a>, Head of Platform at Fling.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="http://us4.campaign-archive2.com/?u=9735795484d2e4c204da82a29&id=22fde1c28d&e=1c81d7b3e1">
+                      Top Python projects, tools and articles for 2015
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>pycoders&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=Top Python projects, tools and articles for 2015&url=http://us4.campaign-archive2.com/?u=9735795484d2e4c204da82a29&id=22fde1c28d&e=1c81d7b3e1'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="http://us4.campaign-archive2.com/?u=9735795484d2e4c204da82a29&id=22fde1c28d&e=1c81d7b3e1">
+                      The top Python projects, tools and articles for 2015 curated by our friends at PyCoder Weekly.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>Suggested by </span>
+                      <a href='https://twitter.com/jbuty'>Julien Buty</a>, Director of Eng. at LLVision
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="https://developer.atlassian.com/blog/2016/01/git-2.7-release/">
+                      Neat new features in Git 2.7
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>atlassian&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=Neat new features in Git 2.7&url=https://developer.atlassian.com/blog/2016/01/git-2.7-release/'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="https://developer.atlassian.com/blog/2016/01/git-2.7-release/">
+                      Better <code>.gitignore</code>, <code>git stash</code> improvement, <code>worktree</code> now has a <code>list</code> command, <code>filter-branch</code> gained speed and more!
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>From </span>
+                      <a href='https://twitter.com/kannonboy'>Tim Pettersen</a>, Developer Relation at Atlassian
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+        </div>
+
+        <!-- /content -->
+
+      </td>
+    </tr>
+  </table>
+
+  <br />
+  <table class="body-wrap">
+    <tr>
+      <td class="container" bgcolor="#FFFFFF">
+        <!-- content -->
+        <div class="content">
+
+          <table>
+
+            <!-- Tip of the week -->
+            <tr>
+              <td>
+                <span class='badge'>TIP OF THE WEEK</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h2>How to merge commits in Git?</h2>
+                <p style='margin-bottom:2px;margin-top:15px;line-height:1.45'>
+                Sometimes, you commit something and realize it needs some more fixing, and then some more. Resulting in 3 or more commits for the same task.<br />You like to keep your <code>git log</code> clean and want to merge your commits.
+                Here is how to do just that:
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class='code'>
+                  <span class='comment'># Suppose we have this history:</span>
+                  $ git log --oneline
+                  <br />
+                  2750b94 Finally fix bug #84.
+                  <br />
+                  da52aaa Fix bug #84.
+                  <br />
+                  31f5476 Fixing bug #84.
+                  <br />
+                  <br />
+                  <span class='comment'># We enter rebasing with:</span>
+                  git rebase --interactive HEAD~3
+                  <span class='comment'># HEAD~3 says from HEAD include 3 commits</span>
+                  <br />
+                  <span class='comment'># Our editor will open with:</span>
+                  pick 31f5476 Fixing bug #84.
+                  <br />
+                  pick da52aaa Fix bug #84.
+                  <br />
+                  pick 2750b94 Finally fix bug #84.
+                  <br />
+                  <br />
+                  <span class='comment'># Update the file as follow:</span>
+                  pick &nbsp; 31f5476 Fixing bug #84.
+                  <br />
+                  squash da52aaa Fix bug #84.
+                  <br />
+                  squash 2750b94 Finally fix bug #84.
+                  <span class='comment'># Now quit and save,</span>
+                  <span class='comment'># you will be prompted to enter a new commit message.</span>
+                  <br />
+                  <span class='comment'># Your new log history will be:</span>
+                  $ git log --oneline
+                  <br />
+                  38c0f13 Your new commit message about bug #84.
+                </div>
+                <p><strong>Star or fork this <a style='text-decoration: underline;' href='https://gist.github.com/nepsilon/87730346f618cdc6d1d8'>Gist on Github &raquo;</a></strong></p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style='text-align:center;  padding: 0 0 30px 0;'>
+              <br />
+              <br />
+                <strong style='font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;'>See you next week!</strong>
+              </td>
+            </tr>
+
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <!-- /body -->
+
+  <!-- footer -->
+  <table class="footer-wrap">
+    <tr>
+      <td class="container">
+
+        <!-- content -->
+        <div class="content" style='padding-top:10px'>
+          <table>
+            <tr>
+              <td align="center">
+                <p>💬<br />
+                  <strong> Got feedback? Just hit reply.</strong>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <p>
+                  <br>
+                  <a href="http://fullweb.io" target='_blank'>Website</a> &middot;
+                  <a href="https://twitter.com/fullwebio" target='_blank'>Follow us on Twitter</a> &middot;
+                  <a href="https://www.facebook.com/fullwebio" target='_blank'>Like us on Facebook</a>
+                  <br /><br /><br />
+                  *|REWARDS|*
+                  <br /><br /><br />
+                  <a href="*|UNSUB|*">Unsubscribe</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </div><!-- /content -->
+
+      </td>
+    </tr>
+  </table>
+  <!-- /footer -->
+
+</body>
+</html>
