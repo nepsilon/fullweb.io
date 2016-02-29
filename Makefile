@@ -29,13 +29,13 @@ jade:
 
 
 build: jade
-	@$(BINS)/minify public/index.html > public/index.min.html
-	@cat public/html-banner.txt public/index.min.html > public/index.html
-	@rm public/index.min.html
-	@$(BINS)/minify public/thanks.html > public/thanks.min.html
-	@cat public/html-banner.txt public/thanks.min.html > public/thanks.html
-	@rm public/thanks.min.html
-	@echo ">>> BUILD COMPLETE --------------------"
+#	@$(BINS)/minify public/index.html > public/index.min.html
+#	@cat public/html-banner.txt public/index.min.html > public/index.html
+#	@rm public/index.min.html
+#	@$(BINS)/minify public/thanks.html > public/thanks.min.html
+#	@cat public/html-banner.txt public/thanks.min.html > public/thanks.html
+#	@rm public/thanks.min.html
+#	@echo ">>> BUILD COMPLETE --------------------"
 
 
 issue:
