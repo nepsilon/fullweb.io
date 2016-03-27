@@ -58,7 +58,6 @@ block scripts
             cache: false,
             contentType: 'application/json; charset=utf-8',
             success: function (data, xhr, status) {
-              _gaq.push(['_trackPageview', '/ajax-contactForm/SUBSCRIBED.html']);
               if (data && data.result === 'success') {
                 $SUBS_BOX.get(0).className = 'hide'
                 setTimeout(function() {
@@ -73,6 +72,8 @@ block scripts
               $SUBS_BOX.disabled = '';
               $('#subscribe-box legend').text('Join 1,256 fullstack developers:');
               $E.value = ''
+              try { ga.push(['_trackPageview', '/ajax-contactForm/SUBSCRIBED.html']) }
+              catch (e) {}
             }
           });
         }
