@@ -1026,6 +1026,7 @@
           $B.get(0).className = 'btn processing';
           $SUBS_BOX.disabled = 'disabled';
           $('#subscribe-box legend').text('Talking to a computer...');
+          console.log('ok', $F.serialize());
           $.ajax({
             type: 'get',
             url: "//newsletter.us11.list-manage.com/subscribe/post-json?u=8e9d09ec89c0c4ededef3beab&id=b98e776907&c=?",
@@ -1043,13 +1044,12 @@
                 }, 500);
               }
               else {
+                console.log('hmm', xhr);
               }
               $B.get(0).className = 'btn';
               $SUBS_BOX.disabled = '';
               $('#subscribe-box legend').text('Join 1,256 fullstack developers:');
-              $E.value = ''
-              //try { ga.push(['_trackPageview', '/ajax-contactForm/SUBSCRIBED.html']) }
-              //catch (e) {}
+              $E.value = '';
             }
           });
         }
