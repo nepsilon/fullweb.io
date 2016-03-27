@@ -143,12 +143,6 @@
   bold {
     font-weight: 600;
   }
-  @font-face {
-    font-family: 'Satisfy';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Satisfy'), url("http://fonts.gstatic.com/l/font?kit=tcv0Aibm9As-KQnUe452nwHXwqeCHOyb2YcW-2ByC3g&skey=b02738efc6e9caf3") format('truetype');
-  }
   body {
     font: 400 0.9375rem/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
