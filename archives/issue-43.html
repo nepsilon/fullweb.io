@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+  <meta name="viewport" content="width=device-width">
+  <meta content="telephone=no" name="format-detection">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Fullweb Issue #43</title>
+  <meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png" />
+  <meta property="og:title" content="Fullweb Newsletter: Issue #43" />
+
+  <style type="text/css">
+      *{
+        margin:0;
+        padding:0;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        font-size:100%;
+        line-height:1.6;
+        box-sizing: border-box;
+      }
+      img{
+        max-width:100%;
+      }
+      body{
+        -webkit-font-smoothing:antialiased;
+        -webkit-text-size-adjust:none;
+        width:100%!important;
+        height:100%;
+      }
+      a{
+        color:#0079DF;
+        text-decoration:none;
+      }
+      code {
+        display: inline;
+        font-family: monospace;
+        background-color: #EBEBEB;
+        padding: 0 3px;
+        border-radius: 2px;
+        line-height: 1.25;
+       }
+       hr {
+        margin: 25px auto 25px;
+        color: #CCC;
+        background-color: #CCC;
+        height: 1px;
+        border: 0;
+        width: 75px;
+       }
+      .btn-primary,.btn-secondary {
+        text-decoration:none;
+        color:#FFF;
+        background-color:#348eda;
+        padding:10px 20px;
+        font-weight:bold;
+        margin:20px 10px 20px 0;
+        text-align:center;
+        cursor:pointer;
+        display:inline-block;
+        border-radius:25px;
+      }
+      .btn-secondary{
+        background:#aaa;
+      }
+      .last{
+        margin-bottom:0;
+      }
+      .first{
+        margin-top:0;
+      }
+      table.body-wrap{
+        width:100%;
+      }
+      table.body-wrap .container {
+        margin-top: 10px;
+      }
+      table.header-wrap,
+      table.footer-wrap{
+        width:100%;
+        clear:both!important;
+        background-color: #FCFCFA;
+      }
+      table.header-wrap {
+        border-bottom: 2px solid #FFDE00;
+      }
+      table.footer-wrap{
+        border-top: 2px solid #FFDE00;
+      }
+      .footer-wrap .container p{
+        font-size:12px;
+        color:#666;
+      }
+      table.footer-wrap a{
+        color:#999;
+      }
+      h1,h2,h3{
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        line-height:1.2;
+        margin-bottom:15px;
+        color:#333;
+        margin:0;
+        font-weight:500;
+      }
+      h1 {
+        font-size: 19px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 22px;
+        text-align: left;
+      }
+      h3, h3 a {
+        font-size: 19px;
+        margin-bottom: 0;
+      }
+      .link-section{
+        padding-bottom: 0;
+        font-family:Georgia, sans-serif;
+      }
+      .link-section h3 a {
+        display: inline-block;
+        font-size: 19px;
+        color: #1374DA;
+        line-height: 1.25;
+        text-decoration: none !important;
+      }
+      .link-section h3 {
+        text-decoration:underline;
+        line-height: 1.25;
+        font-family:Georgia, sans-serif;
+      }
+      .link-section p a {
+        color:#222;
+        text-decoration:none;
+        font-family:Georgia, sans-serif;
+        font-size: 15px;
+        display: block;
+        line-height: 1.5;
+      }
+      .link-section .link-desc .meta {
+        font-size: 13px;
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        color: #888;
+        text-transform: lowercase;
+      }
+      p,ul {
+        margin-bottom:25px;
+        font-weight:normal;
+        font-size:15px;
+      }
+      p {
+        margin-bottom:0;
+      }
+      ul li {
+        margin-left:5px;
+        list-style-position:inside;
+      }
+      .container{
+        display:block!important;
+        max-width:650px!important;
+        width:100%!important;
+        margin:0 auto!important;
+        clear:both!important;
+      }
+      .content,.header{
+        padding:20px;
+        max-width:650px;
+        width:100%!important;
+        margin:0 auto;
+        display:block;
+      }
+      .header {
+        padding: 0;
+      }
+      .header h3 {
+        font-size: 13px;
+        color: #515151;
+      }
+      .header p {
+        margin-bottom:10px;
+      }
+      .content {
+        padding-bottom: 0;
+        padding-left: 10px;
+      }
+      .content table {
+        width:100%;
+      }
+      sup {
+        font-size: 9px;
+        line-height: 0;
+      }
+      .code {
+        background-color: #202020;
+        padding: 10px;
+        font-family: Menlo, monospace;
+        margin-top: 3px;
+        color: #FFF;
+        border-radius: 2px;
+        line-height: 1.35;
+        font-size: 13px;
+      }
+      .code pre {
+        color: #FFF;
+        font-size: 13px;
+        font-family: Menlo, monospace;
+        line-height: 1.35;
+        display: block;
+      }
+      .code .comment {
+        color: #88888E;
+        font-size: 13px;
+        font-family: Menlo, monospace;
+        line-height: 1.35;
+        display: block;
+      }
+      .header-archive-links {
+        margin-top: 1em;
+        font-size: 15px;
+        color: #333;
+      }
+      .header-archive-links a {
+        font-size: 13px;
+        font-weight: 500;
+        color: #515151;
+      }
+      .badge {
+        background: #FFDE00;
+        color: #333;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 3px 12px;
+        display:inline-block;
+        margin-bottom: 25px;
+      }
+      .alert {
+        background-color: #ECECEC;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 2px;
+        font-size: 15px;
+      }
+      .author-line {
+        font-size: 12px;
+        color: #3A3A3A;
+        font-weight: 500;
+        display: inline-block;
+        padding: 0px 2px 1px;
+        background-color: #FFF089;
+        border-radius: 2px;
+      }
+  </style>
+
+  </head>
+
+<body bgcolor="#fff">
+<div style='opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px'>The top 5 fullstack links this week.</div>
+  <!-- header-wrap -->
+  <table class="header-wrap">
+    <tr>
+      <td class="container">
+        <!-- header -->
+        <div class="header" style='min-height: 150px;'>
+          <table style="width:100%">
+            <tr style="width:100%">
+              <td style="width:50%">
+                <h1>
+                  <img src='https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg?new' height='150' width='100' title='Fullweb Weekly' style="text-align:center;display:inline-block;border-left:3px solid #FCFCFA;box-sizing:content-box"/>
+                </h1>
+              </td>
+              <td style="width:50%; text-align:left;">
+                <h2 style='font-size: 18px;font-weight: 600;line-height:1.75;margin-bottom:0'>ISSUE #43</h2>
+                <h3>Tu&#8203;esday 12<sup>th</sup> Apri&#8203;l 2&#8203;016</h3>
+                <div class='header-archive-links'>
+                  <a href='*|ARCHIVE|*' target='_blank'>View on the web</a>
+                  &thinsp;&middot;&thinsp;
+                  <a href='http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907' target='_blank'>Archives</a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- /header -->
+      </td>
+    </tr>
+  </table>
+
+  <table class="body-wrap">
+    <tr>
+      <td class="container" bgcolor="#FFFFFF">
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div>
+                  Hi folks! 🙌
+                  <div style='height:.5rem'></div>
+                  Lots of things happened this last week. <a href='https://blog.whatsapp.com/10000618/end-to-end-encryption'>WhatsApp turned on end-to-end encryption</a> for all its users, <a href='https://pages.gitlab.io/'>GitLab added static pages</a> generator, Github now finally supports <a href='https://github.com/blog/2144-gpg-signature-verification'>GPG signature verification</a> and you can now get your <a href='https://davidwalsh.name/get-weather-command-line'>weather info from the CLI</a> 🙃 .
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style='height:.5rem'></div>
+                As always, feel free to forward this email to your dev friends if you liked it! 
+              </td>
+            </tr>
+          </table>
+          <hr />
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <!-- body -->
+  <table class="body-wrap">
+    <tr>
+      <td class="container" bgcolor="#FFFFFF">
+
+        <!-- content -->
+        <div class="content" style="padding-top: 20px">
+
+        <div class='badge'>TOP 5 LINKS THIS WEEK</div>
+        <table>
+
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work">
+                      Git tools: Signing your work
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>git-scm&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=Git Tools - Signing Your Work&url=https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work">
+                      Now that Github supports GPG signature verification it’s time to remember how to use this great feature of Git.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>Suggested by </span>
+                      <a href='https://github.com/nepsilon/'>Julien Buty</a>, Director of Engineering at LLVision
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="https://www.smashingmagazine.com/2016/04/web-developer-guide-color/">
+                      A simple Web developer’s guide to color
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>smashingmagazine&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=A Simple Web Developer’s Guide To Color&url=https://www.smashingmagazine.com/2016/04/web-developer-guide-color/'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="https://www.smashingmagazine.com/2016/04/web-developer-guide-color/">
+                       Introducing you to a simple color workflow that you can use in your next web project.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>From </span>
+                      <a href='http://www.lauraelizabeth.co/'>Laura Elizabeth</a>, Independent Designer
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="https://m.signalvnoise.com/being-tired-isn-t-a-badge-of-honor-fa6d4c8cff4e">
+                      Being tired isn’t a badge of honor
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>signalvnoise&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=Being tired isn’t a badge of honor&url=https://m.signalvnoise.com/being-tired-isn-t-a-badge-of-honor-fa6d4c8cff4e'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="https://m.signalvnoise.com/being-tired-isn-t-a-badge-of-honor-fa6d4c8cff4e">
+                      In the long run, work is not more important than sleep. If you aren’t sure how important sleep is, think about this: You’ll die faster without sleep than you will without food.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>From </span>
+                      <a href='https://twitter.com/jasonfried'>Jason Fried</a>, Founder &amp; CEO at Basecamp
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="https://github.com/nficano/python-lambda">
+                      A toolkit to develop+deploy serverless Python code to AWS Lambda 🐍
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>github&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=A toolkit for developing and deploying serverless Python code in AWS Lambda&url=https://github.com/nficano/python-lambda'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="https://github.com/nficano/python-lambda">
+                      AWS Lambda is a service that allows you to write Python, Java, or Node.js code that gets executed in response to events like http requests or files uploaded to S3.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>From </span>
+                      <a href='https://github.com/nficano'>Nick Ficano</a>, Python Developer
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="http://webkay.robinlinus.com/">
+                      See what your browser knows about you: 😱
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>robinlinus&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=What every Browser knows about you&url=http://webkay.robinlinus.com/'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="http://webkay.robinlinus.com/">
+                      This is a demonstration of all the data your browser knows about you. All this data can be accessed by any website without asking you for any permission.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>From </span>
+                      <a href='https://twitter.com/robin_linus'>Robin Linus</a>, Entrepreneur, Javascript Enthusiast
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+        </div>
+        <!-- /content -->
+      </td>
+    </tr>
+  </table>
+
+  <br />
+  <table class="body-wrap">
+    <tr>
+      <td class="container" bgcolor="#FFFFFF">
+        <!-- content -->
+        <div class="content">
+
+          <table>
+
+            <!-- Tip of the week -->
+            <tr>
+              <td>
+                <span class='badge'>TIP OF THE WEEK</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h2>CLI: Output the difference between 2 files</h2>
+                <p style='margin-bottom:2px;margin-top:15px;line-height:1.45'>
+                Thinking of using <code>diff</code>? Try <code>comm</code>, its sole purpose is to compare 2 sorted files line by line.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class='code'>
+                  <span class='comment'># Show lines in A.txt</span>
+                  <span class='comment'># but NOT in B.txt:</span>
+                  $ comm -2 -3 A.txt B.txt
+                  <span class='comment'># If the files aren’t sorted, use:</span>
+                  $ comm -2 -3 &lt;(sort A.txt) &lt;(sort B.txt)
+                  <br />
+                  <br />
+                  <span class='comment'># Show lines in B.txt</span>
+                  <span class='comment'># but NOT in A.txt:</span>
+                  $ comm -2 -3 B.txt A.txt
+                  <br />
+                  <br />
+                  <span class='comment'># BONUS:</span>
+                  <span class='comment'># Show lines in both files (UNION):</span>
+                  $ comm -1 A.txt B.txt
+                </div>
+                <p><strong>Star or fork this <a style='text-decoration: underline;' href='https://gist.github.com/nepsilon/4abe1d3325eaee4264e3c61463d4e859'>Gist on Github &raquo;</a></strong></p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style='text-align:center;  padding: 0 0 30px 0;'>
+              <br />
+              <br />
+                <strong style='font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;'>All the best and see you next week!</strong>
+                <br />
+                <strong style='font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;'>— Julien</strong>
+              </td>
+            </tr>
+
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <!-- /body -->
+
+  <!-- footer -->
+  <table class="footer-wrap">
+    <tr>
+      <td class="container">
+
+        <!-- content -->
+        <div class="content" style='padding-top:10px'>
+          <table>
+            <tr>
+              <td align="center">
+                <p>💬<br />
+                  <strong> Got feedback? Just hit reply.</strong>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <p>
+                  <br>
+                  <a href="http://fullweb.io" target='_blank'>Website</a> &middot;
+                  <a href="https://twitter.com/fullwebio" target='_blank'>Follow us on Twitter</a> &middot;
+                  <a href="https://www.facebook.com/fullwebio" target='_blank'>Like us on Facebook</a>
+                  <br /><br /><br />
+                  *|REWARDS|*
+                  <br /><br /><br />
+                  <a href="*|UNSUB|*">Unsubscribe</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </div><!-- /content -->
+
+      </td>
+    </tr>
+  </table>
+  <!-- /footer -->
+
+</body>
+</html>
