@@ -1,0 +1,642 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+  <meta name="viewport" content="width=device-width">
+  <meta content="telephone=no" name="format-detection">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Fullweb Issue #46</title>
+  <meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png" />
+  <meta property="og:title" content="Fullweb Newsletter: Issue #46" />
+
+  <style type="text/css">
+      *{
+        margin:0;
+        padding:0;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        font-size:100%;
+        line-height:1.6;
+        box-sizing: border-box;
+      }
+      img{
+        max-width:100%;
+      }
+      body{
+        -webkit-font-smoothing:antialiased;
+        -webkit-text-size-adjust:none;
+        width:100%!important;
+        height:100%;
+      }
+      a{
+        color:#0079DF;
+        text-decoration:none;
+      }
+      code {
+        display: inline;
+        font-family: monospace;
+        background-color: #EBEBEB;
+        padding: 0 3px;
+        border-radius: 2px;
+        line-height: 1.25;
+       }
+       hr {
+        margin: 25px auto 25px;
+        color: #CCC;
+        background-color: #CCC;
+        height: 1px;
+        border: 0;
+        width: 75px;
+       }
+      .btn-primary,.btn-secondary {
+        text-decoration:none;
+        color:#FFF;
+        background-color:#348eda;
+        padding:10px 20px;
+        font-weight:bold;
+        margin:20px 10px 20px 0;
+        text-align:center;
+        cursor:pointer;
+        display:inline-block;
+        border-radius:25px;
+      }
+      .btn-secondary{
+        background:#aaa;
+      }
+      .last{
+        margin-bottom:0;
+      }
+      .first{
+        margin-top:0;
+      }
+      table.body-wrap{
+        width:100%;
+      }
+      table.body-wrap .container {
+        margin-top: 10px;
+      }
+      table.header-wrap,
+      table.footer-wrap{
+        width:100%;
+        clear:both!important;
+        background-color: #FCFCFA;
+      }
+      table.header-wrap {
+        border-bottom: 2px solid #FFDE00;
+      }
+      table.footer-wrap{
+        border-top: 2px solid #FFDE00;
+      }
+      .footer-wrap .container p{
+        font-size:12px;
+        color:#666;
+      }
+      table.footer-wrap a{
+        color:#999;
+      }
+      h1,h2,h3{
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        line-height:1.2;
+        margin-bottom:15px;
+        color:#333;
+        margin:0;
+        font-weight:500;
+      }
+      h1 {
+        font-size: 19px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 22px;
+        text-align: left;
+      }
+      h3, h3 a {
+        font-size: 19px;
+        margin-bottom: 0;
+      }
+      .link-section{
+        padding-bottom: 0;
+        font-family:Georgia, sans-serif;
+      }
+      .link-section h3 a {
+        display: inline-block;
+        font-size: 19px;
+        color: #1374DA;
+        line-height: 1.25;
+        text-decoration: none !important;
+      }
+      .link-section h3 {
+        text-decoration:underline;
+        line-height: 1.25;
+        font-family:Georgia, sans-serif;
+      }
+      .link-section p a {
+        color:#222;
+        text-decoration:none;
+        font-family:Georgia, sans-serif;
+        font-size: 15px;
+        display: block;
+        line-height: 1.5;
+      }
+      .link-section .link-desc .meta {
+        font-size: 13px;
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        color: #888;
+        text-transform: lowercase;
+      }
+      p,ul {
+        margin-bottom:25px;
+        font-weight:normal;
+        font-size:15px;
+      }
+      p {
+        margin-bottom:0;
+      }
+      ul li {
+        margin-left:5px;
+        list-style-position:inside;
+      }
+      .container{
+        display:block!important;
+        max-width:650px!important;
+        width:100%!important;
+        margin:0 auto!important;
+        clear:both!important;
+      }
+      .content,.header{
+        padding:20px;
+        max-width:650px;
+        width:100%!important;
+        margin:0 auto;
+        display:block;
+      }
+      .header {
+        padding: 0;
+      }
+      .header h3 {
+        font-size: 13px;
+        color: #515151;
+      }
+      .header p {
+        margin-bottom:10px;
+      }
+      .content {
+        padding-bottom: 0;
+        padding-left: 10px;
+      }
+      .content table {
+        width:100%;
+      }
+      sup {
+        font-size: 9px;
+        line-height: 0;
+      }
+      .code {
+        background-color: #202020;
+        padding: 10px;
+        font-family: Menlo, monospace;
+        margin-top: 3px;
+        color: #FFF;
+        border-radius: 2px;
+        line-height: 1.35;
+        font-size: 13px;
+        padding-left: 5px;
+      }
+      .code pre {
+        color: #FFF;
+        font-size: 13px;
+        font-family: Menlo, monospace;
+        line-height: 1.35;
+        display: block;
+        white-space: pre-wrap;
+      }
+      .code .comment {
+        color: #88888E;
+        font-size: 13px;
+        font-family: Menlo, monospace;
+        line-height: 1.35;
+        display: block;
+      }
+      .header-archive-links {
+        margin-top: 1em;
+        font-size: 15px;
+        color: #333;
+      }
+      .header-archive-links a {
+        font-size: 13px;
+        font-weight: 500;
+        color: #515151;
+      }
+      .badge {
+        background: #FFDE00;
+        color: #333;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 3px 12px;
+        display:inline-block;
+        margin-bottom: 25px;
+      }
+      .alert {
+        background-color: #ECECEC;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 2px;
+        font-size: 15px;
+      }
+      .author-line {
+        font-size: 12px;
+        color: #3A3A3A;
+        font-weight: 500;
+        display: inline-block;
+        padding: 0px 2px 1px;
+        background-color: #FFF089;
+        border-radius: 2px;
+      }
+  </style>
+
+  </head>
+
+<body bgcolor="#fff">
+<div style='opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px'>The top 5 fullstack links this week.</div>
+  <!-- header-wrap -->
+  <table class="header-wrap">
+    <tr>
+      <td class="container">
+        <!-- header -->
+        <div class="header" style='min-height: 150px;'>
+          <table style="width:100%">
+            <tr style="width:100%">
+              <td style="width:50%">
+                <h1>
+                  <img src='https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg?new' height='150' width='100' title='Fullweb Weekly' style="text-align:center;display:inline-block;border-left:3px solid #FCFCFA;box-sizing:content-box"/>
+                </h1>
+              </td>
+              <td style="width:50%; text-align:left;">
+                <h2 style='font-size: 18px;font-weight: 600;line-height:1.75;margin-bottom:0'>ISSUE #46</h2>
+                <h3>Tu&#8203;esday 3<sup>rd</sup> Ma&#8203;y 2&#8203;016</h3>
+                <div class='header-archive-links'>
+                  <a href='*|ARCHIVE|*' target='_blank'>View on the web</a>
+                  &thinsp;&middot;&thinsp;
+                  <a href='http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907' target='_blank'>Archives</a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- /header -->
+      </td>
+    </tr>
+  </table>
+
+<!--   <table class="body-wrap"> -->
+<!--     <tr> -->
+<!--       <td class="container" bgcolor="#FFFFFF"> -->
+<!--         <div class="content"> -->
+<!--           <table> -->
+<!--             <tr> -->
+<!--               <td> -->
+<!--                 <div> -->
+<!--                   Hi folks! 🙌 -->
+<!--                   <div style='height:.5rem'></div> -->
+<!--                   Lots of things happened this last week. <a href='https://blog.whatsapp.com/10000618/end-to-end-encryption'>WhatsApp turned on end-to-end encryption</a> for all its users, <a href='https://pages.gitlab.io/'>GitLab added static pages</a> generator, Github now finally supports <a href='https://github.com/blog/2144-gpg-signature-verification'>GPG signature verification</a> and you can now get your <a href='https://davidwalsh.name/get-weather-command-line'>weather info from the CLI</a> 🙃 . -->
+<!--                 </div> -->
+<!--               </td> -->
+<!--             </tr> -->
+<!--             <tr> -->
+<!--               <td> -->
+<!--                 <div style='height:.5rem'></div> -->
+<!--                 As always, feel free to forward this email to your dev friends if you liked it!  -->
+<!--               </td> -->
+<!--             </tr> -->
+<!--           </table> -->
+<!--           <hr /> -->
+<!--         </div> -->
+<!--       </td> -->
+<!--     </tr> -->
+<!--   </table> -->
+
+  <!-- body -->
+  <table class="body-wrap">
+    <tr>
+      <td class="container" bgcolor="#FFFFFF">
+
+        <!-- content -->
+        <div class="content" style="padding-top: 20px">
+
+        <div class='badge'>TOP 5 LINKS THIS WEEK</div>
+        <table>
+
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="http://www.alexkras.com/what-is-the-best-part-about-being-a-software-engineer/">
+                      What is the best part about being a Software Engineer? 😊
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>alexkras&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=What is the best part about being a Software Engineer&url=http://www.alexkras.com/what-is-the-best-part-about-being-a-software-engineer/'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="http://www.alexkras.com/what-is-the-best-part-about-being-a-software-engineer/">
+                      A response to the recent HN thread titled “What’s awful about being a Software Engineer?”.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>From </span>
+                      <a href='https://twitter.com/akras14'>Alex Kras</a>, Software Engineer
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="http://www.sitepoint.com/a-basic-html5-template/">
+                      A basic HTML5 template for any project
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>sitepoint&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=A Basic HTML5 Template For Any Project&url=http://www.sitepoint.com/a-basic-html5-template/'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="http://www.sitepoint.com/a-basic-html5-template/">
+                      Explaining block by block the rationale behind the HTML5 boilerplate.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>From </span>
+                      <a href='http://twitter.com/ImpressiveWebs'>Louis Lazaris</a>, Developer and Blogger
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="https://blog.8thlight.com/rabea-gleissner/2016/04/25/alleviate-frontend-dev-pains-with-flexbox.html">
+                      How flexbox alleviates some common frontend development pains
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>8thlight&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=How flexbox alleviates some common front end development pains&url=https://blog.8thlight.com/rabea-gleissner/2016/04/25/alleviate-frontend-dev-pains-with-flexbox.html'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="https://blog.8thlight.com/rabea-gleissner/2016/04/25/alleviate-frontend-dev-pains-with-flexbox.html">
+                      Flexbox is a CSS module that efficiently lays out items inside a container. It makes sure that spacing and alignment are always consistent and that unused space inside the container is filled, even if the container size or the child element sizes are changeable or unknown.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>Suggested by </span>
+                      <a href='https://twitter.com/jbuty'>Julien Buty</a>, Director of Eng. at LLVision
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="https://www.chef.io/blog/2016/04/28/devops-is-a-career-bet-are-you-willing-to-take-it/">
+                      DevOps is a career bet – Are you willing to take it?
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>chef&#8203;.io</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=DevOps is a Career Bet – Are You Willing to take it&url=https://www.chef.io/blog/2016/04/28/devops-is-a-career-bet-are-you-willing-to-take-it/'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="https://www.chef.io/blog/2016/04/28/devops-is-a-career-bet-are-you-willing-to-take-it/">
+                     While DevOps has been cited as one of the most lucrative technical professions – Dice.com cites Chef skills are one of a few that will get you a $110,000-plus salary – it’s also an incredibly complex and demanding profession.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>Suggested by </span>
+                      <a href='https://twitter.com/jbuty'>Julien Buty</a>, Director of Eng. at LLVision
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+        <!-- Link snippet -->
+          <tr>
+            <td class="link-section">
+              <table>
+                <tr>
+                  <td>
+                    <h3>
+                      <a href="http://highscalability.com/blog/2016/4/28/how-walmart-canadas-responsive-redesign-boosted-conversions.html">
+                      How Walmart Canada’s responsive redesign boosted conversions by 20%: A case study
+                      </a>
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td class='link-desc'>
+                    <div class='meta'>
+                      <span class='domain'>highscalability&#8203;.com</span> &middot; <a href='https://twitter.com/intent/tweet?via=fullwebio&text=How Walmart Canada Responsive Redesign Boosted Conversions By 20%: A Case Study&url=http://highscalability.com/blog/2016/4/28/how-walmart-canadas-responsive-redesign-boosted-conversions.html'>Tweet this link</a>
+                    </div>
+                    <p>
+                      <a href="http://highscalability.com/blog/2016/4/28/how-walmart-canadas-responsive-redesign-boosted-conversions.html">
+                       With conversion optimization on the rise, it is a great idea to look into case studies which help you learn and adopt them to your personal needs positively.
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class='author-line'>
+                      <span class='muted'>Suggested by </span>
+                      <a href='https://twitter.com/jbuty'>Julien Buty</a>, Director of Eng. at LLVision
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+        </div>
+        <!-- /content -->
+      </td>
+    </tr>
+  </table>
+
+  <br />
+  <table class="body-wrap">
+    <tr>
+      <td class="container" bgcolor="#FFFFFF">
+        <!-- content -->
+        <div class="content">
+
+          <table>
+
+            <!-- Tip of the week -->
+            <tr>
+              <td>
+                <span class='badge'>TIP OF THE WEEK</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h2><a style='line-height:1.25' href='https://gist.github.com/nepsilon/15811b7a3c430ec9dedf2a14cc1a86b2'>A better setup for Git</a></h2>
+                <p style='margin-bottom:2px;margin-top:10px;line-height:1.45'>
+                Git default configuration is good but it can be personalized to improve your workflow efficiency.
+                <br />
+                Here are some good lines to put in your <code>~/.gitconfig</code>:
+                </p>
+                <div class='code'><pre><span class='comment'># The basics, who you commit as:</span>[user]
+  name = John Doe
+  email = john@doe.org
+
+<span class='comment'># Your Github username</span>[github]
+  user = githubusername
+
+<span class='comment'># Some aliases to save 1000s keystrokes each year:</span>[alias]
+  log = log --color
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+<span class='comment' style='display:inline-block'>  # Long but worth it</span>
+  lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen%ar%Creset by %C(yellow)%an%Creset' --abbrev-commit
+<span class='comment'>  # Convenient for minified files</span>  dw = diff --color-words
+
+<span class='comment'># Add colors</span>[color]
+  ui = true
+  diff = auto
+
+<span class='comment'># Avoid messy merge commits with autorebase</span>[branch]
+  autosetuprebase = always
+
+<span class='comment'># Push the current branch by default</span>[push]
+  default = current
+
+<span class='comment'># Guess what you really meant to type</span>[help]
+  autocorrect = 1
+
+<span class='comment'># Tell git you have a global .gitignore</span>[core]
+  excludesfile = ~/.gitignore
+
+<span class='comment'># Remove usage hints</span>[advice]
+  statusHints = false
+
+<span class='comment'># Tell where are the diff from,<br /># instead of using a and b notation</span>[diff]
+  mnemonicprefix = true</pre>
+                </div>
+                <p>👉 <strong>Star or fork this <a style='text-decoration: underline;' href='https://gist.github.com/nepsilon/15811b7a3c430ec9dedf2a14cc1a86b2'>Gist on Github &raquo;</a></strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td style='text-align:center;  padding: 0 0 30px 0;'>
+              <br />
+              <br />
+                <strong style='font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;'>All the best and see you next week!</strong>
+                <br />
+                <strong style='font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;'>— Julien</strong>
+              </td>
+            </tr>
+
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <!-- /body -->
+
+  <!-- footer -->
+  <table class="footer-wrap">
+    <tr>
+      <td class="container">
+
+        <!-- content -->
+        <div class="content" style='padding-top:10px'>
+          <table>
+            <tr>
+              <td align="center">
+                <p>💬<br />
+                  <strong> Got feedback? Just hit reply.</strong>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <p>
+                  <br>
+                  <a href="http://fullweb.io" target='_blank'>Website</a> &middot;
+                  <a href="https://twitter.com/fullwebio" target='_blank'>Follow us on Twitter</a> &middot;
+                  <a href="https://www.facebook.com/fullwebio" target='_blank'>Like us on Facebook</a>
+                  <br /><br /><br />
+                  *|REWARDS|*
+                  <br /><br /><br />
+                  <a href="*|UNSUB|*">Unsubscribe</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </div><!-- /content -->
+
+      </td>
+    </tr>
+  </table>
+  <!-- /footer -->
+
+</body>
+</html>
