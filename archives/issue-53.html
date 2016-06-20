@@ -1,0 +1,755 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta content="telephone=no" name="format-detection">
+  <title data-placeholder="" id="page-title">Fullweb Issue #53</title>
+  <meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png">
+  <meta property="og:title" content="Fullweb Newsletter: Issue #53" data-placeholder="" id="meta-og-title">
+  <style>
+  /* Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/ */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+.hljs-strong {
+  font-weight: bold;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+  </style>
+
+  <style type="text/css">
+      * {
+        margin:0;
+        padding:0;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        font-size:100%;
+        line-height:1.6;
+        box-sizing: border-box;
+      }
+      pre * {
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace !important;
+      }
+      img{
+        max-width:100%;
+      }
+      body{
+        -webkit-font-smoothing:antialiased;
+        -webkit-text-size-adjust:none;
+        width:100%!important;
+        height:100%;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      }
+      a {
+        color:#0079DF;
+        text-decoration:none;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      }
+      strong {
+        font-size: 15px;
+      }
+      h1 code, h2 code, h3 code, p code {
+        display: inline;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        background-color: #EBEBEB;
+        padding: 0 3px;
+        border-radius: 2px;
+        line-height: 1.25;
+        font-size: 13px;
+       }
+       hr {
+        margin: 25px auto 25px;
+        color: #CCC;
+        background-color: #CCC;
+        height: 1px;
+        border: 0;
+        width: 75px;
+       }
+      .btn-primary,.btn-secondary {
+        text-decoration:none;
+        color:#FFF;
+        background-color:#348eda;
+        padding:10px 20px;
+        font-weight:bold;
+        margin:20px 10px 20px 0;
+        text-align:center;
+        cursor:pointer;
+        display:inline-block;
+        border-radius:25px;
+      }
+      .btn-secondary{
+        background:#aaa;
+      }
+      .last{
+        margin-bottom:0;
+      }
+      .first{
+        margin-top:0;
+      }
+      table.body-wrap{
+        width:100%;
+      }
+      table.body-wrap .container {
+        margin-top: 10px;
+      }
+      table.header-wrap,
+      table.footer-wrap{
+        width:100%;
+        clear:both!important;
+        background-color: #FCFCFA;
+      }
+      table.header-wrap {
+        border-bottom: 2px solid #FFDE00;
+      }
+      table.footer-wrap{
+        border-top: 2px solid #FFDE00;
+      }
+      .footer-wrap .container pre{
+        font-size:12px;
+        color:#666;
+      }
+      table.footer-wrap a{
+        color:#999;
+      }
+      h1,h2,h3{
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        line-height:1.2;
+        margin-bottom:15px;
+        color:#333;
+        margin:0;
+        font-weight:500;
+      }
+      h1 {
+        font-size: 19px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 22px;
+        text-align: left;
+      }
+      h2 code {
+        font-size: 19px;
+      }
+      h3, h3 a {
+        font-size: 19px;
+        margin-bottom: 0;
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      }
+      .link-section{
+        padding-bottom: 0;
+        font-family:Georgia, sans-serif;
+      }
+      .link-section h2 {
+        margin-bottom: 0;
+      }
+      .link-section h2 a {
+        display: inline-block;
+        color: #1374DA;
+        line-height: 1.2;
+        text-decoration: none !important;
+      }
+      .link-desc p a {
+        color:#222;
+        text-decoration:none;
+        font-family: Georgia, sans-serif;
+        font-size: 15px;
+        display: block;
+        line-height: 1.5;
+      }
+        {
+        font-size: 13px;
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        color: #888;
+        text-transform: lowercase;
+      }
+      p,ul {
+        margin-bottom:25px;
+        font-weight:normal;
+        font-size:15px;
+      }
+      p {
+        margin-bottom:0;
+        line-height: 1.5;
+      }
+      .link-desc p {
+        font-size:15px;
+        font-family: Georgia, sans-serif;
+      }
+      ul li {
+        margin-left:5px;
+        list-style-position:inside;
+      }
+      .container{
+        display:block!important;
+        max-width:650px!important;
+        width:100%!important;
+        margin:0 auto!important;
+        clear:both!important;
+        width: 650px;
+      }
+      .content,.header{
+        padding:20px;
+        max-width:650px;
+        width:100%!important;
+        margin:0 auto;
+        display:block;
+      }
+      .header {
+        padding: 0;
+      }
+      .header h3 {
+        font-size: 13px;
+        color: #515151;
+      }
+      .header p {
+        margin-bottom:10px;
+      }
+      .content {
+        padding-bottom: 0;
+        padding-left: 10px;
+      }
+      /*.content table {
+        width:100%;
+      }*/
+      sup {
+        font-size: 9px;
+        line-height: 0;
+      }
+      .code, pre {
+        background-color: #202020;
+        padding: 10px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        margin-top: 3px;
+        color: #FFF;
+        border-radius: 2px;
+        line-height: 1.35;
+        font-size: 13px;
+        padding-left: 5px;
+      }
+      pre code {
+        background: #202020;
+        color: inherit;
+        white-space: pre-wrap;
+        line-height: 1.25;
+      }
+      .code pre {
+        color: #FFF;
+        font-size: 13px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        line-height: 1.35;
+        display: block;
+        white-space: pre-wrap;
+      }
+      .code .comment {
+        color: #88888E;
+        font-size: 13px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        line-height: 1.35;
+        display: block;
+      }
+      .header-archive-links {
+        margin-top: 1em;
+        font-size: 15px;
+        color: #333;
+      }
+      .header-archive-links a {
+        font-size: 13px;
+        font-weight: 500;
+        color: #515151;
+      }
+      .badge {
+        background: #FFDE00;
+        color: #333;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: bold;
+        font-weight: 500;
+        padding: 3px 12px;
+        display:inline-block;
+      }
+      .alert {
+        background-color: #ECECEC;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 2px;
+        font-size: 15px;
+      }
+      .author-line {
+        font-size: 12px;
+        color: #3A3A3A;
+        font-weight: 500;
+        display: inline-block;
+        padding: 0px 2px 1px;
+        background-color: #FFF089;
+        border-radius: 2px;
+      }
+      .meta {
+        font-size: 13px;
+      }
+      .meta .domain {
+        color: #797979;
+      }
+      #tip-of-the-week h2 {
+        line-height: 1.2rem;
+        margin: 5px 0 10px 0;
+      }
+      h2 a {
+        line-height: 1.2;
+      }
+  </style>
+
+  </head>
+  <body bgcolor="#fff">
+  <center>
+  <table width="650" cellpadding="0" cellspacing="0">
+  <tr><td>
+  <div style="opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px">The top 5 fullstack links this week.</div>
+    <!-- header-wrap -->
+    <table class="header-wrap" width="650">
+      <tbody><tr>
+        <td class="container" width="650">
+          <!-- header -->
+          <div class="header" style="min-height: 150px;">
+            <table style="width:100%">
+              <tbody><tr style="width:100%">
+                <td style="width:50%">
+                  <h1>
+                    <img src="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg" height="150" width="103" title="Fullweb Weekly" style="text-align:center;display:inline-block;border-left:3px solid #FCFCFA;box-sizing:content-box">
+                  </h1>
+                </td>
+                <td style="width:50%; text-align:left;">
+                  <h2 id="issue-nb" style="font-size: 18px;font-weight: 600;line-height:1.75;margin-bottom:0" name="Issue-number" data-placeholder="">ISSUE #53
+  </h2>
+                  <h3 id="issue-date" data-placeholder="" name="Issue date">Tu&#8203;esday 21<sup>th</sup> Jun&#8203;e 2&#8203;016
+  </h3>
+                  <div class="header-archive-links">
+                    <a href="*|ARCHIVE|*" target="_blank">View on the web</a>
+                     · 
+                    <a href="http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907" target="_blank">Archives</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+          <!-- /header -->
+        </td>
+      </tr>
+    </tbody></table>
+
+     <table class="body-wrap">   
+       <tr>   
+         <td class="container" bgcolor="#FFFFFF">   
+           <div class="content">   
+             <table>   
+               <tr>   
+                 <td>   
+                   <div> 
+                     <h4 style='font-size: 19px; font-weight: 500; color: #333; margin-bottom: 0.5em;'>   
+                     Lots of interesting things for this week!
+                     </h4>   
+                    <p>
+                     <strong>&bull; <a href='https://github.com/blog/2188-git-2-9-has-been-released'>Git 2.9 has been released</a></strong> with some cool new features and bug fixes.<br />
+                     <strong>&bull; <a href='https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/'>jQuery 3.0 released</a></strong>, after almost 2 years of work it gets even slimmer and faster.<br />
+                     &bull; A great discussion on HN, about <strong><a href='https://news.ycombinator.com/item?id=11907960'>what non-technical skills make a senior developer and how to develop them</a></strong>.
+                    </p>
+                   </div>   
+                 </td>   
+               </tr>   
+             </table>   
+           </div>   
+         </td>   
+       </tr>   
+     </table>   
+
+    <!-- body -->
+    <table class="body-wrap"  width="650">
+      <tbody><tr>
+        <td class="container" bgcolor="#FFFFFF" width="650">
+          <br />
+          <!-- content -->
+          <div class="content" style="padding-top: 0px">
+          <table cellspacing="0" cellpadding="0" style="margin: 15px 0 10px;">
+              <tr><td>
+          <table width="initial" style="font-size:16px;font-weight: bold;font-weight:500;background: #FFDE00; color: #333;border-radius: 2px; display: inline-block; padding: 3px 12px;" cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                  TOP 5 LINKS THIS WEEK
+                </td>
+              </tr>
+          </table>
+              </td></tr>
+              </table>
+          <br />
+          <table>
+
+          <!-- Link snippet -->
+            <tbody><tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I1-link-title"><a href="https://github.com/joshbuchea/HEAD">100 elements that could go in your <code>&lt;head&gt;</code></a>
+  </h2>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>
+                      <div class="meta">
+                        <span class="domain" data-placeholder="" id="I1-link-domain">github.&#8203;com
+  </span> · <span data-placeholder="" id="I1-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=100 elements that could go in your head&url=https://github.com/joshbuchea/HEAD">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I1-link-desc" data-placeholder=""><a href="https://github.com/joshbuchea/HEAD">
+                      A list of everything that could go in the <code>&lt;head&gt;</code> of your document. Well organized and with usage description.
+  </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I1-author-line" data-placeholder="">From <a href="https://twitter.com/joshbuchea">Josh Buchea</a>, Front-End Developer
+  </span>
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr>
+              </td>
+            </tr>
+
+          <!-- Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I2-link-title">
+                      <a href="https://stribika.github.io/2015/01/04/secure-secure-shell.html">
+                        My goal with this post is to make NSA analysts sad
+                      </a>
+  </h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I2-link-domain">github&#8203;.io
+  </span> · <span id="I2-share-twitter-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=My goal with this post here is to make NSA analysts sad&url=https://stribika.github.io/2015/01/04/secure-secure-shell.html">tweet this link</a></span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I2-link-desc" data-placeholder=""><a href="https://stribika.github.io/2015/01/04/secure-secure-shell.html">
+                      A short guide to beef up your SSH config.
+                    </a>
+                    </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I2-author-line" data-placeholder="">From <a href="https://twitter.com/stribika">Stribika</a>, Software Engineer
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr>
+              </td>
+            </tr>
+
+          <!-- Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I3-link-title"><a href="http://www.codelitt.com/blog/my-first-10-minutes-on-a-server-primer-for-securing-ubuntu/">My first 10 minutes on a server: Primer for securing Ubuntu</a>
+  </h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I3-link-domain">codelitt&#8203;.com
+  </span> · <span data-placeholder="" id="I3-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=My first 10 minutes on a server - Primer for securing Ubuntu&url=http://www.codelitt.com/blog/my-first-10-minutes-on-a-server-primer-for-securing-ubuntu/">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I3-link-desc" data-placeholder=""><a href="http://www.codelitt.com/blog/my-first-10-minutes-on-a-server-primer-for-securing-ubuntu/">
+                      My First 5 Minutes on a Server, by Bryan Kennedy, is an excellent intro into securing a server against most attacks. We have a few modifications to his approach that we wanted to document as part of our efforts of externalizing our processes and best practices.
+</a>
+  </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I3-author-line" data-placeholder="">From <a href="https://twitter.com/codelitt">Cody Littlewood</a>, CEO at Codelitt
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr>
+              </td>
+            </tr>
+
+          <!-- Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I4-link-title"><a href="http://zejn.net/b/2016/06/10/postgresql-tutorial-color-similarity-search/">Efficient color similarity search with PostgreSQL</a>
+  </h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I4-link-domain">zejn&#8203;.net</span> · <span data-placeholder="" id="I4-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Efficient color similarity search with PostgreSQL&url=http://zejn.net/b/2016/06/10/postgresql-tutorial-color-similarity-search/">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I4-link-desc" data-placeholder=""><a href="http://zejn.net/b/2016/06/10/postgresql-tutorial-color-similarity-search/">
+In this post I will cover some insight into custom GiST index, which enables efficiently looking up similar colors.
+</a>
+  </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I4-author-line" data-placeholder="">From <a href="https://twitter.com/hruske">Gašper Žejn</a>, Software Engineer
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr>
+              </td>
+            </tr>
+
+          <!-- Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I5-link-title"><a href="http://www.blog.pythonlibrary.org/2016/06/09/python-how-to-create-an-exception-logging-decorator/">Python: How to create an exception logging decorator</a>
+  </h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I5-link-domain">pythonlibrary&#8203;.org</span> · <span id="I5-share-twitter-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Python: How to create an exception logging decorator&url=http://www.blog.pythonlibrary.org/2016/06/09/python-how-to-create-an-exception-logging-decorator/">tweet this link</a></span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I5-link-desc" data-placeholder=""><a href="http://www.blog.pythonlibrary.org/2016/06/09/python-how-to-create-an-exception-logging-decorator/">The other day, I decided I wanted to create a decorator to catch exceptions and log them.
+</a>
+  </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I5-author-line" data-placeholder="">From <a href="http://twitter.com/mousevspython">Mike Driscoll</a>, Computer Programmer
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+          </div>
+          <!-- /content -->
+        </td>
+      </tr>
+    </tbody></table>
+      
+  <br />
+      
+      <!-- Tip of the week -->
+      <table class="body-wrap" width="650">
+      <tbody><tr>
+        <td class="container" bgcolor="#FFFFFF" width="650">
+          <!-- content -->
+          <div class="content">
+                <table cellspacing="0" cellpadding="0" style="margin-bottom:0px"><tr><td>
+                      <table width="initial" style="font-size:16px;font-weight: bold;font-weight:500;background: #FFDE00; color: #333;border-radius: 2px; display: inline-block; padding: 3px 12px;" cellspacing="0" cellpadding="0">
+                          <tr>
+                              <td>
+                                  TIP OF THE WEEK
+                              </td>
+                          </tr>
+                      </table>
+              </td></tr></table>
+
+           <table>
+              <tbody>
+               <tr>
+                <td>
+              <tr>
+                <td data-placeholder="" name="Tip of the week" id="tip-of-the-week">
+                <h2 style='margin-top:20px'>
+                  <a href="https://gist.github.com/nepsilon/a7b034616ffb24521c8fb9442c64d41f">
+                    Periodically run a query with PostgreSQL
+                  </a>
+                </h2>
+
+            <p style='margin-bottom:10px'>
+              If you ever used <code>watch -n 3 ...</code> to run your SQL query every 3 seconds, rejoice because Postgres provides a way to do this without leaving the <code>psql</code> prompt.
+            </p>
+            <p style='margin-bottom:5px'>
+              First run the command you’d like to repeat:
+            </p>
+
+<pre>
+<code class="sql">test-db=# <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">now</span>();
+</code></pre>
+
+            <p style='margin-bottom:5px;margin-top:10px'>
+               Then just type <code>\watch X</code> to repeat your query every X seconds:
+            </p>
+
+<pre><code class="sql">test-db=# \watch 3
+
+Watch every 3s Mon Jun 20 13:44:53 2016
+
+              now
+───────────────────────────────
+   2016-06-20 13:44:53.739159+08
+
+</code></pre>
+
+            <p style='margin-bottom:5px;margin-top:10px'>
+              <strong> 👉  You can star and fork this <a style='text-decoration:underline' href="https://gist.github.com/nepsilon/a7b034616ffb24521c8fb9442c64d41f">Gist on Github &raquo;</a></strong>
+              <br />
+            </p>
+              </td>
+              </tr>
+              <tr>
+                <td style="text-align:center;  padding: 0 0 30px 0;">
+                <br>
+                <hr>
+                  <strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">All the best and see you next week!</strong>
+                  <br>
+                  <strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">— Julien</strong>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+    <!-- /body -->
+
+    <!-- footer -->
+    <table class="footer-wrap">
+      <tbody><tr>
+        <td class="container" width="650">
+          <center>
+          <!-- content -->
+          <div class="content" style="padding-top:10px">
+            <table>
+              <tbody><tr>
+                <td align="center">
+                  <p>💬<br />
+                    <strong style="color:#333"> Got feedback? Just hit reply.</strong>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <p>
+                    <br>
+                    <a href="http://fullweb.io/" target="_blank">Website</a> ·
+                    <a href="https://twitter.com/fullwebio" target="_blank">Follow us on Twitter</a> ·
+                    <a href="https://www.facebook.com/fullwebio" target="_blank">Like us on Facebook</a>
+                    <br><br><br>
+                    *|REWARDS|*
+                    <br><br><br>
+                    <a href="*|UNSUB|*">Unsubscribe</a>
+                  </p>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+          </center>
+          <!-- /content -->
+        </td>
+      </tr>
+    </tbody></table>
+    <!-- /footer -->
+
+      </td></tr></table>
+  </center>
+  </body>
+</html>
