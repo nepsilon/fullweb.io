@@ -1,243 +1,2317 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta name="viewport" content="width=device-width"/><meta content="telephone=no" name="format-detection"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>Fullweb Issue #25</title><meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png"/><meta property="og:title" content="Fullweb Newsletter: Issue #25"/><style type="text/css">*{
-  margin:0;
-  padding:0;
-  font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size:100%;
-  line-height:1.6;
-  box-sizing: border-box;
-}
-img{
-  max-width:100%;
-}
-body{
-  -webkit-font-smoothing:antialiased;
-  -webkit-text-size-adjust:none;
-  width:100%!important;
-  height:100%;
-}
-a{
-  color:#0079DF;
-  text-decoration:none;
-}
-code {
-  display: inline;
-  font-family: monospace;
-  background-color: #EBEBEB;
-  padding: 0 3px;
-  border-radius: 2px;
-  line-height: 1.25;
- }
- hr {
-  margin: 25px auto 25px;
-  color: #CCC;
-  background-color: #CCC;
-  height: 1px;
-  border: 0;
-  width: 75px;
- }
-.btn-primary,.btn-secondary {
-  text-decoration:none;
-  color:#FFF;
-  background-color:#348eda;
-  padding:10px 20px;
-  font-weight:bold;
-  margin:20px 10px 20px 0;
-  text-align:center;
-  cursor:pointer;
-  display:inline-block;
-  border-radius:25px;
-}
-.btn-secondary{
-  background:#aaa;
-}
-.last{
-  margin-bottom:0;
-}
-.first{
-  margin-top:0;
-}
-table.body-wrap{
-  width:100%;
-}
-table.body-wrap .container {
-  margin-top: 10px;
-}
-table.header-wrap,
-table.footer-wrap{
-  width:100%;
-  clear:both!important;
-  background-color: #FCFCFA;
-}
-table.header-wrap {
-  border-bottom: 2px solid #FFDE00;
-}
-table.footer-wrap{
-  border-top: 2px solid #FFDE00;
-}
-.footer-wrap .container p{
-  font-size:12px;
-  color:#666;
-}
-table.footer-wrap a{
-  color:#999;
-}
-h1,h2,h3{
-  font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  line-height:1.2;
-  margin-bottom:15px;
-  color:#333;
-  margin:0;
-  font-weight:500;
-}
-h1 {
-  font-size: 19px;
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
-h2 {
-  font-size: 22px;
-  text-align: left;
-}
-h3, h3 a {
-  font-size: 19px;
-  margin-bottom: 0;
-}
-.link-section{
-  padding-bottom: 0;
-  font-family:Georgia, sans-serif;
-}
-.link-section h3 a {
-  display: inline-block;
-  font-size: 19px;
-  color: #1374DA;
-  line-height: 1.25;
-  text-decoration: none !important;
-}
-.link-section h3 {
-  text-decoration:underline;
-  line-height: 1.25;
-  font-family:Georgia, sans-serif;
-}
-.link-section p a {
-  color:#222;
-  text-decoration:none;
-  font-family:Georgia, sans-serif;
-  font-size: 15px;
-  display: block;
-  line-height: 1.5;
-}
-.link-section .link-desc .meta {
-  font-size: 13px;
-  font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: #888;
-  text-transform: lowercase;
-}
-p,ul {
-  margin-bottom:25px;
-  font-weight:normal;
-  font-size:15px;
-}
-p {
-  margin-bottom:0;
-}
-ul li {
-  margin-left:5px;
-  list-style-position:inside;
-}
-.container{
-  display:block!important;
-  max-width:650px!important;
-  width:100%!important;
-  margin:0 auto!important;
-  clear:both!important;
-}
-.content,.header{
-  padding:20px;
-  max-width:650px;
-  width:100%!important;
-  margin:0 auto;
-  display:block;
-}
-.header {
-  padding: 0;
-}
-.header h3 {
-  font-size: 13px;
-  color: #515151;
-}
-.header p {
-  margin-bottom:10px;
-}
-.content {
-  padding-bottom: 0;
-  padding-left: 10px;
-}
-.content table {
-  width:100%;
-}
-sup {
-  font-size: 9px;
-  line-height: 0;
-}
-.code {
-  background-color: #202020;
-  padding: 10px;
-  font-family: Menlo, monospace;
-  margin-top: 3px;
-  color: #FFF;
-  border-radius: 2px;
-  line-height: 1.35;
-  font-size: 13px;
-}
-.code pre {
-  color: #FFF;
-  font-size: 13px;
-  font-family: Menlo, monospace;
-  line-height: 1.35;
-  display: block;
-}
-.code .comment {
-  color: #88888E;
-  font-size: 13px;
-  font-family: Menlo, monospace;
-  line-height: 1.35;
-  display: block;
-}
-.header-archive-links {
-  margin-top: 1em;
-  font-size: 15px;
-  color: #333;
-}
-.header-archive-links a {
-  font-size: 13px;
-  font-weight: 500;
-  color: #515151;
-}
-.badge {
-  background: #FFDE00;
-  color: #333;
-  border-radius: 2px;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 3px 12px;
-  display:inline-block;
-  margin-bottom: 25px;
-}
-.alert {
-  background-color: #ECECEC;
-  padding: 20px;
-  margin-top: 10px;
-  border-radius: 2px;
-  font-size: 15px;
-}
-.author-line {
-  font-size: 12px;
-  color: #3A3A3A;
-  font-weight: 500;
-  display: inline-block;
-  padding: 0px 2px 1px;
-  background-color: #FFF089;
-  border-radius: 2px;
-}
-</style></head><body bgcolor="#fff"><div style="opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px">The top 5 fullstack links this week.</div><table class="header-wrap"><tr><td class="container"><div style="min-height: 150px;" class="header"><table style="width:100%"><tr style="width:100%"><td style="width:50%"><h1><img src="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg?new" height="150" width="100" title="Fullweb Weekly" style="text-align:center;display:inline-block;border-left:3px solid #FCFCFA;box-sizing:content-box"/></h1></td><td style="width:50%; text-align:left;"><h2 style="font-size: 18px;font-weight: 600;line-height:1.75;margin-bottom:0">ISSUE #25</h2><h3>Tu&#8203;esday 3<sup>rd </sup>December&#8203;r 2&#8203;015</h3><div class="header-archive-links"><a href="*|ARCHIVE|*" target="_blank">View on the web</a>&thinsp;&middot;&thinsp;<a href="http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&amp;id=b98e776907" target="_blank">Archives</a></div></td></tr></table></div></td></tr></table><table class="body-wrap"><tr><td bgcolor="#FFFFFF" class="container"><div class="content"><table><tr><td><div class="alert"><h4 style="font-size: 19px; font-weight: 500; color: #333; margin-bottom: 0.5em;">Help share the love</h4><p>Share the love</p></div></td></tr></table></div></td></tr></table><table class="body-wrap"><tr><td bgcolor="#FFFFFF" class="container"><div style="padding-top: 30px" class="content"><div class="badge">TOP 5 LINKS THIS WEEK</div><table><tr><td class="link-section"><table><tr><td><h3><a href="http://ok">Super title</a></h3></td></tr><tr><td class="link-desc"><div class="meta"><span class="domain">github.com</span>&middot; <a href="https://twitter.com/intent/tweet?via=fullwebio&amp;text=Super title&amp;url=http://ok">Tweet this link</a></div><p><a href="http://ok">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. </a></p></td></tr><tr><td><div class="author-line"><span class="muted">From </span><a href="http://twitter.com/jbuty">Julien Buty</a>, panda</div></td></tr></table><hr/></td></tr><tr><td class="link-section"><table><tr><td><h3><a href="http://ok">Super title2</a></h3></td></tr><tr><td class="link-desc"><div class="meta"><span class="domain">github.com</span>&middot; <a href="https://twitter.com/intent/tweet?via=fullwebio&amp;text=Super title2&amp;url=http://ok">Tweet this link</a></div><p><a href="http://ok">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. </a></p></td></tr><tr><td><div class="author-line"><span class="muted">From </span><a href="http://twitter.com/jbuty">Julien Buty</a>, panda</div></td></tr></table></td></tr></table></div></td></tr></table><br/><table class="body-wrap"><tr><td bgcolor="#FFFFFF" class="container"><div class="content"><table><tr><td><span class="badge">TIP OF THE WEEK</span></td></tr><tr><td><p>| ## Lorem ipsum dolor sit amet?</p>
-</td></tr><tr><td style="text-align:center;  padding: 0 0 30px 0;"><br/><br/><strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">See you next week!</strong></td></tr></table></div></td></tr></table><table class="footer-wrap"><tr><td class="container"><div style="padding-top:10px" class="content"><table><tr><td align="center"><p>💬<br/><strong>Got feedback? Just hit reply.</strong></p></td></tr><tr><td align="center"><p><br/><a href="http://fullweb.io" target="_blank">Website</a>&middot;<a href="https://twitter.com/fullwebio" target="_blank">Follow on Twitter</a>&middot;<a href="https://www.facebook.com/fullwebio" target="_blank">Follow on Facebook</a><br/><br/><br/>*|REWARDS|*<br/><br/><br/><a href="*|UNSUB|*">Unsubscribe</a></p></td></tr></table></div></td></tr></table></body></html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta content="telephone=no" name="format-detection">
+  <title data-placeholder="" id="page-title">Fullweb Issue #48</title>
+  <meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png">
+  <meta property="og:title" content="Fullweb Newsletter: Issue #48" data-placeholder="" id="meta-og-title">
+  <style type="text/css">
+    /* function css */
+    .wrapper {
+      width: 100%; }
+
+    #outlook a {
+      padding: 0; }
+
+    body {
+      width: 100% !important;
+      min-width: 100%;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      margin: 0;
+      Margin: 0;
+      padding: 0;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+
+    .ExternalClass {
+      width: 100%; }
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%; }
+
+    #backgroundTable {
+      margin: 0;
+      Margin: 0;
+      padding: 0;
+      width: 100% !important;
+      line-height: 100% !important; }
+
+    img {
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+      width: auto;
+      max-width: 100%;
+      clear: both;
+      display: block; }
+
+    center {
+      width: 100%;
+      min-width: 580px; }
+
+    a img {
+      border: none; }
+
+    p {
+      margin: 0 0 0 10px;
+      Margin: 0 0 0 10px; }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse; }
+
+    td {
+      word-wrap: break-word;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      hyphens: auto;
+      border-collapse: collapse !important; }
+
+    table, tr, td {
+      padding: 0;
+      vertical-align: top;
+      text-align: left; }
+
+    @media only screen {
+      html {
+        min-height: 100%;
+        background: #f3f3f3; } }
+
+    table.body {
+      background: #f3f3f3;
+      height: 100%;
+      width: 100%; }
+
+    table.container {
+      background: #fefefe;
+      width: 580px;
+      margin: 0 auto;
+      Margin: 0 auto;
+      text-align: inherit; }
+
+    table.row {
+      padding: 0;
+      width: 100%;
+      position: relative; }
+
+    table.spacer {
+      width: 100%; }
+      table.spacer td {
+        mso-line-height-rule: exactly; }
+
+    table.container table.row {
+      display: table; }
+
+    td.columns,
+    td.column,
+    th.columns,
+    th.column {
+      margin: 0 auto;
+      Margin: 0 auto;
+      padding-left: 16px;
+      padding-bottom: 16px; }
+      td.columns .column,
+      td.columns .columns,
+      td.column .column,
+      td.column .columns,
+      th.columns .column,
+      th.columns .columns,
+      th.column .column,
+      th.column .columns {
+        padding-left: 0 !important;
+        padding-right: 0 !important; }
+        td.columns .column center,
+        td.columns .columns center,
+        td.column .column center,
+        td.column .columns center,
+        th.columns .column center,
+        th.columns .columns center,
+        th.column .column center,
+        th.column .columns center {
+          min-width: none !important; }
+
+    td.columns.last,
+    td.column.last,
+    th.columns.last,
+    th.column.last {
+      padding-right: 16px; }
+
+    td.columns table:not(.button),
+    td.column table:not(.button),
+    th.columns table:not(.button),
+    th.column table:not(.button) {
+      width: 100%; }
+
+    td.large-1,
+    th.large-1 {
+      width: 32.33333px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    td.large-1.first,
+    th.large-1.first {
+      padding-left: 16px; }
+
+    td.large-1.last,
+    th.large-1.last {
+      padding-right: 16px; }
+
+    .collapse > tbody > tr > td.large-1,
+    .collapse > tbody > tr > th.large-1 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 48.33333px; }
+
+    .collapse td.large-1.first,
+    .collapse th.large-1.first,
+    .collapse td.large-1.last,
+    .collapse th.large-1.last {
+      width: 56.33333px; }
+
+    td.large-1 center,
+    th.large-1 center {
+      min-width: 0.33333px; }
+
+    .body .columns td.large-1,
+    .body .column td.large-1,
+    .body .columns th.large-1,
+    .body .column th.large-1 {
+      width: 8.33333%; }
+
+    td.large-2,
+    th.large-2 {
+      width: 80.66667px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    td.large-2.first,
+    th.large-2.first {
+      padding-left: 16px; }
+
+    td.large-2.last,
+    th.large-2.last {
+      padding-right: 16px; }
+
+    .collapse > tbody > tr > td.large-2,
+    .collapse > tbody > tr > th.large-2 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 96.66667px; }
+
+    .collapse td.large-2.first,
+    .collapse th.large-2.first,
+    .collapse td.large-2.last,
+    .collapse th.large-2.last {
+      width: 104.66667px; }
+
+    td.large-2 center,
+    th.large-2 center {
+      min-width: 48.66667px; }
+
+    .body .columns td.large-2,
+    .body .column td.large-2,
+    .body .columns th.large-2,
+    .body .column th.large-2 {
+      width: 16.66667%; }
+
+    td.large-3,
+    th.large-3 {
+      width: 129px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    td.large-3.first,
+    th.large-3.first {
+      padding-left: 16px; }
+
+    td.large-3.last,
+    th.large-3.last {
+      padding-right: 16px; }
+
+    .collapse > tbody > tr > td.large-3,
+    .collapse > tbody > tr > th.large-3 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 145px; }
+
+    .collapse td.large-3.first,
+    .collapse th.large-3.first,
+    .collapse td.large-3.last,
+    .collapse th.large-3.last {
+      width: 153px; }
+
+    td.large-3 center,
+    th.large-3 center {
+      min-width: 97px; }
+
+    .body .columns td.large-3,
+    .body .column td.large-3,
+    .body .columns th.large-3,
+    .body .column th.large-3 {
+      width: 25%; }
+
+    td.large-4,
+    th.large-4 {
+      width: 177.33333px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    td.large-4.first,
+    th.large-4.first {
+      padding-left: 16px; }
+
+    td.large-4.last,
+    th.large-4.last {
+      padding-right: 16px; }
+
+    .collapse > tbody > tr > td.large-4,
+    .collapse > tbody > tr > th.large-4 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 193.33333px; }
+
+    .collapse td.large-4.first,
+    .collapse th.large-4.first,
+    .collapse td.large-4.last,
+    .collapse th.large-4.last {
+      width: 201.33333px; }
+
+    td.large-4 center,
+    th.large-4 center {
+      min-width: 145.33333px; }
+
+    .body .columns td.large-4,
+    .body .column td.large-4,
+    .body .columns th.large-4,
+    .body .column th.large-4 {
+      width: 33.33333%; }
+
+    td.large-5,
+    th.large-5 {
+      width: 225.66667px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    td.large-5.first,
+    th.large-5.first {
+      padding-left: 16px; }
+
+    td.large-5.last,
+    th.large-5.last {
+      padding-right: 16px; }
+
+    .collapse > tbody > tr > td.large-5,
+    .collapse > tbody > tr > th.large-5 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 241.66667px; }
+
+    .collapse td.large-5.first,
+    .collapse th.large-5.first,
+    .collapse td.large-5.last,
+    .collapse th.large-5.last {
+      width: 249.66667px; }
+
+    td.large-5 center,
+    th.large-5 center {
+      min-width: 193.66667px; }
+
+    .body .columns td.large-5,
+    .body .column td.large-5,
+    .body .columns th.large-5,
+    .body .column th.large-5 {
+      width: 41.66667%; }
+
+    td.large-6,
+    th.large-6 {
+      width: 274px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    td.large-6.first,
+    th.large-6.first {
+      padding-left: 16px; }
+
+    td.large-6.last,
+    th.large-6.last {
+      padding-right: 16px; }
+
+    .collapse > tbody > tr > td.large-6,
+    .collapse > tbody > tr > th.large-6 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 290px; }
+
+    .collapse td.large-6.first,
+    .collapse th.large-6.first,
+    .collapse td.large-6.last,
+    .collapse th.large-6.last {
+      width: 298px; }
+
+    td.large-6 center,
+    th.large-6 center {
+      min-width: 242px; }
+
+    .body .columns td.large-6,
+    .body .column td.large-6,
+    .body .columns th.large-6,
+    .body .column th.large-6 {
+      width: 50%; }
+
+    td.large-7,
+    th.large-7 {
+      width: 322.33333px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    td.large-7.first,
+    th.large-7.first {
+      padding-left: 16px; }
+
+    td.large-7.last,
+    th.large-7.last {
+      padding-right: 16px; }
+
+    .collapse > tbody > tr > td.large-7,
+    .collapse > tbody > tr > th.large-7 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 338.33333px; }
+
+    .collapse td.large-7.first,
+    .collapse th.large-7.first,
+    .collapse td.large-7.last,
+    .collapse th.large-7.last {
+      width: 346.33333px; }
+
+    td.large-7 center,
+    th.large-7 center {
+      min-width: 290.33333px; }
+
+    .body .columns td.large-7,
+    .body .column td.large-7,
+    .body .columns th.large-7,
+    .body .column th.large-7 {
+      width: 58.33333%; }
+
+    td.large-8,
+    th.large-8 {
+      width: 370.66667px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    td.large-8.first,
+    th.large-8.first {
+      padding-left: 16px; }
+
+    td.large-8.last,
+    th.large-8.last {
+      padding-right: 16px; }
+
+    .collapse > tbody > tr > td.large-8,
+    .collapse > tbody > tr > th.large-8 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 386.66667px; }
+
+    .collapse td.large-8.first,
+    .collapse th.large-8.first,
+    .collapse td.large-8.last,
+    .collapse th.large-8.last {
+      width: 394.66667px; }
+
+    td.large-8 center,
+    th.large-8 center {
+      min-width: 338.66667px; }
+
+    .body .columns td.large-8,
+    .body .column td.large-8,
+    .body .columns th.large-8,
+    .body .column th.large-8 {
+      width: 66.66667%; }
+
+    td.large-9,
+    th.large-9 {
+      width: 419px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    td.large-9.first,
+    th.large-9.first {
+      padding-left: 16px; }
+
+    td.large-9.last,
+    th.large-9.last {
+      padding-right: 16px; }
+
+    .collapse > tbody > tr > td.large-9,
+    .collapse > tbody > tr > th.large-9 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 435px; }
+
+    .collapse td.large-9.first,
+    .collapse th.large-9.first,
+    .collapse td.large-9.last,
+    .collapse th.large-9.last {
+      width: 443px; }
+
+    td.large-9 center,
+    th.large-9 center {
+      min-width: 387px; }
+
+    .body .columns td.large-9,
+    .body .column td.large-9,
+    .body .columns th.large-9,
+    .body .column th.large-9 {
+      width: 75%; }
+
+    td.large-10,
+    th.large-10 {
+      width: 467.33333px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    td.large-10.first,
+    th.large-10.first {
+      padding-left: 16px; }
+
+    td.large-10.last,
+    th.large-10.last {
+      padding-right: 16px; }
+
+    .collapse > tbody > tr > td.large-10,
+    .collapse > tbody > tr > th.large-10 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 483.33333px; }
+
+    .collapse td.large-10.first,
+    .collapse th.large-10.first,
+    .collapse td.large-10.last,
+    .collapse th.large-10.last {
+      width: 491.33333px; }
+
+    td.large-10 center,
+    th.large-10 center {
+      min-width: 435.33333px; }
+
+    .body .columns td.large-10,
+    .body .column td.large-10,
+    .body .columns th.large-10,
+    .body .column th.large-10 {
+      width: 83.33333%; }
+
+    td.large-11,
+    th.large-11 {
+      width: 515.66667px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    td.large-11.first,
+    th.large-11.first {
+      padding-left: 16px; }
+
+    td.large-11.last,
+    th.large-11.last {
+      padding-right: 16px; }
+
+    .collapse > tbody > tr > td.large-11,
+    .collapse > tbody > tr > th.large-11 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 531.66667px; }
+
+    .collapse td.large-11.first,
+    .collapse th.large-11.first,
+    .collapse td.large-11.last,
+    .collapse th.large-11.last {
+      width: 539.66667px; }
+
+    td.large-11 center,
+    th.large-11 center {
+      min-width: 483.66667px; }
+
+    .body .columns td.large-11,
+    .body .column td.large-11,
+    .body .columns th.large-11,
+    .body .column th.large-11 {
+      width: 91.66667%; }
+
+    td.large-12,
+    th.large-12 {
+      width: 564px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    td.large-12.first,
+    th.large-12.first {
+      padding-left: 16px; }
+
+    td.large-12.last,
+    th.large-12.last {
+      padding-right: 16px; }
+
+    .collapse > tbody > tr > td.large-12,
+    .collapse > tbody > tr > th.large-12 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 580px; }
+
+    .collapse td.large-12.first,
+    .collapse th.large-12.first,
+    .collapse td.large-12.last,
+    .collapse th.large-12.last {
+      width: 588px; }
+
+    td.large-12 center,
+    th.large-12 center {
+      min-width: 532px; }
+
+    .body .columns td.large-12,
+    .body .column td.large-12,
+    .body .columns th.large-12,
+    .body .column th.large-12 {
+      width: 100%; }
+
+    td.large-offset-1,
+    td.large-offset-1.first,
+    td.large-offset-1.last,
+    th.large-offset-1,
+    th.large-offset-1.first,
+    th.large-offset-1.last {
+      padding-left: 64.33333px; }
+
+    td.large-offset-2,
+    td.large-offset-2.first,
+    td.large-offset-2.last,
+    th.large-offset-2,
+    th.large-offset-2.first,
+    th.large-offset-2.last {
+      padding-left: 112.66667px; }
+
+    td.large-offset-3,
+    td.large-offset-3.first,
+    td.large-offset-3.last,
+    th.large-offset-3,
+    th.large-offset-3.first,
+    th.large-offset-3.last {
+      padding-left: 161px; }
+
+    td.large-offset-4,
+    td.large-offset-4.first,
+    td.large-offset-4.last,
+    th.large-offset-4,
+    th.large-offset-4.first,
+    th.large-offset-4.last {
+      padding-left: 209.33333px; }
+
+    td.large-offset-5,
+    td.large-offset-5.first,
+    td.large-offset-5.last,
+    th.large-offset-5,
+    th.large-offset-5.first,
+    th.large-offset-5.last {
+      padding-left: 257.66667px; }
+
+    td.large-offset-6,
+    td.large-offset-6.first,
+    td.large-offset-6.last,
+    th.large-offset-6,
+    th.large-offset-6.first,
+    th.large-offset-6.last {
+      padding-left: 306px; }
+
+    td.large-offset-7,
+    td.large-offset-7.first,
+    td.large-offset-7.last,
+    th.large-offset-7,
+    th.large-offset-7.first,
+    th.large-offset-7.last {
+      padding-left: 354.33333px; }
+
+    td.large-offset-8,
+    td.large-offset-8.first,
+    td.large-offset-8.last,
+    th.large-offset-8,
+    th.large-offset-8.first,
+    th.large-offset-8.last {
+      padding-left: 402.66667px; }
+
+    td.large-offset-9,
+    td.large-offset-9.first,
+    td.large-offset-9.last,
+    th.large-offset-9,
+    th.large-offset-9.first,
+    th.large-offset-9.last {
+      padding-left: 451px; }
+
+    td.large-offset-10,
+    td.large-offset-10.first,
+    td.large-offset-10.last,
+    th.large-offset-10,
+    th.large-offset-10.first,
+    th.large-offset-10.last {
+      padding-left: 499.33333px; }
+
+    td.large-offset-11,
+    td.large-offset-11.first,
+    td.large-offset-11.last,
+    th.large-offset-11,
+    th.large-offset-11.first,
+    th.large-offset-11.last {
+      padding-left: 547.66667px; }
+
+    td.expander,
+    th.expander {
+      visibility: hidden;
+      width: 0;
+      padding: 0 !important; }
+
+    table.container.radius {
+      border-radius: 0;
+      border-collapse: separate; }
+
+    .block-grid {
+      width: 100%;
+      max-width: 580px; }
+      .block-grid td {
+        display: inline-block;
+        padding: 8px; }
+
+    .up-2 td {
+      width: 274px !important; }
+
+    .up-3 td {
+      width: 177px !important; }
+
+    .up-4 td {
+      width: 129px !important; }
+
+    .up-5 td {
+      width: 100px !important; }
+
+    .up-6 td {
+      width: 80px !important; }
+
+    .up-7 td {
+      width: 66px !important; }
+
+    .up-8 td {
+      width: 56px !important; }
+
+    table.text-center,
+    th.text-center,
+    td.text-center,
+    h1.text-center,
+    h2.text-center,
+    h3.text-center,
+    h4.text-center,
+    h5.text-center,
+    h6.text-center,
+    p.text-center,
+    span.text-center {
+      text-align: center; }
+
+    table.text-left,
+    th.text-left,
+    td.text-left,
+    h1.text-left,
+    h2.text-left,
+    h3.text-left,
+    h4.text-left,
+    h5.text-left,
+    h6.text-left,
+    p.text-left,
+    span.text-left {
+      text-align: left; }
+
+    table.text-right,
+    th.text-right,
+    td.text-right,
+    h1.text-right,
+    h2.text-right,
+    h3.text-right,
+    h4.text-right,
+    h5.text-right,
+    h6.text-right,
+    p.text-right,
+    span.text-right {
+      text-align: right; }
+
+    span.text-center {
+      display: block;
+      width: 100%;
+      text-align: center; }
+
+    @media only screen and (max-width: 596px) {
+      .small-float-center {
+        margin: 0 auto !important;
+        float: none !important;
+        text-align: center !important; }
+      .small-text-center {
+        text-align: center !important; }
+      .small-text-left {
+        text-align: left !important; }
+      .small-text-right {
+        text-align: right !important; } }
+
+    img.float-left {
+      float: left;
+      text-align: left; }
+
+    img.float-right {
+      float: right;
+      text-align: right; }
+
+    img.float-center,
+    img.text-center {
+      margin: 0 auto;
+      Margin: 0 auto;
+      float: none;
+      text-align: center; }
+
+    table.float-center,
+    td.float-center,
+    th.float-center {
+      margin: 0 auto;
+      Margin: 0 auto;
+      float: none;
+      text-align: center; }
+
+    .hide-for-large {
+      display: none !important;
+      mso-hide: all;
+      overflow: hidden;
+      max-height: 0;
+      font-size: 0;
+      width: 0;
+      line-height: 0; }
+      @media only screen and (max-width: 596px) {
+        .hide-for-large {
+          display: block !important;
+          width: auto !important;
+          overflow: visible !important;
+          max-height: none !important;
+          font-size: inherit !important;
+          line-height: inherit !important; } }
+
+    table.body table.container .hide-for-large * {
+      mso-hide: all; }
+
+    @media only screen and (max-width: 596px) {
+      table.body table.container .hide-for-large,
+      table.body table.container .row.hide-for-large {
+        display: table !important;
+        width: 100% !important; } }
+
+    @media only screen and (max-width: 596px) {
+      table.body table.container .callout-inner.hide-for-large {
+        display: table-cell !important;
+        width: 100% !important; } }
+
+    @media only screen and (max-width: 596px) {
+      table.body table.container .show-for-large {
+        display: none !important;
+        width: 0;
+        mso-hide: all;
+        overflow: hidden; } }
+
+    body,
+    table.body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    td,
+    th,
+    a {
+      color: #0a0a0a;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      padding: 0;
+      margin: 0;
+      Margin: 0;
+      text-align: left;
+      line-height: 1.3; }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: inherit;
+      word-wrap: normal;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      margin-bottom: 10px;
+      Margin-bottom: 10px; }
+
+    h1 {
+      font-size: 34px; }
+
+    h2 {
+      font-size: 30px; }
+
+    h3 {
+      font-size: 28px; }
+
+    h4 {
+       margin-top: 1em;
+       font-size: 16px;
+       font-weight: 600; }
+
+    h5 {
+      font-size: 20px; }
+
+    h6 {
+      font-size: 18px; }
+
+    body,
+    table.body,
+    p,
+    td,
+    th {
+      font-size: 16px;
+      line-height: 1.3; }
+
+    p {
+      margin-bottom: 10px;
+      Margin-bottom: 10px; }
+      p.lead {
+        font-size: 20px;
+        line-height: 1.6; }
+      p.subheader {
+        margin-top: 4px;
+        margin-bottom: 8px;
+        Margin-top: 4px;
+        Margin-bottom: 8px;
+        font-weight: normal;
+        line-height: 1.4;
+        color: #8a8a8a; }
+
+    small {
+      font-size: 80%;
+      color: #cacaca; }
+
+    a {
+      color: #2199e8;
+      text-decoration: none; }
+      a:hover {
+        color: #147dc2; }
+      a:active {
+        color: #147dc2; }
+      a:visited {
+        color: #2199e8; }
+
+    h1 a,
+    h1 a:visited,
+    h2 a,
+    h2 a:visited,
+    h3 a,
+    h3 a:visited,
+    h4 a,
+    h4 a:visited,
+    h5 a,
+    h5 a:visited,
+    h6 a,
+    h6 a:visited {
+      color: #2199e8; }
+
+    pre {
+      background: #f3f3f3;
+      margin: 10px 0;
+      Margin: 10px 0; }
+      pre code {
+        color: #cacaca; }
+        pre code span.callout {
+          color: #8a8a8a;
+          font-weight: bold; }
+        pre code span.callout-strong {
+          color: #ff6908;
+          font-weight: bold; }
+
+    table.hr {
+      width: 100%; }
+      table.hr th {
+        height: 0;
+        max-width: 580px;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 1px solid #0a0a0a;
+        border-left: 0;
+        margin: 20px auto;
+        Margin: 20px auto;
+        clear: both; }
+
+    .stat {
+      font-size: 40px;
+      line-height: 1; }
+      p + .stat {
+        margin-top: -16px;
+        Margin-top: -16px; }
+
+    span.preheader {
+      display: none !important;
+      visibility: hidden;
+      mso-hide: all !important;
+      font-size: 1px;
+      color: #f3f3f3;
+      line-height: 1px;
+      max-height: 0px;
+      max-width: 0px;
+      opacity: 0;
+      overflow: hidden; }
+
+    table.button {
+      width: auto;
+      margin: 0 0 16px 0;
+      Margin: 0 0 16px 0; }
+      table.button table td {
+        text-align: left;
+        color: #fefefe;
+        background: #2199e8;
+        border: 2px solid #2199e8; }
+        table.button table td a {
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 16px;
+          font-weight: bold;
+          color: #fefefe;
+          text-decoration: none;
+          display: inline-block;
+          padding: 8px 16px 8px 16px;
+          border: 0 solid #2199e8;
+          border-radius: 3px; }
+      table.button.radius table td {
+        border-radius: 3px;
+        border: none; }
+      table.button.rounded table td {
+        border-radius: 500px;
+        border: none; }
+
+    table.button:hover table tr td a,
+    table.button:active table tr td a,
+    table.button table tr td a:visited,
+    table.button.tiny:hover table tr td a,
+    table.button.tiny:active table tr td a,
+    table.button.tiny table tr td a:visited,
+    table.button.small:hover table tr td a,
+    table.button.small:active table tr td a,
+    table.button.small table tr td a:visited,
+    table.button.large:hover table tr td a,
+    table.button.large:active table tr td a,
+    table.button.large table tr td a:visited {
+      color: #fefefe; }
+
+    table.button.tiny table td,
+    table.button.tiny table a {
+      padding: 4px 8px 4px 8px; }
+
+    table.button.tiny table a {
+      font-size: 10px;
+      font-weight: normal; }
+
+    table.button.small table td,
+    table.button.small table a {
+      padding: 5px 10px 5px 10px;
+      font-size: 12px; }
+
+    table.button.large table a {
+      padding: 10px 20px 10px 20px;
+      font-size: 20px; }
+
+    table.button.expand,
+    table.button.expanded {
+      width: 100% !important; }
+      table.button.expand table,
+      table.button.expanded table {
+        width: 100%; }
+        table.button.expand table a,
+        table.button.expanded table a {
+          text-align: center;
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0; }
+      table.button.expand center,
+      table.button.expanded center {
+        min-width: 0; }
+
+    table.button:hover table td,
+    table.button:visited table td,
+    table.button:active table td {
+      background: #147dc2;
+      color: #fefefe; }
+
+    table.button:hover table a,
+    table.button:visited table a,
+    table.button:active table a {
+      border: 0 solid #147dc2; }
+
+    table.button.secondary table td {
+      background: #777777;
+      color: #fefefe;
+      border: 0px solid #777777; }
+
+    table.button.secondary table a {
+      color: #fefefe;
+      border: 0 solid #777777; }
+
+    table.button.secondary:hover table td {
+      background: #919191;
+      color: #fefefe; }
+
+    table.button.secondary:hover table a {
+      border: 0 solid #919191; }
+
+    table.button.secondary:hover table td a {
+      color: #fefefe; }
+
+    table.button.secondary:active table td a {
+      color: #fefefe; }
+
+    table.button.secondary table td a:visited {
+      color: #fefefe; }
+
+    table.button.success table td {
+      background: #3adb76;
+      border: 0px solid #3adb76; }
+
+    table.button.success table a {
+      border: 0 solid #3adb76; }
+
+    table.button.success:hover table td {
+      background: #23bf5d; }
+
+    table.button.success:hover table a {
+      border: 0 solid #23bf5d; }
+
+    table.button.alert table td {
+      background: #ec5840;
+      border: 0px solid #ec5840; }
+
+    table.button.alert table a {
+      border: 0 solid #ec5840; }
+
+    table.button.alert:hover table td {
+      background: #e23317; }
+
+    table.button.alert:hover table a {
+      border: 0 solid #e23317; }
+
+    table.button.warning table td {
+      background: #ffae00;
+      border: 0px solid #ffae00; }
+
+    table.button.warning table a {
+      border: 0px solid #ffae00; }
+
+    table.button.warning:hover table td {
+      background: #cc8b00; }
+
+    table.button.warning:hover table a {
+      border: 0px solid #cc8b00; }
+
+    table.callout {
+      margin-bottom: 16px;
+      Margin-bottom: 16px; }
+
+    th.callout-inner {
+      width: 100%;
+      border: 1px solid #cbcbcb;
+      padding: 10px;
+      background: #fefefe; }
+      th.callout-inner.primary {
+        background: #def0fc;
+        border: 1px solid #444444;
+        color: #0a0a0a; }
+      th.callout-inner.secondary {
+        background: #ebebeb;
+        border: 1px solid #444444;
+        color: #0a0a0a; }
+      th.callout-inner.success {
+        background: #e1faea;
+        border: 1px solid #1b9448;
+        color: #fefefe; }
+      th.callout-inner.warning {
+        background: #fff3d9;
+        border: 1px solid #996800;
+        color: #fefefe; }
+      th.callout-inner.alert {
+        background: #fce6e2;
+        border: 1px solid #b42912;
+        color: #fefefe; }
+
+    .thumbnail {
+      border: solid 4px #fefefe;
+      box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+      display: inline-block;
+      line-height: 0;
+      max-width: 100%;
+      transition: box-shadow 200ms ease-out;
+      border-radius: 3px;
+      margin-bottom: 16px; }
+      .thumbnail:hover, .thumbnail:focus {
+        box-shadow: 0 0 6px 1px rgba(33, 153, 232, 0.5); }
+
+    table.menu {
+      width: 580px; }
+      table.menu td.menu-item,
+      table.menu th.menu-item {
+        padding: 10px;
+        padding-right: 10px; }
+        table.menu td.menu-item a,
+        table.menu th.menu-item a {
+          color: #2199e8; }
+
+    table.menu.vertical td.menu-item,
+    table.menu.vertical th.menu-item {
+      padding: 10px;
+      padding-right: 0;
+      display: block; }
+      table.menu.vertical td.menu-item a,
+      table.menu.vertical th.menu-item a {
+        width: 100%; }
+
+    table.menu.vertical td.menu-item table.menu.vertical td.menu-item,
+    table.menu.vertical td.menu-item table.menu.vertical th.menu-item,
+    table.menu.vertical th.menu-item table.menu.vertical td.menu-item,
+    table.menu.vertical th.menu-item table.menu.vertical th.menu-item {
+      padding-left: 10px; }
+
+    table.menu.text-center a {
+      text-align: center; }
+
+    .menu[align="center"] {
+      width: auto !important; }
+
+    body.outlook p {
+      display: inline !important; }
+
+    @media only screen and (max-width: 596px) {
+      table.body img {
+        width: auto;
+        height: auto; }
+      table.body center {
+        min-width: 0 !important; }
+      table.body .container {
+        width: 95% !important; }
+      table.body .columns,
+      table.body .column {
+        height: auto !important;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 16px !important;
+        padding-right: 16px !important; }
+        table.body .columns .column,
+        table.body .columns .columns,
+        table.body .column .column,
+        table.body .column .columns {
+          padding-left: 0 !important;
+          padding-right: 0 !important; }
+      table.body .collapse .columns,
+      table.body .collapse .column {
+        padding-left: 0 !important;
+        padding-right: 0 !important; }
+      td.small-1,
+      th.small-1 {
+        display: inline-block !important;
+        width: 8.33333% !important; }
+      td.small-2,
+      th.small-2 {
+        display: inline-block !important;
+        width: 16.66667% !important; }
+      td.small-3,
+      th.small-3 {
+        display: inline-block !important;
+        width: 25% !important; }
+      td.small-4,
+      th.small-4 {
+        display: inline-block !important;
+        width: 33.33333% !important; }
+      td.small-5,
+      th.small-5 {
+        display: inline-block !important;
+        width: 41.66667% !important; }
+      td.small-6,
+      th.small-6 {
+        display: inline-block !important;
+        width: 50% !important; }
+      td.small-7,
+      th.small-7 {
+        display: inline-block !important;
+        width: 58.33333% !important; }
+      td.small-8,
+      th.small-8 {
+        display: inline-block !important;
+        width: 66.66667% !important; }
+      td.small-9,
+      th.small-9 {
+        display: inline-block !important;
+        width: 75% !important; }
+      td.small-10,
+      th.small-10 {
+        display: inline-block !important;
+        width: 83.33333% !important; }
+      td.small-11,
+      th.small-11 {
+        display: inline-block !important;
+        width: 91.66667% !important; }
+      td.small-12,
+      th.small-12 {
+        display: inline-block !important;
+        width: 100% !important; }
+      .columns td.small-12,
+      .column td.small-12,
+      .columns th.small-12,
+      .column th.small-12 {
+        display: block !important;
+        width: 100% !important; }
+      table.body td.small-offset-1,
+      table.body th.small-offset-1 {
+        margin-left: 8.33333% !important;
+        Margin-left: 8.33333% !important; }
+      table.body td.small-offset-2,
+      table.body th.small-offset-2 {
+        margin-left: 16.66667% !important;
+        Margin-left: 16.66667% !important; }
+      table.body td.small-offset-3,
+      table.body th.small-offset-3 {
+        margin-left: 25% !important;
+        Margin-left: 25% !important; }
+      table.body td.small-offset-4,
+      table.body th.small-offset-4 {
+        margin-left: 33.33333% !important;
+        Margin-left: 33.33333% !important; }
+      table.body td.small-offset-5,
+      table.body th.small-offset-5 {
+        margin-left: 41.66667% !important;
+        Margin-left: 41.66667% !important; }
+      table.body td.small-offset-6,
+      table.body th.small-offset-6 {
+        margin-left: 50% !important;
+        Margin-left: 50% !important; }
+      table.body td.small-offset-7,
+      table.body th.small-offset-7 {
+        margin-left: 58.33333% !important;
+        Margin-left: 58.33333% !important; }
+      table.body td.small-offset-8,
+      table.body th.small-offset-8 {
+        margin-left: 66.66667% !important;
+        Margin-left: 66.66667% !important; }
+      table.body td.small-offset-9,
+      table.body th.small-offset-9 {
+        margin-left: 75% !important;
+        Margin-left: 75% !important; }
+      table.body td.small-offset-10,
+      table.body th.small-offset-10 {
+        margin-left: 83.33333% !important;
+        Margin-left: 83.33333% !important; }
+      table.body td.small-offset-11,
+      table.body th.small-offset-11 {
+        margin-left: 91.66667% !important;
+        Margin-left: 91.66667% !important; }
+      table.body table.columns td.expander,
+      table.body table.columns th.expander {
+        display: none !important; }
+      table.body .right-text-pad,
+      table.body .text-pad-right {
+        padding-left: 10px !important; }
+      table.body .left-text-pad,
+      table.body .text-pad-left {
+        padding-right: 10px !important; }
+      table.menu {
+        width: 100% !important; }
+        table.menu td,
+        table.menu th {
+          width: auto !important;
+          display: inline-block !important; }
+        table.menu.vertical td,
+        table.menu.vertical th, table.menu.small-vertical td,
+        table.menu.small-vertical th {
+          display: block !important; }
+      table.menu[align="center"] {
+        width: auto !important; }
+      table.button.small-expand,
+      table.button.small-expanded {
+        width: 100% !important; }
+        table.button.small-expand table,
+        table.button.small-expanded table {
+          width: 100%; }
+          table.button.small-expand table a,
+          table.button.small-expanded table a {
+            text-align: center !important;
+            width: 100% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important; }
+        table.button.small-expand center,
+        table.button.small-expanded center {
+          min-width: 0; } }
+
+    /*------end-------*/
+    * {
+      margin:0;
+      padding:0;
+      font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-size:100%;
+      line-height:1.6;
+      box-sizing: border-box;
+    }
+    body{
+      -webkit-font-smoothing:antialiased;
+      -webkit-text-size-adjust:none;
+      width:100%!important;
+      height:100%;
+    }
+    a {
+      color:#0079DF;
+      text-decoration:none;
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    }
+    html{
+      background: #fcfcfa;
+    }
+    table.body{
+      background: #fcfcfa;
+    }
+    table.container{
+      background: #fff;
+    }
+    h1,h2,h3{
+      font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      line-height:1.2;
+      margin-bottom:15px;
+      color:#333;
+      margin:0;
+      font-weight:500;
+    }
+    table.body img.logo{
+      width:100px;
+      height: 150px;
+    }
+    .wrapper.header {
+      background: #fcfcfa !important;
+      border-bottom: 2px solid #FFDE00;
+    }
+    .wrapper.header h2{
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom:0;
+      line-height:1.75;
+    }
+    .wrapper.header h3{
+      font-size: 12px;
+      color:#515151;
+    }
+    .wrapper.header .columns {
+      padding-bottom: 0 !important;
+    }
+    .header-archive-links{
+      padding-top: 1em;
+      font-size:  12px;
+      color:#333;
+    }
+    .header-archive-links a{
+      color: #515151;
+    }
+    .wrapper .header-container, .wrapper .footer-container {
+      background: #fcfcfa !important;
+    }
+    .wrapper.footer{
+      background: #fcfcfa !important;
+      border-top: 2px solid #FFDE00;
+    }
+    .wrapper.footer .wrapper-inner{
+      padding:30px 0;
+    }
+    .wrapper .footer-container td{
+      font-size: 12px;
+      color:#999;
+    }
+    .wrapper .footer-container strong{
+      color:#666;
+    }
+    .l-padding-t10{
+      padding-top:10px;
+    }
+    .l-padding-b30{
+      padding-bottom: 30px;
+    }
+    .l-padding-t0{
+      padding-top:0!important;
+    }
+    .wrapper .footer-container a{
+      color:#999;
+    }
+
+    /*content*/
+    table.content-wrapper{
+      background: #ffffff;
+    }
+    .badge {
+      background: #FFDE00;
+      color: #333;
+      border-radius: 2px;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 3px 12px;
+      display:inline-block;
+    }
+    .toptic-section table.container{
+      background: #ffffff;
+    }
+    .avatar{
+      border-radius: 20px;
+      width: 20px;
+      height: 20px;
+      max-width: 20px;
+      max-height: 20px;
+      display: inline-block;
+    }
+    .quote-block{
+      font-size: 19px;
+      line-height: 1.25;
+      color: #1374DA;
+      font-weight: 500;
+    }
+    .quote-block h2 {
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-size:21px;
+      letter-spacing:-0.5px;
+      line-height:1.25;
+      font-weight:bold;
+    }
+    .quote-block a{
+      color: #1374DA;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    hr {
+      color: #CCC;
+      background-color: #CCC;
+      height: 1px;
+      border: 0;
+      width: 75px;
+      margin: 15px auto 25px;
+    }
+    td.large-3, th.large-3{
+      padding-left: 0;
+      padding-right: 5px;
+    }
+    td.large-9, th.large-9{
+      padding-left: 0;
+    }
+    .large-9.quote-details{
+      padding-top: 0;
+    }
+    .avatar-intro{
+      vertical-align: middle;
+      font-size: 12px;
+      line-height: 1.7;
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      color:#777;
+    }
+    .avatar-intro a, .avatar-intro span{
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    }
+    .toptic-section .name{
+      color:#666;
+      font-weight: 600;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .toptic-quote-section .avatar-intro .views{
+      display: block;
+      color:#999;
+    }
+    .toptic-quote-section .avatar-intro a{
+      color:#333;
+    }
+    .quote-details{
+      padding:0;
+      font-size: 15px;
+      line-height: 1.4;
+      font-family: Georgia, serif;
+
+    }
+    .quote-details a{
+      text-decoration:none;
+      display: block;
+      color: #0A0A0A;
+      padding: 0;
+      font-size: 15px;
+      line-height: 1.4;
+      font-family: Georgia, serif;
+    }
+    .quote-details a:visited {
+      color: #777;
+    }
+    @media only screen and (max-width: 596px){
+      .row .quote-details{
+        padding-top:0;
+      }
+      table.body img{
+        width:100%;
+        /*max-width: 100%!important;*/
+      }
+    }
+    .meta{
+      padding:0;
+      color: #777;
+    }
+    .bottom {
+      background-color: #fff089;
+      color: #333;
+      font-size: 12px;
+      font-weight: bold;
+      vertical-align: middle;
+      padding: 2px 5px;
+      border-radius: 3px;
+      display: inline-block;
+      margin-top: 5px;
+    }
+    .bottom img {
+      width:20px;
+      height: 20px;
+      vertical-align: middle;
+    }
+    .bottom a img {
+      text-decoration: none;
+    }
+    .bottom a.name {
+      color: #333;
+      text-decoration: underline;
+    }
+    .meta img{
+      display: inline;
+      vertical-align: middle;
+      width:20px;
+      height: 20px;
+      max-width:20px;
+      max-height: 20px;
+    }
+    @media only screen and (max-width: 596px){
+      .meta img{
+        width:20px!important;
+        height: 20px!important;
+      }
+    }
+
+    .meta, .meta a, .meta span {
+      font-size: 12px;
+      font-weight: normal;
+    }
+    .meta a.tweet-link{
+      color:#0079DF;
+      font-weight: normal;
+    }
+    .quote-block .site-link{
+      color:#999;
+    }
+    .color-black{
+      color:#333!important;
+    }
+    /*
+
+    Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+    */
+
+    .hljs {
+      display: block;
+      overflow-x: auto;
+      padding: 0.5em;
+      background: #23241f;
+    }
+
+    .hljs,
+    .hljs-tag,
+    .hljs-subst {
+      color: #f8f8f2;
+    }
+
+    .hljs-strong,
+    .hljs-emphasis {
+      color: #a8a8a2;
+    }
+
+    .hljs-bullet,
+    .hljs-quote,
+    .hljs-number,
+    .hljs-regexp,
+    .hljs-literal,
+    .hljs-link {
+      color: #ae81ff;
+    }
+
+    .hljs-code,
+    .hljs-title,
+    .hljs-section,
+    .hljs-selector-class {
+      color: #a6e22e;
+    }
+
+    .hljs-strong {
+      font-weight: bold;
+    }
+
+    .hljs-emphasis {
+      font-style: italic;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-name,
+    .hljs-attr {
+      color: #f92672;
+    }
+
+    .hljs-symbol,
+    .hljs-attribute {
+      color: #66d9ef;
+    }
+
+    .hljs-params,
+    .hljs-class .hljs-title {
+      color: #f8f8f2;
+    }
+
+    .hljs-string,
+    .hljs-type,
+    .hljs-built_in,
+    .hljs-builtin-name,
+    .hljs-selector-id,
+    .hljs-selector-attr,
+    .hljs-selector-pseudo,
+    .hljs-addition,
+    .hljs-variable,
+    .hljs-template-variable {
+      color: #e6db74;
+    }
+
+    .hljs-comment,
+    .hljs-deletion,
+    .hljs-meta {
+      color: #75715e;
+    }
+
+    pre * {
+      font-family: Menlo, Monaco, monospace !important;
+    }
+
+    code {
+      display: inline;
+      font-family: monospace;
+      background-color: #EBEBEB;
+      padding: 0 3px;
+      border-radius: 2px;
+      line-height: 1.25;
+    }
+    h2, h2 a {
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-size:21px;
+      letter-spacing:-0.5px;
+      line-height:1.25;
+      font-weight:bold;
+    }
+    h2 a {
+      color: #0079DF;
+    }
+    h2 a:visited {
+      color: #2199e8;
+    }
+    p,ul {
+      margin-bottom:25px;
+      font-weight:normal;
+      font-size:15px;
+    }
+    p {
+      margin-bottom:0;
+    }
+    ul li {
+      margin-left:5px;
+      list-style-position:inside;
+    }
+    sup {
+      font-size: 9px;
+      line-height: 0;
+    }
+    .code, pre {
+      background-color: #202020;
+      padding: 10px;
+      font-family: Menlo, monospace;
+      margin-top: 3px;
+      color: #FFF;
+      border-radius: 2px;
+      line-height: 1.35;
+      font-size: 13px;
+      padding-left: 5px;
+    }
+    pre code {
+      background: inherit;
+      color: inherit;
+      white-space: pre-line;
+    }
+    .code pre {
+      color: #FFF;
+      font-size: 13px;
+      font-family: Menlo, monospace;
+      line-height: 1.35;
+      display: block;
+      white-space: pre-wrap;
+    }
+    .code .comment {
+      color: #88888E;
+      font-size: 13px;
+      font-family: Menlo, monospace;
+      line-height: 1.35;
+      display: block;
+    }
+    .alert {
+      background-color: #ECECEC;
+      padding: 20px;
+      margin-top: 10px;
+      border-radius: 2px;
+      font-size: 15px;
+    }
+    .author-line {
+      font-size: 12px;
+      color: #3A3A3A;
+      font-weight: 500;
+      display: inline-block;
+      padding: 0px 2px 1px;
+      background-color: #FFF089;
+      border-radius: 2px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <table class="body" data-made-with-foundation>
+    <tr>
+      <td class="float-center" align="center" valign="top">
+        <center>
+          <!-- header begin -->
+          <table class="wrapper header" align="center" bgcolor="#fcfcfa">
+            <tr>
+              <td class="wrapper-inner">
+                <center>
+                  <table align="center" class="container header-container float-center">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <table class="row collapse">
+                            <tbody>
+                              <tr>
+                                <th class="small-6 large-6 columns" valign="middle">
+                                  <table>
+                                    <tr>
+                                      <th>
+                                        <img src="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg" width="100" height="150" class="logo">
+                                      </th>
+                                    </tr>
+                                  </table>
+                                </th>
+                                <th class="small-6 large-6 columns" valign="middle">
+                                  <table>
+                                    <tr>
+                                      <th>
+                                        <h2 id="issue-nb">ISSUE #48</h2>
+                                        <h3 id="issue-date">Tu&#8203;esday 17<sup>th</sup> Ma&#8203;y 2&#8203;016</h3>
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                      <td class="header-archive-links">
+                                        <a href="*|ARCHIVE|*" target="_blank">View on the web</a>
+                                         · 
+                                        <a href="http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907" target="_blank">Archives</a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </center>
+              </td>
+            </tr>
+          </table>
+          <!-- header end -->
+
+          <!-- content -->
+          <table class="wrapper content-wrapper" align="center" bgcolor="ffffff">
+            <tr>
+              <td class="float-center" align="center" valign="top">
+                <center>
+                  <table class="spacer">
+                    <tbody>
+                      <tr>
+                        <td height="25px" style="font-size:25px;line-height:25px;">&#xA0;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <table align="center" class="container content-wrapper float-center">
+                    <tbody>
+                      <tr>
+                        <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge">TOP 5 LINKS THIS WEEK</span></td>
+                      </tr>
+                      <tr>
+                        <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                      </tr>
+                      <!-- five sections -->
+
+                      <!-- one -->
+                      <tr>
+                        <td align="center">
+                          <table class="toptic-section" align="center">
+                            <tr>
+                              <td>
+                                <table width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <div class='meta'>
+                                          <a href="#">
+                                            <img src="https://pbs.twimg.com/profile_images/684637308704833536/uvjCE3jF_bigger.jpg" class="avatar"  width="20" height="20">
+                                          </a>
+                                          <a href="#" class="name">Arron Hunt</a>
+                                          <span>recommended this link:</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="quote-block">
+                                <h2><a href="#">
+                                  Why do doctors often claim they’re not paid well?
+                                </a></h2>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="meta">
+                                  github​.io ·
+                                  <a href="#" class="tweet-link">tweet this link</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="quote-details">
+                                <a href='#'>
+                                I know I’m going to mirror a lot of what other people are saying but I figured I’d put my two cents in, So I’m a plastic surgeon who recently graduated from residency; when people ask what I do, I tell them I’m a plastic surgeon.
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class='bottom'>
+                                  By
+                                  <a href="#">
+                                    <img src="https://avatars1.githubusercontent.com/u/12679251" class="avatar" width="20" height="20">
+                                  </a>
+                                  <a href="#" class="name">Fabien Loudet</a>, SysAdmin at Rosetta Stone
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+
+                      <!-- two -->
+                      <tr>
+                        <td align="center">
+                          <table class="toptic-section" align="center">
+                            <tr>
+                              <td>
+                                <table width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <div class='meta'>
+                                          <a href="#">
+                                            <img src="https://avatars3.githubusercontent.com/u/517062?v=3&s=460" class="avatar"  width="20" height="20">
+                                          </a>
+                                          <a href="#" class="name">Yoann Cerda</a>
+                                          <span>recommended this link:</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="quote-block">
+                                <h2><a href="#">
+                                  Why do doctors often claim they’re not paid well?
+                                </a></h2>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="meta">
+                                  github​.io ·
+                                  <a href="#" class="tweet-link">tweet this link</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="quote-details">
+                                <a href='#'>
+                                I know I’m going to mirror a lot of what other people are saying but I figured I’d put my two cents in, So I’m a plastic surgeon who recently graduated from residency; when people ask what I do, I tell them I’m a plastic surgeon.
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class='bottom'>
+                                  By
+                                  <a href="#">
+                                    <img src="https://avatars1.githubusercontent.com/u/12679251" class="avatar" width="20" height="20">
+                                  </a>
+                                  <a href="#" class="name">Fabien Loudet</a>, SysAdmin at Rosetta Stone
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+
+                      <!-- three -->
+                      <tr>
+                        <td align="center">
+                          <table class="toptic-section" align="center">
+                            <tr>
+                              <td>
+                                <table width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <div class='meta'>
+                                          <a href="#">
+                                            <img src="https://avatars3.githubusercontent.com/u/517062?v=3&s=460" class="avatar"  width="20" height="20">
+                                          </a>
+                                          <a href="#" class="name">Yoann Cerda</a>
+                                          <span>recommended this link:</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="quote-block">
+                                <h2><a href="#">
+                                  Why do doctors often claim they’re not paid well?
+                                </a></h2>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="meta">
+                                  github​.io ·
+                                  <a href="#" class="tweet-link">tweet this link</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="quote-details">
+                                <a href='#'>
+                                I know I’m going to mirror a lot of what other people are saying but I figured I’d put my two cents in, So I’m a plastic surgeon who recently graduated from residency; when people ask what I do, I tell them I’m a plastic surgeon.
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class='bottom'>
+                                  By
+                                  <a href="#">
+                                    <img src="https://avatars1.githubusercontent.com/u/12679251" class="avatar" width="20" height="20">
+                                  </a>
+                                  <a href="#" class="name">Fabien Loudet</a>, SysAdmin at Rosetta Stone
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+
+                      <!-- five -->
+                      <tr>
+                        <td align="center">
+                          <table class="toptic-section" align="center">
+                            <tr>
+                              <td>
+                                <table width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <div class='meta'>
+                                          <a href="#">
+                                            <img src="https://avatars3.githubusercontent.com/u/517062?v=3&s=460" class="avatar"  width="20" height="20">
+                                          </a>
+                                          <a href="#" class="name">Yoann Cerda</a>
+                                          <span>recommended this link:</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="quote-block">
+                                <h2><a href="#">
+                                  Why do doctors often claim they’re not paid well?
+                                </a></h2>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="meta">
+                                  github​.io ·
+                                  <a href="#" class="tweet-link">tweet this link</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="quote-details">
+                                <a href='#'>
+                                I know I’m going to mirror a lot of what other people are saying but I figured I’d put my two cents in, So I’m a plastic surgeon who recently graduated from residency; when people ask what I do, I tell them I’m a plastic surgeon.
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class='bottom'>
+                                  By
+                                  <a href="#">
+                                    <img src="https://avatars1.githubusercontent.com/u/12679251" class="avatar" width="20" height="20">
+                                  </a>
+                                  <a href="#" class="name">Fabien Loudet</a>, SysAdmin at Rosetta Stone
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+
+                      <!-- five -->
+                      <tr>
+                        <td align="center">
+                          <table class="toptic-section" align="center">
+                            <tr>
+                              <td>
+                                <table width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <div class='meta'>
+                                          <a href="#">
+                                            <img src="https://avatars3.githubusercontent.com/u/517062?v=3&s=460" class="avatar"  width="20" height="20">
+                                          </a>
+                                          <a href="#" class="name">Yoann Cerda</a>
+                                          <span>recommended this link:</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="quote-block">
+                                <h2><a href="#">
+                                  Why do doctors often claim they’re not paid well?
+                                </a></h2>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="meta">
+                                  github​.io ·
+                                  <a href="#" class="tweet-link">tweet this link</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="quote-details">
+                                <a href='#'>
+                                I know I’m going to mirror a lot of what other people are saying but I figured I’d put my two cents in, So I’m a plastic surgeon who recently graduated from residency; when people ask what I do, I tell them I’m a plastic surgeon.
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class='bottom'>
+                                  By
+                                  <a href="#">
+                                    <img src="https://avatars1.githubusercontent.com/u/12679251" class="avatar" width="20" height="20">
+                                  </a>
+                                  <a href="#" class="name">Fabien Loudet</a>, SysAdmin at Rosetta Stone
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <br/>
+                        </td>
+                      </tr>
+
+                      <!-- five end -->
+                    </tbody>
+                  </table>
+                </center>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="float-center" align="center" valign="top">
+                <center>
+                  <table class="container">
+                    <tbody>
+                      <!-- Tip of the week -->
+                      <tr>
+                        <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="badge">TIP OF THE WEEK</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                      </tr>
+
+                      <tr>
+                        <td data-placeholder="" name="Tip of the week" id="tip-of-the-week">
+                          <h2><a href="https://gist.github.com/nepsilon/0aa66098f6b5be23cd39bdca6676aef323">
+                            5 handy JavaScript one-liners
+                          </a></h2>
+
+                          <h4>1. Generate a random string:</h4>
+
+                          <pre><code class="lang-javascript"><span class="hljs-selector-tag">Math</span><span class="hljs-selector-class">.random</span>()<span class="hljs-selector-class">.toString</span>(36)<span class="hljs-selector-class">.substr</span>(2);
+                          </code></pre>
+
+                          <p>This simply generates a random float, casts it into a String using base 36 and remove the 2 first chars <code>0</code> and <code>.</code>. </p>
+
+                          <h4>2. Clone an array:</h4>
+                          <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> newA = myArray.slice(<span class="hljs-number">0</span>);
+                          </code></pre>
+                          <p>This will return a copy of the array, ensuring no other variables point to it.</p>
+
+                          <br/>
+                          <strong>👉 Keep these Gists on <a href="https://gist.github.com/nepsilon/066098f6b5be23cd39bdca6676aef323" style="font-weight: bold;">Github »</a></strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" class="text-center" style="padding:40px 0">
+                          <strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">All the best and see you next week!</strong>
+                          <br>
+                          <strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">— Julien</strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </center>
+              </td>
+            </tr>
+
+
+          <!-- footer begin -->
+          <table class="wrapper footer" align="center" bgcolor="#fcfcfa">
+            <tr>
+              <td class="wrapper-inner">
+                <center>
+                  <table align="center" class="container footer-container float-center">
+                    <tbody>
+                      <tr>
+                        <td align="center" class="text-center">
+                          💬
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center l-padding-t10 l-padding-b30"><strong> Got feedback? Just hit reply.</strong></td>
+                      </tr>
+                      <tr>
+                        <td align="center" class="text-center l-padding-b30">
+                          <a href="http://fullweb.io/" target="_blank">Website</a> ·
+                          <a href="https://twitter.com/fullwebio" target="_blank">Follow us on Twitter</a> ·
+                          <a href="https://www.facebook.com/fullwebio" target="_blank">Like us on Facebook</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" class="text-center l-padding-b30">
+                          *|REWARDS|*
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" class="text-center">
+                          <a href="*|UNSUB|*">Unsubscribe</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </center>
+              </td>
+            </tr>
+          </table>
+          <!-- footer end -->
+          </center>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>
