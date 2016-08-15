@@ -1,0 +1,757 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta content="telephone=no" name="format-detection">
+  <title data-placeholder="" id="page-title">Fullweb Issue #61</title>
+  <meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png">
+  <meta property="og:title" content="Fullweb Newsletter: Issue #61" data-placeholder="" id="meta-og-title">
+  <style>
+  /* Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/ */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+.hljs-strong {
+  font-weight: bold;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+  </style>
+
+  <style type="text/css">
+      * {
+        margin:0;
+        padding:0;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        font-size:100%;
+        line-height:1.6;
+        box-sizing: border-box;
+      }
+      pre * {
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace !important;
+      }
+      img{
+        max-width:100%;
+      }
+      body{
+        -webkit-font-smoothing:antialiased;
+        -webkit-text-size-adjust:none;
+        width:100%!important;
+        height:100%;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      }
+      a {
+        color:#0079DF;
+        text-decoration:none;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      }
+      h1 code, h2 code, h3 code, p code {
+        display: inline;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        background-color: #EBEBEB;
+        padding: 0 3px;
+        border-radius: 2px;
+        line-height: 1.25;
+        font-size: 13px;
+       }
+       hr {
+        margin: 25px auto 25px;
+        color: #CCC;
+        background-color: #CCC;
+        height: 1px;
+        border: 0;
+        width: 75px;
+       }
+      .btn-primary,.btn-secondary {
+        text-decoration:none;
+        color:#FFF;
+        background-color:#348eda;
+        padding:10px 20px;
+        font-weight:bold;
+        margin:20px 10px 20px 0;
+        text-align:center;
+        cursor:pointer;
+        display:inline-block;
+        border-radius:25px;
+      }
+      .btn-secondary{
+        background:#aaa;
+      }
+      .last{
+        margin-bottom:0;
+      }
+      .first{
+        margin-top:0;
+      }
+      table.body-wrap{
+        width:100%;
+      }
+      table.body-wrap .container {
+        margin-top: 10px;
+      }
+      table.header-wrap,
+      table.footer-wrap{
+        width:100%;
+        clear:both!important;
+        background-color: #FCFCFA;
+      }
+      table.header-wrap {
+        border-bottom: 2px solid #FFDE00;
+      }
+      table.footer-wrap{
+        border-top: 2px solid #FFDE00;
+      }
+      .footer-wrap .container pre{
+        font-size:12px;
+        color:#666;
+      }
+      table.footer-wrap a{
+        color:#999;
+      }
+      h1,h2,h3{
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        line-height:1.2;
+        margin-bottom:15px;
+        color:#333;
+        margin:0;
+        font-weight:500;
+      }
+      h1 {
+        font-size: 19px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 22px;
+        text-align: left;
+      }
+      h2 code {
+        font-size: 19px;
+      }
+      h3, h3 a {
+        font-size: 19px;
+        margin-bottom: 0;
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      }
+      .link-section{
+        padding-bottom: 0;
+        font-family:Georgia, sans-serif;
+      }
+      .link-section h2 {
+        margin-bottom: 0;
+      }
+      .link-section h2 a {
+        display: inline-block;
+        color: #1374DA;
+        line-height: 1.2;
+        text-decoration: none !important;
+      }
+      .link-desc p a {
+        color:#222;
+        text-decoration:none;
+        font-family: Georgia, sans-serif;
+        font-size: 15px;
+        display: block;
+        line-height: 1.5;
+      }
+        {
+        font-size: 13px;
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        color: #888;
+        text-transform: lowercase;
+      }
+      p,ul {
+        margin-bottom:25px;
+        font-weight:normal;
+        font-size:15px;
+      }
+      p {
+        margin-bottom:0;
+        line-height: 1.5;
+      }
+      .link-desc p {
+        font-size:15px;
+        font-family: Georgia, sans-serif;
+      }
+      ul li {
+        margin-left:5px;
+        list-style-position:inside;
+      }
+      .container{
+        display:block!important;
+        max-width:650px!important;
+        width:100%!important;
+        margin:0 auto!important;
+        clear:both!important;
+        width: 650px;
+      }
+      .content,.header{
+        padding:20px;
+        max-width:650px;
+        width:100%!important;
+        margin:0 auto;
+        display:block;
+      }
+      .header {
+        padding: 0;
+      }
+      .header h3 {
+        font-size: 13px;
+        color: #515151;
+      }
+      .header p {
+        margin-bottom:10px;
+      }
+      .content {
+        padding-bottom: 0;
+        padding-left: 10px;
+      }
+      /*.content table {
+        width:100%;
+      }*/
+      sup {
+        font-size: 9px;
+        line-height: 0;
+      }
+      .code, pre {
+        background-color: #202020;
+        padding: 10px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        margin-top: 3px;
+        color: #FFF;
+        border-radius: 2px;
+        line-height: 1.35;
+        font-size: 13px;
+        padding-left: 5px;
+      }
+      pre code {
+        background: #202020;
+        color: inherit;
+        white-space: pre-wrap;
+        line-height: 1.25;
+      }
+      .code pre {
+        color: #FFF;
+        font-size: 13px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        line-height: 1.35;
+        display: block;
+        white-space: pre-wrap;
+      }
+      .code .comment {
+        color: #88888E;
+        font-size: 13px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        line-height: 1.35;
+        display: block;
+      }
+      .header-archive-links {
+        margin-top: 1em;
+        font-size: 15px;
+        color: #333;
+      }
+      .header-archive-links a {
+        font-size: 13px;
+        font-weight: 500;
+        color: #515151;
+      }
+      .badge {
+        background: #FFDE00;
+        color: #333;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: bold;
+        font-weight: 500;
+        padding: 3px 12px;
+        display:inline-block;
+      }
+      .alert {
+        background-color: #ECECEC;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 2px;
+        font-size: 15px;
+      }
+      .author-line {
+        font-size: 12px;
+        color: #3A3A3A;
+        font-weight: 500;
+        display: inline-block;
+        padding: 0px 2px 1px;
+        background-color: #FFF089;
+        border-radius: 2px;
+      }
+      .meta {
+        font-size: 13px;
+      }
+      .meta .domain {
+        color: #797979;
+      }
+      #tip-of-the-week h2 {
+        line-height: 1.2rem;
+        margin: 5px 0 10px 0;
+      }
+      h2 a {
+        line-height: 1.2;
+      }
+  </style>
+
+  </head>
+  <body bgcolor="#fff">
+  <center>
+  <table width="650" cellpadding="0" cellspacing="0">
+  <tr><td>
+  <div style="opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px">Your weekly dose of dev news.</div>
+    <!-- header-wrap -->
+    <table class="header-wrap" width="650">
+      <tbody><tr>
+        <td class="container" width="650">
+          <!-- header -->
+          <div class="header" style="min-height: 150px;">
+            <table style="width:100%">
+              <tbody><tr style="width:100%">
+                <td style="width:50%">
+                  <h1>
+                    <img src="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg" height="150" width="103" title="Fullweb Weekly" style="text-align:center;display:inline-block;border-left:3px solid #FCFCFA;box-sizing:content-box">
+                  </h1>
+                </td>
+                <td style="width:50%; text-align:left;">
+                  <h2 id="issue-nb" style="font-size: 18px;font-weight: 600;line-height:1.75;margin-bottom:0" name="Issue-number" data-placeholder="">ISSUE #61
+  </h2>
+                  <h3 id="issue-date" data-placeholder="" name="Issue date">Tu&#8203;esday 16<sup>th</sup> Aug&#8203;ust 2&#8203;016
+  </h3>
+                  <div class="header-archive-links">
+                    <a href="*|ARCHIVE|*" target="_blank">View on the web</a>
+                     · 
+                    <a href="http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907" target="_blank">Archives</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+          <!-- /header -->
+        </td>
+      </tr>
+    </tbody></table>
+
+<!--       <table class="body-wrap">     -->
+<!--         <tr>     -->
+<!--           <td class="container" bgcolor="#FFFFFF">     -->
+<!--             <div class="content">     -->
+<!--               <table>     -->
+<!--                 <tr>     -->
+<!--                   <td>     -->
+<!--                     <div>   -->
+<!--                       <strong> -->
+<!--                       <a href='https://news.ycombinator.com/item?id=12030863'></a> -->
+<!--                       </strong> -->
+<!--                      <p>  -->
+<!--                        An interesting thread on HN where people tell how their <code>Show HN:</code> announcement correlated to their project success or failure. -->
+<!--                      </p>  -->
+<!--                     </div>     -->
+<!--                   </td>     -->
+<!--                 </tr>     -->
+<!--               </table>     -->
+<!--             </div>     -->
+<!--           </td>     -->
+<!--         </tr>     -->
+<!--       </table>     -->
+
+    <!-- body -->
+    <table class="body-wrap"  width="650">
+      <tbody><tr>
+        <td class="container" bgcolor="#FFFFFF" width="650">
+          <br />
+          <!-- content -->
+          <div class="content" style="padding-top: 0px">
+          <table cellspacing="0" cellpadding="0" style="margin: 15px 0 10px;">
+              <tr><td>
+          <table width="initial" style="font-size:16px;font-weight: bold;font-weight:500;background: #FFDE00; color: #333;border-radius: 2px; display: inline-block; padding: 3px 12px;" cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                  TOP 5 LINKS THIS WEEK
+                </td>
+              </tr>
+          </table>
+              </td></tr>
+              </table>
+          <br />
+          <table>
+
+          <!-- 1 - Link snippet -->
+            <tbody><tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I1-link-title"><a href="https://medium.mybridge.co/top-ten-python-articles-for-the-past-month-a6bb135941e3">Top 10 Python articles for the past month</a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>
+                      <div class="meta">
+                        <span class="domain" data-placeholder="" id="I1-link-domain">mybridge.&#8203;co</span> · <span data-placeholder="" id="I1-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Top 10 Python articles for the past month&url=https://medium.mybridge.co/top-ten-python-articles-for-the-past-month-a6bb135941e3">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I1-link-desc" data-placeholder=""><a href="https://medium.mybridge.co/top-ten-python-articles-for-the-past-month-a6bb135941e3">
+                        This list is competitive and carefully includes great articles for you to read, so that you can learn and code more productively in the field of Python.
+  </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I1-author-line" data-placeholder="">Suggested by <a href="https://github.com/tuxlinuxien">Yoann Cerda</a>, Software Engineer at Goyoo
+  </span>
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr>
+              </td>
+            </tr>
+
+          <!-- 2 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I2-link-title">
+                      <a href="http://hackerthemes.com/bootstrap-cheatsheet/">
+                        Bootstrap 4 cheat sheet
+                      </a>
+  </h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I2-link-domain">hackerthemes&#8203;.com
+  </span> · <span id="I2-share-twitter-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Bootstrap 4 cheat sheet&url=http://hackerthemes.com/bootstrap-cheatsheet/">tweet this link</a></span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I2-link-desc" data-placeholder=""><a href="http://hackerthemes.com/bootstrap-cheatsheet/">
+                       Get the code snippet and preview for all Bootstrap component in a click.
+                    </a>
+                    </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I2-author-line" data-placeholder="">From <a href="https://twitter.com/arechsteiner">Alexander Rechsteiner</a>, Developer &amp; Web Designer
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr>
+              </td>
+            </tr>
+
+          <!-- 3 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I3-link-title"><a href="https://magic.io/blog/asyncpg-1m-rows-from-postgres-to-python/">Asyncpg: 1M rows/s from Postgres to Python</a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I4-link-domain">magic&#8203;.io</span> · <span data-placeholder="" id="I4-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Asyncpg: 1M rows/s from Postgres to Python&url=https://magic.io/blog/asyncpg-1m-rows-from-postgres-to-python/">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I3-link-desc" data-placeholder=""><a href="https://magic.io/blog/asyncpg-1m-rows-from-postgres-to-python/">
+                        Asyncpg is a new fully-featured open-source Python client library for PostgreSQL. It is built specifically for asyncio and Python 3.5 <code>async</code>/<code>await</code>.<br />Asyncpg is the fastest driver among common Python, NodeJS and Go implementations.
+                      </a></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I3-author-line" data-placeholder="">From <a href="https://twitter.com/elprans">Elvis Pranskevichus</a>, Founder of magic&#8203;.io
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr>
+              </td>
+            </tr>
+
+          <!-- 4 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I4-link-title"><a href="http://lcamtuf.coredump.cx/squirrel/">
+                       This JPEG is also a webpage
+                      </a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I4-link-domain">coredump&#8203;.cx</span> · <span data-placeholder="" id="I4-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=This JPEG is also a webpage&url=http://lcamtuf.coredump.cx/squirrel/">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I4-link-desc" data-placeholder=""><a href="http://lcamtuf.coredump.cx/squirrel/">
+                        No server-side hacks involved - the magic happens in your browser.
+                      </a>
+                      </p>
+                      <p>HN discussion <a style='display:inline;text-decoration:underline' href='https://news.ycombinator.com/item?id=12262470'>here</a>.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I4-author-line" data-placeholder="">From <a href="https://twitter.com/lcamtuf">Lcamtuf</a>, Security Researcher
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr>
+              </td>
+            </tr>
+
+          <!-- 5 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I4-link-title"><a href="https://webkit.org/blog/6830/a-refined-content-security-policy/">
+                        A refined content security policy
+                      </a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I4-link-domain">webkit&#8203;.org</span> · <span data-placeholder="" id="I4-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=A Refined Content Security Policy&url=https://webkit.org/blog/6830/a-refined-content-security-policy/">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I4-link-desc" data-placeholder=""><a href="https://webkit.org/blog/6830/a-refined-content-security-policy/">
+                        The latest WebKit builds and Safari Technology Preview now support all of the features of the Content Security Policy Level 2 standard, including hashes for <code>script</code> and <code>style</code> elements.
+                      </a>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I4-author-line" data-placeholder="">Suggested by <a href="https://twitter.com/jbuty">Julien Buty</a>, Director of Eng. at LLVISION
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+          </div>
+          <!-- /content -->
+        </td>
+      </tr>
+    </tbody></table>
+  <br />
+
+      <!-- Tip of the week -->
+      <table class="body-wrap" width="650">
+      <tbody><tr>
+        <td class="container" bgcolor="#FFFFFF" width="650">
+          <!-- content -->
+          <div class="content">
+                <table cellspacing="0" cellpadding="0" style="margin-bottom:0px"><tr><td>
+                      <table width="initial" style="font-size:16px;font-weight: bold;font-weight:500;background: #FFDE00; color: #333;border-radius: 2px; display: inline-block; padding: 3px 12px;" cellspacing="0" cellpadding="0">
+                          <tr>
+                              <td>
+                                  TIP OF THE WEEK
+                              </td>
+                          </tr>
+                      </table>
+              </td></tr></table>
+
+           <table width='100%'>
+              <tbody>
+               <tr>
+                <td>
+              <tr>
+                <td data-placeholder="" name="Tip of the week" id="tip-of-the-week">
+                <br />
+                <h2 style='margin-top:10px'>
+                  <a href="https://gist.github.com/nepsilon/850eabe8df71762d74ed33a42a4f5141">
+                    3 hidden HTML tips
+                  </a>
+                </h2>
+
+
+            <p style='margin-bottom:5px;margin-top:10px'>
+              <strong style='font-size:16px'>1. Click label to auto-focus on input</strong>
+              <br />
+              A big plus for a good UX that all modern browsers support.<br />Note that the pairing happens between the <code>label</code>’s <code>for</code> attribute and the <code>input</code>’s <code>id</code> attribute, not its <code>name</code>.
+            </p>
+<pre><code class="xml html"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"username"</span>&gt;</span>Fiscal Year<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"username"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"username"</span> /&gt;</span>
+</code></pre>
+
+            <p style='margin-bottom:5px;margin-top:10px'>
+              <strong style='font-size:16px'>2. Allow line breaks where it make sense:</strong>
+              <br />
+              You can control where the browser add a line break when its window is too narrow for its content. The tag to use is <code>&lt;wbr&gt;</code>.
+            </p>
+<pre><code class="xml html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Lebensabschnitt<span class="hljs-tag">&lt;<span class="hljs-name">wbr</span>&gt;</span>partner<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+            <p style='margin-bottom:5px;margin-top:5px'>
+              Another trick is using the HTML entity <code>&amp;shy;</code> to tell where to break the words. Nothing will be shown if no line break is needed, but a linking hyphen <code>-</code> will be shown otherwise:
+            </p>
+            <pre><code class="xml html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Lebensabschnitt<span class="hljs-name">&amp;shy;</span>partner<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> </code></pre>
+
+            <p style='margin-bottom:5px;margin-top:10px'>
+              <strong style='font-size:16px'>3. Use protocol independent URLs</strong>
+              <br />
+              This is a best practice to avoid the ugly "This page contains both secure and non-secure content" warning. This happens when your HTTPS hosted page links to non-HTTPS resources (image, script, css, font, etc).
+            </p>
+<pre><code class="xml html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"//domain&#8203;.com/foo&#8203;.js"</span>&gt;</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">/script</span>&gt;</span>
+</span></span></code></pre>
+
+            <p style='margin-bottom:5px;margin-top:10px;font-size:17px;'>
+              <strong> 👉  <a style='text-decoration:underline' href="https://gist.github.com/nepsilon/850eabe8df71762d74ed33a42a4f5141">Keep this as Gist on Github &raquo;</a></strong>
+              <br />
+            </p>
+              </td>
+              </tr>
+              <tr>
+                <td style="text-align:center;  padding: 0 0 30px 0;">
+                <br>
+                <hr>
+                  <strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">All the best and see you next week! </strong>
+                  <br>
+                  <strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">— Julien</strong>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+    <!-- /body -->
+
+    <!-- footer -->
+    <table class="footer-wrap">
+      <tbody><tr>
+        <td class="container" width="650">
+          <center>
+          <!-- content -->
+          <div class="content" style="padding-top:10px">
+            <table>
+              <tbody><tr>
+                <td align="center">
+                  <p>💬<br />
+                    <strong style="color:#333"> Got feedback? Just hit reply.</strong>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <p>
+                    <br>
+                    <a href="http://fullweb.io/" target="_blank">Website</a> ·
+                    <a href="https://twitter.com/fullwebio" target="_blank">Follow us on Twitter</a> ·
+                    <a href="https://www.facebook.com/fullwebio" target="_blank">Like us on Facebook</a>
+                    <br><br><br>
+                    *|REWARDS|*
+                    <br><br><br>
+                    <a href="*|UNSUB|*">Unsubscribe</a>
+                  </p>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+          </center>
+          <!-- /content -->
+        </td>
+      </tr>
+    </tbody></table>
+    <!-- /footer -->
+
+      </td></tr></table>
+  </center>
+  </body>
+</html>
