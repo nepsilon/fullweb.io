@@ -1,0 +1,759 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta content="telephone=no" name="format-detection">
+  <title data-placeholder="" id="page-title">Fullweb Issue #62</title>
+  <meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png">
+  <meta property="og:title" content="Fullweb Newsletter: Issue #62" data-placeholder="" id="meta-og-title">
+  <style>
+  /* Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/ */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+.hljs-strong {
+  font-weight: bold;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+  </style>
+
+  <style type="text/css">
+      * {
+        margin:0;
+        padding:0;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        font-size:100%;
+        line-height:1.6;
+        box-sizing: border-box;
+      }
+      pre * {
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace !important;
+      }
+      img{
+        max-width:100%;
+      }
+      body{
+        -webkit-font-smoothing:antialiased;
+        -webkit-text-size-adjust:none;
+        width:100%!important;
+        height:100%;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      }
+      a {
+        color:#0079DF;
+        text-decoration:none;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      }
+      h1 code, h2 code, h3 code, p code {
+        display: inline;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        background-color: #EBEBEB;
+        padding: 0 3px;
+        border-radius: 2px;
+        line-height: 1.25;
+        font-size: 13px;
+       }
+       hr {
+        margin: 25px auto 25px;
+        color: #CCC;
+        background-color: #CCC;
+        height: 1px;
+        border: 0;
+        width: 75px;
+       }
+      .btn-primary,.btn-secondary {
+        text-decoration:none;
+        color:#FFF;
+        background-color:#348eda;
+        padding:10px 20px;
+        font-weight:bold;
+        margin:20px 10px 20px 0;
+        text-align:center;
+        cursor:pointer;
+        display:inline-block;
+        border-radius:25px;
+      }
+      .btn-secondary{
+        background:#aaa;
+      }
+      .last{
+        margin-bottom:0;
+      }
+      .first{
+        margin-top:0;
+      }
+      table.body-wrap{
+        width:100%;
+      }
+      table.body-wrap .container {
+        margin-top: 10px;
+      }
+      table.header-wrap,
+      table.footer-wrap{
+        width:100%;
+        clear:both!important;
+        background-color: #FCFCFA;
+      }
+      table.header-wrap {
+        border-bottom: 2px solid #FFDE00;
+      }
+      table.footer-wrap{
+        border-top: 2px solid #FFDE00;
+      }
+      .footer-wrap .container pre{
+        font-size:12px;
+        color:#666;
+      }
+      table.footer-wrap a{
+        color:#999;
+      }
+      h1,h2,h3{
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        line-height:1.2;
+        margin-bottom:15px;
+        color:#333;
+        margin:0;
+        font-weight:500;
+      }
+      h1 {
+        font-size: 19px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 22px;
+        text-align: left;
+      }
+      h2 code {
+        font-size: 19px;
+      }
+      h3, h3 a {
+        font-size: 19px;
+        margin-bottom: 0;
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      }
+      .link-section{
+        padding-bottom: 0;
+        font-family:Georgia, sans-serif;
+      }
+      .link-section h2 {
+        margin-bottom: 0;
+      }
+      .link-section h2 a {
+        display: inline-block;
+        color: #1374DA;
+        line-height: 1.2;
+        text-decoration: none !important;
+      }
+      .link-desc p a {
+        color:#222;
+        text-decoration:none;
+        font-family: Georgia, sans-serif;
+        font-size: 15px;
+        display: block;
+        line-height: 1.5;
+      }
+        {
+        font-size: 13px;
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        color: #888;
+        text-transform: lowercase;
+      }
+      p,ul {
+        margin-bottom:25px;
+        font-weight:normal;
+        font-size:15px;
+      }
+      p {
+        margin-bottom:0;
+        line-height: 1.5;
+      }
+      .link-desc p {
+        font-size:15px;
+        font-family: Georgia, sans-serif;
+      }
+      ul li {
+        margin-left:5px;
+        list-style-position:inside;
+      }
+      .container{
+        display:block!important;
+        max-width:650px!important;
+        width:100%!important;
+        margin:0 auto!important;
+        clear:both!important;
+        width: 650px;
+      }
+      .content,.header{
+        padding:20px;
+        max-width:650px;
+        width:100%!important;
+        margin:0 auto;
+        display:block;
+      }
+      .header {
+        padding: 0;
+      }
+      .header h3 {
+        font-size: 13px;
+        color: #515151;
+      }
+      .header p {
+        margin-bottom:10px;
+      }
+      .content {
+        padding-bottom: 0;
+        padding-left: 10px;
+      }
+      /*.content table {
+        width:100%;
+      }*/
+      sup {
+        font-size: 9px;
+        line-height: 0;
+      }
+      .code, pre {
+        background-color: #202020;
+        padding: 10px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        margin-top: 3px;
+        color: #FFF;
+        border-radius: 2px;
+        line-height: 1.35;
+        font-size: 13px;
+        padding-left: 5px;
+      }
+      pre code {
+        background: #202020;
+        color: inherit;
+        white-space: pre-wrap;
+        line-height: 1.25;
+      }
+      .code pre {
+        color: #FFF;
+        font-size: 13px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        line-height: 1.35;
+        display: block;
+        white-space: pre-wrap;
+      }
+      .code .comment {
+        color: #88888E;
+        font-size: 13px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        line-height: 1.35;
+        display: block;
+      }
+      .header-archive-links {
+        margin-top: 1em;
+        font-size: 15px;
+        color: #333;
+      }
+      .header-archive-links a {
+        font-size: 13px;
+        font-weight: 500;
+        color: #515151;
+      }
+      .badge {
+        background: #FFDE00;
+        color: #333;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: bold;
+        font-weight: 500;
+        padding: 3px 12px;
+        display:inline-block;
+      }
+      .alert {
+        background-color: #ECECEC;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 2px;
+        font-size: 15px;
+      }
+      .author-line {
+        font-size: 12px;
+        color: #3A3A3A;
+        font-weight: 500;
+        display: inline-block;
+        padding: 0px 2px 1px;
+        background-color: #FFF089;
+        border-radius: 2px;
+      }
+      .meta {
+        font-size: 13px;
+      }
+      .meta .domain {
+        color: #797979;
+      }
+      #tip-of-the-week h2 {
+        line-height: 1.2rem;
+        margin: 5px 0 10px 0;
+      }
+      h2 a {
+        line-height: 1.2;
+      }
+  </style>
+
+  </head>
+  <body bgcolor="#fff">
+  <center>
+  <table width="650" cellpadding="0" cellspacing="0">
+  <tr><td>
+  <div style="opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px">Your weekly dose of dev news.</div>
+    <!-- header-wrap -->
+    <table class="header-wrap" width="650">
+      <tbody><tr>
+        <td class="container" width="650">
+          <!-- header -->
+          <div class="header" style="min-height: 150px;">
+            <table style="width:100%">
+              <tbody><tr style="width:100%">
+                <td style="width:50%">
+                  <h1>
+                    <img src="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg" height="150" width="103" title="Fullweb Weekly" style="text-align:center;display:inline-block;border-left:3px solid #FCFCFA;box-sizing:content-box">
+                  </h1>
+                </td>
+                <td style="width:50%; text-align:left;">
+                  <h2 id="issue-nb" style="font-size: 18px;font-weight: 600;line-height:1.75;margin-bottom:0" name="Issue-number" data-placeholder="">ISSUE #62
+  </h2>
+                  <h3 id="issue-date" data-placeholder="" name="Issue date">Tu&#8203;esday 23<sup>th</sup> Aug&#8203;ust 2&#8203;016
+  </h3>
+                  <div class="header-archive-links">
+                    <a href="*|ARCHIVE|*" target="_blank">View on the web</a>
+                     · 
+                    <a href="http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907" target="_blank">Archives</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+          <!-- /header -->
+        </td>
+      </tr>
+    </tbody></table>
+
+<!--       <table class="body-wrap">     -->
+<!--         <tr>     -->
+<!--           <td class="container" bgcolor="#FFFFFF">     -->
+<!--             <div class="content">     -->
+<!--               <table>     -->
+<!--                 <tr>     -->
+<!--                   <td>     -->
+<!--                     <div>   -->
+<!--                       <strong> -->
+<!--                       <a href='https://news.ycombinator.com/item?id=12030863'></a> -->
+<!--                       </strong> -->
+<!--                      <p>  -->
+<!--                        An interesting thread on HN where people tell how their <code>Show HN:</code> announcement correlated to their project success or failure. -->
+<!--                      </p>  -->
+<!--                     </div>     -->
+<!--                   </td>     -->
+<!--                 </tr>     -->
+<!--               </table>     -->
+<!--             </div>     -->
+<!--           </td>     -->
+<!--         </tr>     -->
+<!--       </table>     -->
+
+    <!-- body -->
+    <table class="body-wrap"  width="650">
+      <tbody><tr>
+        <td class="container" bgcolor="#FFFFFF" width="650">
+          <br />
+          <!-- content -->
+          <div class="content" style="padding-top: 0px">
+          <table cellspacing="0" cellpadding="0" style="margin: 15px 0 10px;">
+              <tr><td>
+          <table width="initial" style="font-size:16px;font-weight: bold;font-weight:500;background: #FFDE00; color: #333;border-radius: 2px; display: inline-block; padding: 3px 12px;" cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                  TOP 5 LINKS THIS WEEK
+                </td>
+              </tr>
+          </table>
+              </td></tr>
+              </table>
+          <br />
+          <table>
+
+          <!-- 1 - Link snippet -->
+            <tbody><tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I1-link-title"><a href="http://www.heydonworks.com/article/on-writing-less-damn-code">Writing less damn code</a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>
+                      <div class="meta">
+                        <span class="domain" data-placeholder="" id="I1-link-domain">heydonworks.&#8203;com</span> · <span data-placeholder="" id="I1-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Writing Less Damn Code&url=http://www.heydonworks.com/article/on-writing-less-damn-code">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I1-link-desc" data-placeholder=""><a href="http://www.heydonworks.com/article/on-writing-less-damn-code">
+                        I’m not the most talented coder in the world. No, it’s true. So I try to write as little code as possible. The less I write, the less there is to break, justify, or maintain.
+  </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I1-author-line" data-placeholder="">From <a href="https://twitter.com/heydonworks">Heydon Pickering</a>, Freelance Web Accessibility Consultant
+  </span>
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr>
+              </td>
+            </tr>
+
+          <!-- 2 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I2-link-title">
+                      <a href="https://help.github.com/articles/signing-commits-using-gpg/">
+                       Signing commits using GPG
+                      </a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I2-link-domain">github&#8203;.com
+  </span> · <span id="I2-share-twitter-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Signing commits using GPG&url=https://help.github.com/articles/signing-commits-using-gpg/">tweet this link</a></span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I2-link-desc" data-placeholder=""><a href="https://help.github.com/articles/signing-commits-using-gpg/">
+                       Git can sign your commits with GPG, this will ensure all commits are really from you.
+                    </a>
+                    </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I4-author-line" data-placeholder="">Suggested by <a href="https://twitter.com/jbuty">Julien Buty</a>, Director of Eng. at LLVISION
+                      </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr>
+              </td>
+            </tr>
+
+          <!-- 3 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I3-link-title"><a href="https://medium.com/@cdixon/eleven-reasons-to-be-excited-about-the-future-of-technology-ef5f9b939cb2">Eleven reasons to be excited about the future of technology</a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I4-link-domain">medium&#8203;.com</span> · <span data-placeholder="" id="I4-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Eleven Reasons To Be Excited About The Future of Technology&url=https://medium.com/@cdixon/eleven-reasons-to-be-excited-about-the-future-of-technology-ef5f9b939cb2">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I3-link-desc" data-placeholder=""><a href="https://medium.com/@cdixon/eleven-reasons-to-be-excited-about-the-future-of-technology-ef5f9b939cb2">
+                        There are many exciting new technologies that will continue to transform the world and improve human welfare. Here are eleven of them.
+                      </a></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I3-author-line" data-placeholder="">From <a href="https://twitter.com/cdixon">Chris Dixon</a>, General Partner at a16z
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr>
+              </td>
+            </tr>
+
+          <!-- 4 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I4-link-title"><a href="http://labs.openviewpartners.com/funded-vs-bootstrapped-comparing-the-metrics-of-37-saas-companies/">
+                       Funded vs bootstrapped: Comparing the metrics of 37 SaaS companies
+                      </a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I4-link-domain">openviewpartners&#8203;.com</span> · <span data-placeholder="" id="I4-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Funded vs bootstrapped: Comparing the metrics of 37 SaaS companies&url=http://labs.openviewpartners.com/funded-vs-bootstrapped-comparing-the-metrics-of-37-saas-companies/">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I4-link-desc" data-placeholder=""><a href="http://labs.openviewpartners.com/funded-vs-bootstrapped-comparing-the-metrics-of-37-saas-companies/">
+                        I’ve been tracking what’s going on in the SaaS world for some time now and I’ve definitely noticed the rise of bootstrapped SaaS startups in our industry. And here are the results&ellip;
+                      </a>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I4-author-line" data-placeholder="">From <a href="https://twitter.com/clemnt">Clement Vouillon</a>, Senior Research Analyst
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr>
+              </td>
+            </tr>
+
+          <!-- 5 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I4-link-title"><a href="https://blog.golang.org/go1.7">
+                        Go 1.7 is released
+                      </a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I4-link-domain">golang&#8203;.org</span> · <span data-placeholder="" id="I4-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Go 1.7 is released&url=https://blog.golang.org/go1.7">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I4-link-desc" data-placeholder=""><a href="https://blog.golang.org/go1.7">
+                        Today we are happy to announce the release of Go 1.7. There are several significant changes in this release: a port for Linux on IBM z Systems (s390x), compiler improvements, the addition of the context package, and support for hierarchical tests and benchmarks.
+                      </a>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="author-line" id="I4-author-line" data-placeholder="">Suggested by <a href="https://twitter.com/jbuty">Julien Buty</a>, Director of Eng. at LLVISION
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+          </div>
+          <!-- /content -->
+        </td>
+      </tr>
+    </tbody></table>
+  <br />
+
+      <!-- Tip of the week -->
+      <table class="body-wrap" width="650">
+      <tbody><tr>
+        <td class="container" bgcolor="#FFFFFF" width="650">
+          <!-- content -->
+          <div class="content">
+                <table cellspacing="0" cellpadding="0" style="margin-bottom:0px"><tr><td>
+                      <table width="initial" style="font-size:16px;font-weight: bold;font-weight:500;background: #FFDE00; color: #333;border-radius: 2px; display: inline-block; padding: 3px 12px;" cellspacing="0" cellpadding="0">
+                          <tr>
+                              <td>
+                                  TIP OF THE WEEK
+                              </td>
+                          </tr>
+                      </table>
+              </td></tr></table>
+
+           <table width='100%'>
+              <tbody>
+               <tr>
+                <td>
+              <tr>
+                <td data-placeholder="" name="Tip of the week" id="tip-of-the-week">
+                <br />
+                <h2 style='margin-top:10px'>
+                  <a href="https://gist.github.com/nepsilon/e6ee01bbcda0f074bd8f3dbc7f68b501">
+                    3 hidden CSS tips
+                  </a>
+                </h2>
+
+
+            <p style='margin-bottom:5px;margin-top:10px'>
+              <strong style='font-size:16px'>1. Use <code style='font-size:14px'>empty-cells</code> to style <code style='font-size:14px'>table</code> empty cells:</strong>
+              <br />
+              Surprisingly the browser support is quite good and extends back to IE8. Convenient to give less visual predominance to empty cells.
+            </p>
+<pre><code class="css"><span class="hljs-selector-tag">table</span> {
+  <span class="hljs-attribute">empty-cells</span>: hide;
+}</code></pre>
+
+            <p style='margin-bottom:5px;margin-top:10px'>
+              <strong style='font-size:16px'>2. <code style='font-size:14px'>border-radius</code> can be made non-symmetric</code>:</strong>
+              <br />
+              In short you can define the horizontal and vertical radius independently. This gives room for interesting shapes. The left part of the slash is the horizontal radius, the right part is the vertical radius.
+            </p>
+<pre><code class="css"><span class="hljs-selector-class">.custom-round</span> {
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">15px</span> <span class="hljs-number">15px</span> <span class="hljs-number">15px</span> <span class="hljs-number">10px</span> / <span class="hljs-number">5px</span> <span class="hljs-number">5px</span> <span class="hljs-number">20px</span> <span class="hljs-number">5px</span>;
+}
+</code></pre>
+
+            <p style='margin-bottom:5px;margin-top:10px'>
+              <strong style='font-size:16px'>3. Use pseudo-elements to style the first letter and line:</strong>
+              <br />
+              No need to resort to another element to wrap the first letter or line of a <code>&lt;p&gt;</code> to style them differently:
+            </p>
+<pre><code class="css"><span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">::first-letter</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2rem</span>;
+}
+
+<span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">::first-line</span> {
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">600</span>;
+}</code></pre>
+
+            <p style='margin-bottom:5px;margin-top:10px;font-size:17px;'>
+              <strong> 👉  <a style='text-decoration:underline' href="https://gist.github.com/nepsilon/e6ee01bbcda0f074bd8f3dbc7f68b501">Keep this as Gist on Github &raquo;</a></strong>
+              <br />
+            </p>
+              </td>
+              </tr>
+              <tr>
+                <td style="text-align:center;  padding: 0 0 30px 0;">
+                <br>
+                <hr>
+                  <strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">All the best and see you next week! </strong>
+                  <br>
+                  <strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">— Julien</strong>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+    <!-- /body -->
+
+    <!-- footer -->
+    <table class="footer-wrap">
+      <tbody><tr>
+        <td class="container" width="650">
+          <center>
+          <!-- content -->
+          <div class="content" style="padding-top:10px">
+            <table>
+              <tbody><tr>
+                <td align="center">
+                  <p>💬<br />
+                    <strong style="color:#333"> Got feedback? Just hit reply.</strong>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <p>
+                    <br>
+                    <a href="http://fullweb.io/" target="_blank">Website</a> ·
+                    <a href="https://twitter.com/fullwebio" target="_blank">Follow us on Twitter</a> ·
+                    <a href="https://www.facebook.com/fullwebio" target="_blank">Like us on Facebook</a>
+                    <br><br><br>
+                    *|REWARDS|*
+                    <br><br><br>
+                    <a href="*|UNSUB|*">Unsubscribe</a>
+                  </p>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+          </center>
+          <!-- /content -->
+        </td>
+      </tr>
+    </tbody></table>
+    <!-- /footer -->
+
+      </td></tr></table>
+  </center>
+  </body>
+</html>
