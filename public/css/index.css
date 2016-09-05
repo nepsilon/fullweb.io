@@ -506,9 +506,9 @@
     opacity: 1;
   }
   .cta-box #thanks-box h4 {
-    font-size: 32px;
-    font-weight: 400;
-    color: #feab3a;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ff9800;
   }
   .cta-box #thanks-box hr {
     display: block;
