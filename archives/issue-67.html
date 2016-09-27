@@ -1,0 +1,758 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Fullweb Issue #67</title>
+  <meta name="viewport" content="width=device-width" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png" />
+  <meta property="og:title" content="Fullweb Newsletter: Issue #67" data-placeholder="" id="meta-og-title" />
+  <style>
+  /* Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/ */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+.hljs-strong {
+  font-weight: bold;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+  </style>
+
+  <style type="text/css">
+      * {
+        margin:0;
+        padding:0;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        font-size:100%;
+        line-height:1.6;
+        box-sizing: border-box;
+      }
+      pre * {
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace !important;
+      }
+      img{
+        max-width:100%;
+      }
+      body{
+        -webkit-font-smoothing:antialiased;
+        -webkit-text-size-adjust:none;
+        width:100%!important;
+        height:100%;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      }
+      a {
+        color:#0079DF;
+        text-decoration:none;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      }
+      h1 code, h2 code, h3 code, p code {
+        display: inline;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        background-color: #EBEBEB;
+        padding: 0 3px;
+        border-radius: 2px;
+        line-height: 1.25;
+        font-size: 13px;
+       }
+       hr {
+        margin: 25px auto 25px;
+        color: #CCC;
+        background-color: #CCC;
+        height: 1px;
+        border: 0;
+        width: 75px;
+       }
+      .btn-primary,.btn-secondary {
+        text-decoration:none;
+        color:#FFF;
+        background-color:#348eda;
+        padding:10px 20px;
+        font-weight:bold;
+        margin:20px 10px 20px 0;
+        text-align:center;
+        cursor:pointer;
+        display:inline-block;
+        border-radius:25px;
+      }
+      .btn-secondary{
+        background:#aaa;
+      }
+      .last{
+        margin-bottom:0;
+      }
+      .first{
+        margin-top:0;
+      }
+      table.body-wrap{
+        width:100%;
+      }
+      table.body-wrap .container {
+        margin-top: 10px;
+      }
+      table.header-wrap,
+      table.footer-wrap{
+        width:100%;
+        clear:both!important;
+        background-color: #FCFCFA;
+      }
+      table.header-wrap {
+        border-bottom: 2px solid #FFDE00;
+      }
+      table.footer-wrap{
+        border-top: 2px solid #FFDE00;
+      }
+      .footer-wrap .container pre{
+        font-size:12px;
+        color:#666;
+      }
+      table.footer-wrap a{
+        color:#999;
+      }
+      h1,h2,h3{
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        line-height:1.2;
+        margin-bottom:15px;
+        color:#333;
+        margin:0;
+        font-weight:500;
+      }
+      h1 {
+        font-size: 19px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 22px;
+        text-align: left;
+      }
+      h2 code {
+        font-size: 19px;
+      }
+      h3, h3 a {
+        font-size: 19px;
+        margin-bottom: 0;
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      }
+      .link-section{
+        padding-bottom: 0;
+        font-family:Georgia, sans-serif;
+      }
+      .link-section h2 {
+        margin-bottom: 0;
+      }
+      .link-section h2 a {
+        display: inline-block;
+        color: #1374DA;
+        line-height: 1.2;
+        text-decoration: none !important;
+      }
+      .link-desc p a {
+        color:#222;
+        text-decoration:none;
+        font-family: Georgia, sans-serif;
+        font-size: 15px;
+        display: block;
+        line-height: 1.5;
+      }
+        {
+        font-size: 13px;
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        color: #888;
+        text-transform: lowercase;
+      }
+      p,ul {
+        margin-bottom:25px;
+        font-weight:normal;
+        font-size:15px;
+      }
+      p {
+        margin-bottom:0;
+        line-height: 1.5;
+      }
+      .link-desc p {
+        font-size:15px;
+        font-family: Georgia, sans-serif;
+      }
+      ul li {
+        margin-left:5px;
+        list-style-position:inside;
+      }
+      .container{
+        display:block!important;
+        max-width:650px!important;
+        width:100%!important;
+        margin:0 auto!important;
+        clear:both!important;
+        width: 650px;
+      }
+      .content,.header{
+        padding:20px;
+        max-width:650px;
+        width:100%!important;
+        margin:0 auto;
+        display:block;
+      }
+      .header {
+        padding: 0;
+      }
+      .header h3 {
+        font-size: 13px;
+        color: #515151;
+      }
+      .header p {
+        margin-bottom:10px;
+      }
+      .content {
+        padding-bottom: 0;
+        padding-left: 10px;
+      }
+      /*.content table {
+        width:100%;
+      }*/
+      sup {
+        font-size: 9px;
+        line-height: 0;
+      }
+      .code, pre {
+        background-color: #202020;
+        padding: 10px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        margin-top: 3px;
+        color: #FFF;
+        border-radius: 2px;
+        line-height: 1.35;
+        font-size: 13px;
+        padding-left: 5px;
+      }
+      pre code {
+        background: #202020;
+        color: inherit;
+        white-space: pre-wrap;
+        line-height: 1.25;
+      }
+      .code pre {
+        color: #FFF;
+        font-size: 13px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        line-height: 1.35;
+        display: block;
+        white-space: pre-wrap;
+      }
+      .code .comment {
+        color: #88888E;
+        font-size: 13px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        line-height: 1.35;
+        display: block;
+      }
+      .header-archive-links {
+        margin-top: 1em;
+        font-size: 15px;
+        color: #333;
+      }
+      .header-archive-links a {
+        font-size: 13px;
+        font-weight: 500;
+        color: #515151;
+      }
+      .badge {
+        background: #FFDE00;
+        color: #333;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: bold;
+        font-weight: 500;
+        padding: 3px 12px;
+        display:inline-block;
+      }
+      .alert {
+        background-color: #ECECEC;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 2px;
+        font-size: 15px;
+      }
+      .author-line {
+        font-size: 12px;
+        color: #3A3A3A;
+        font-weight: 500;
+        display: inline-block;
+        padding: 0px 2px 1px;
+        background-color: #FFF089;
+        border-radius: 2px;
+      }
+      .meta {
+        font-size: 13px;
+      }
+      .meta .domain {
+        color: #797979;
+      }
+      #tip-of-the-week h2 {
+        line-height: 1.2rem;
+        margin: 5px 0 10px 0;
+      }
+      h2 a {
+        line-height: 1.2;
+      }
+  </style>
+
+  </head>
+  <body bgcolor="#fff">
+  <center>
+  <table width="650" cellpadding="0" cellspacing="0">
+  <tr><td>
+  <div style="opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px">Your weekly dose of dev news.</div>
+    <!-- header-wrap -->
+    <table class="header-wrap" width="650">
+      <tbody><tr>
+        <td class="container" width="650">
+          <!-- header -->
+          <div class="header" style="min-height: 150px;">
+            <table style="width:100%">
+              <tbody><tr style="width:100%">
+                <td style="width:50%">
+                  <h1>
+                    <img src="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg" height="150" width="103" title="Fullweb Weekly" style="text-align:center;display:inline-block;border-left:3px solid #FCFCFA;box-sizing:content-box" />
+                  </h1>
+                </td>
+                <td style="width:50%; text-align:left;">
+                  <h2 id="issue-nb" style="font-size: 18px;font-weight: 600;line-height:1.75;margin-bottom:0" name="Issue-number" data-placeholder="">ISSUE #67
+  </h2>
+                  <h3 id="issue-date" data-placeholder="" name="Issue date">Tu&#8203;esday 27<sup>th</sup> Septemb&#8203;er 2&#8203;016
+  </h3>
+                  <div class="header-archive-links">
+                    <a href="*|ARCHIVE|*" target="_blank">View on the web</a>
+                     · 
+                    <a href="http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907" target="_blank">Archives</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+          <!-- /header -->
+        </td>
+      </tr>
+    </tbody></table>
+
+<!--        <table class="body-wrap">      -->
+<!--          <tr>      -->
+<!--            <td class="container" bgcolor="#FFFFFF">      -->
+<!--              <div class="content">      -->
+<!--                <table>   -->
+<!--                  <tr>    -->
+<!--                    <td>    -->
+<!--                      <div>    -->
+<!--                       <p>   -->
+<!-- 											<strong>Hi there!</strong> 🙌 -->
+<!-- 											<br /> -->
+<!-- 											I saw this discussion on HN a while back and thought you may like it:<br /> -->
+<!-- 											<strong><a href='https://news.ycombinator.com/item?id=12318449'>Ask HN: Best passive income method for a solo developer?</a></strong> -->
+<!--                       </p>   -->
+<!--                      </div>     -->
+<!--                    </td>  -->
+<!--                  </tr>    -->
+<!--                </table>    -->
+<!--              </div>    -->
+<!--            </td>    -->
+<!--          </tr>      -->
+<!--        </table>      -->
+
+    <!-- body -->
+    <table class="body-wrap"  style='max-width:650'>
+      <tbody><tr>
+        <td class="container" bgcolor="#FFFFFF" width="650">
+          <br />
+          <!-- content -->
+          <div class="content" style="padding-top: 0px">
+          <table cellspacing="0" cellpadding="0" style="margin: 15px 0 10px;">
+              <tr><td>
+          <table width="initial" style="font-size:16px;font-weight: bold;font-weight:500;background: #FFDE00; color: #333;border-radius: 2px; display: inline-block; padding: 3px 12px;" cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                  TOP 5 LINKS THIS WEEK
+                </td>
+              </tr>
+          </table>
+              </td></tr>
+              </table>
+          <br />
+          <table>
+
+          <!-- 1 - Link snippet -->
+            <tbody><tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I1-link-title">
+												<a href="https://www.datadoghq.com/blog/monitoring-elasticache-performance-metrics-with-redis-or-memcached/?ref=fullweb">
+													Monitoring ElastiCache performance metrics with Redis or Memcached
+												</a>
+											</h2>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>
+                      <div class="meta">
+                        <span class="domain" data-placeholder="" id="I1-link-domain">datadoghq.&#8203;com</span> · <span data-placeholder="" id="I1-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Monitoring ElastiCache performance metrics with Redis or Memcached&url=https://www.datadoghq.com/blog/monitoring-elasticache-performance-metrics-with-redis-or-memcached/?ref=fullweb">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I1-link-desc" data-placeholder=""><a href="https://www.datadoghq.com/blog/monitoring-elasticache-performance-metrics-with-redis-or-memcached/?ref=fullweb">
+												This post is part 1 of a 3-part series on monitoring Amazon ElastiCache performance. Part 2 explains how to collect Elastiscache performance metrics, and Part 3 describes how Coursera monitors ElastiCache performance.
+												</a></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+											<span class="author-line" id="I4-author-line" data-placeholder="">From <a href="https://twitter.com/JMSaponaro">Jean-Mathieu Saponaro</a>, Research &amp; Analytics Engineer at DataDog
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr />
+              </td>
+            </tr>
+
+          <!-- 2 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I2-link-title">
+                      <a href="http://stackoverflow.com/questions/23603023/file-caching-query-string-vs-last-modified">
+												File caching: Query string vs <code>Last-Modified</code>?
+                      </a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I2-link-domain">stackoverflow&#8203;.com
+  </span> · <span id="I2-share-twitter-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=File Caching: Query string vs Last-Modified&url=http://stackoverflow.com/questions/23603023/file-caching-query-string-vs-last-modified">tweet this link</a></span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I2-link-desc" data-placeholder=""><a href="http://stackoverflow.com/questions/23603023/file-caching-query-string-vs-last-modified">
+                       A good answer to that question. Covering: no caching or caching disabled, using validation/conditional requests, and caching forever.
+                    </a>
+                    </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+											<span class="author-line" id="I4-author-line" data-placeholder="">Suggested by <a href="https://github.com/lisovskyvlad">Lisovsky Vlad</a>, Fullstack Developer
+                      </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr />
+              </td>
+            </tr>
+
+          <!-- 3 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I3-link-title"><a href="http://golang.rakyll.org/go-tool-flags/">
+											Go tooling essentials
+											</a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I4-link-domain">golang.rakyll&#8203;.org</span> · <span data-placeholder="" id="I4-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Go tooling essentials&url=http://golang.rakyll.org/go-tool-flags/">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I3-link-desc" data-placeholder=""><a href="http://golang.rakyll.org/go-tool-flags/">
+											New to the Go tools? Or do you want to expand your knowledge? This article is about the flags for the Go tools everyone should know.
+                      </a></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+											<span class="author-line" id="I4-author-line" data-placeholder="">From <a href="https://twitter.com/rakyll">Jaana Burcu Dogan</a>, Go Programmer
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr />
+              </td>
+            </tr>
+
+          <!-- 4 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I4-link-title"><a href="https://www.smashingmagazine.com/2016/09/understanding-rest-and-rpc-for-http-apis/">
+                       Understanding REST and RPC for HTTP APIs
+                      </a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I4-link-domain">smashingmagazine&#8203;.com</span> · <span data-placeholder="" id="I4-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Understanding REST And RPC For HTTP APIs&url=https://www.smashingmagazine.com/2016/09/understanding-rest-and-rpc-for-http-apis/">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I4-link-desc" data-placeholder=""><a href="https://www.smashingmagazine.com/2016/09/understanding-rest-and-rpc-for-http-apis/">
+												For the last few years, whenever somebody wants to start building an HTTP API, they pretty much exclusively use REST as the go-to architectural style, over alternative approaches such as XML-RPC, SOAP and JSON-RPC. REST is made out by many to be ultimately superior to the other “RPC-based” approaches, which is a bit misleading because they are just different.
+                      </a>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+											<span class="author-line" id="I4-author-line" data-placeholder="">From <a href="https://twitter.com/philsturgeon">Phil Sturgeon</a>, Software Engineer
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr />
+              </td>
+            </tr>
+
+          <!-- 5 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I4-link-title"><a href="http://www-uxsup.csx.cam.ac.uk/misc/horror.txt">
+                        Unix Admin: Horror stories
+                      </a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I4-link-domain">csx.&#8203;cam.&#8203;ac.&#8203;uk</span> · <span data-placeholder="" id="I4-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Unix Admin, Horror stories&url=http://www-uxsup.csx.cam.ac.uk/misc/horror.txt">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I4-link-desc" data-placeholder=""><a href="http://www-uxsup.csx.cam.ac.uk/misc/horror.txt">
+                        An amazing collection of actual horror stories of what have gone wrong because of bad system administration, as an early morning wakeup.
+                      </a>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+											<span class="author-line" id="I4-author-line" data-placeholder="">Suggested by <a href="http://fabienloudet.com">Fabien Loudet</a>, SysAdmin at Rosetta Stone
+  </span>
+                    </td>
+                  </tr>
+                </tbody>
+								</table>
+              </td>
+            </tr>
+          </tbody></table>
+          </div>
+          <!-- /content -->
+        </td>
+      </tr>
+    </tbody></table>
+  <br />
+
+      <!-- Tip of the week -->
+      <table class="body-wrap" width="650">
+      <tbody><tr>
+        <td class="container" bgcolor="#FFFFFF" width="650">
+          <!-- content -->
+          <div class="content">
+                <table cellspacing="0" cellpadding="0" style="margin-bottom:0px"><tr><td>
+                      <table width="initial" style="font-size:16px;font-weight: bold;font-weight:500;background: #FFDE00; color: #333;border-radius: 2px; display: inline-block; padding: 3px 12px;" cellspacing="0" cellpadding="0">
+                          <tr>
+                              <td>
+                                  TIP OF THE WEEK
+                              </td>
+                          </tr>
+                      </table>
+              </td></tr></table>
+
+           <table width='100%'>
+              <tbody>
+               <tr>
+                <td>
+              <tr>
+                <td data-placeholder="" name="Tip of the week" id="tip-of-the-week">
+									<br />
+									<h2 style='margin-top:10px'>
+										<a href="https://gist.github.com/nepsilon/070daa5f631c4e56237f28775aa31158">
+											One-line browser notepad 📝
+										</a>
+									</h2>
+
+									<p style='margin-bottom:5px;margin-top:10px'>
+									Sometimes you just need to quickly take some notes.
+									</p>
+									<p style='margin-bottom:5px;margin-top:10px'>
+									A trick is to use the <code>data:</code> scheme with <code>data:text/html</code> to show just a piece of HTML in your browser.
+									<br />
+									Then using the mighty <code>contentEditable</code> to make the whole thing editable.
+									</p>
+
+									<p style='margin-bottom:5px;margin-top:10px'>
+										<strong>To copy/paste into your browser address bar:</strong>
+									</p>
+									<pre><code>data:text/html,&lt;html contenteditable&gt;</code></pre>
+
+									<p style='margin-bottom:5px;margin-top:10px'>
+									<strong>And from there you can get fancier. Adding better styling:</strong>
+									</p>
+									<pre><code class="xml">data:text/html,<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">contenteditable</span> <span class="hljs-attr">autofocus</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"font: 500 1rem/1.5 Menlo, monospace; background:#fafafa"</span>&gt;</span> </code></pre>
+
+									<p style='margin-bottom:5px;margin-top:10px'>
+									<strong>From there, no limit: Turning it into a full editor:</strong>
+									<br />
+									<span style='color:#999;font-size:12px'>From <a href='https://gist.github.com/jakeonrails/4666256'>Jake Moffatt</a></span>
+									</p>
+									<pre><code class="xml">data:text/html, &lt;style type="text/css"&gt;#e{position:absolute;top:0;right:0;bottom:0;left:0;}&lt;/style&gt;
+&lt;div id="e"&gt;&lt;/div&gt;&lt;script src="http:&#8203;//d1n0x3qji82z53.&#8203;cloudfront.&#8203;net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;&lt;script&gt;var e=ace.edit("e");e.setTheme("ace/theme/monokai");e.getSession().setMode("ace/mode/ruby");&lt;/script&gt;</code ></pre>
+
+									<p style='margin-bottom:5px;margin-top:10px;font-size:17px;'>
+										<strong> 👉  <a style='text-decoration:underline' href="https://gist.github.com/nepsilon/070daa5f631c4e56237f28775aa31158">Star or fork this gist on Github &raquo;</a></strong>
+										<br />
+									</p>
+              </td>
+              </tr>
+              <tr>
+                <td style="text-align:center;  padding: 0 0 30px 0;">
+									<br />
+									<hr />
+									<strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">All the best and see you next week! </strong>
+									<br />
+									<strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">— Julien</strong>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+    <!-- /body -->
+
+    <!-- footer -->
+    <table class="footer-wrap">
+      <tbody><tr>
+        <td class="container" width="650">
+          <center>
+          <!-- content -->
+          <div class="content" style="padding-top:10px">
+            <table>
+              <tbody><tr>
+                <td align="center">
+                  <p>💬<br />
+                    <strong style="color:#333"> Got feedback? Just hit reply.</strong>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <p>
+                    <br>
+                    <a href="http://fullweb.io/" target="_blank">Website</a> ·
+                    <a href="https://twitter.com/fullwebio" target="_blank">Follow us on Twitter</a> ·
+                    <a href="https://www.facebook.com/fullwebio" target="_blank">Like us on Facebook</a>
+                    <br><br><br>
+                    *|REWARDS|*
+                    <br><br><br>
+                    <a href="*|UNSUB|*">Unsubscribe</a>
+                  </p>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+          </center>
+          <!-- /content -->
+        </td>
+      </tr>
+    </tbody></table>
+    <!-- /footer -->
+
+      </td></tr></table>
+  </center>
+  </body>
+</html>
