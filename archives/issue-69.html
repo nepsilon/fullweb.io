@@ -1,0 +1,761 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Fullweb Issue #69</title>
+  <meta name="viewport" content="width=device-width" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png" />
+  <meta property="og:title" content="Fullweb Newsletter: Issue #69" />
+  <style>
+  /* Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/ */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+.hljs-strong {
+  font-weight: bold;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+  </style>
+
+  <style type="text/css">
+      * {
+        margin:0;
+        padding:0;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        font-size:100%;
+        line-height:1.6;
+        box-sizing: border-box;
+      }
+      pre * {
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace !important;
+      }
+      img{
+        max-width:100%;
+      }
+      body{
+        -webkit-font-smoothing:antialiased;
+        -webkit-text-size-adjust:none;
+        width:100%!important;
+        height:100%;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      }
+      a {
+        color:#0079DF;
+        text-decoration:none;
+        font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      }
+      h1 code, h2 code, h3 code, p code {
+        display: inline;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        background-color: #EBEBEB;
+        padding: 0 3px;
+        border-radius: 2px;
+        line-height: 1.25;
+        font-size: 13px;
+       }
+       hr {
+        margin: 25px auto 25px;
+        color: #CCC;
+        background-color: #CCC;
+        height: 1px;
+        border: 0;
+        width: 75px;
+       }
+      .btn-primary,.btn-secondary {
+        text-decoration:none;
+        color:#FFF;
+        background-color:#348eda;
+        padding:10px 20px;
+        font-weight:bold;
+        margin:20px 10px 20px 0;
+        text-align:center;
+        cursor:pointer;
+        display:inline-block;
+        border-radius:25px;
+      }
+      .btn-secondary{
+        background:#aaa;
+      }
+      .last{
+        margin-bottom:0;
+      }
+      .first{
+        margin-top:0;
+      }
+      table.body-wrap{
+        width:100%;
+      }
+      table.body-wrap .container {
+        margin-top: 10px;
+      }
+      table.header-wrap,
+      table.footer-wrap{
+        width:100%;
+        clear:both!important;
+        background-color: #FCFCFA;
+      }
+      table.header-wrap {
+        border-bottom: 2px solid #FFDE00;
+      }
+      table.footer-wrap{
+        border-top: 2px solid #FFDE00;
+      }
+      .footer-wrap .container pre{
+        font-size:12px;
+        color:#666;
+      }
+      table.footer-wrap a{
+        color:#999;
+      }
+      h1,h2,h3{
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        line-height:1.2;
+        margin-bottom:15px;
+        color:#333;
+        margin:0;
+        font-weight:500;
+      }
+      h1 {
+        font-size: 19px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 22px;
+        text-align: left;
+      }
+      h2 code {
+        font-size: 19px;
+      }
+      h3, h3 a {
+        font-size: 19px;
+        margin-bottom: 0;
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      }
+      .link-section{
+        padding-bottom: 0;
+        font-family:Georgia, sans-serif;
+      }
+      .link-section h2 {
+        margin-bottom: 0;
+      }
+      .link-section h2 a {
+        display: inline-block;
+        color: #1374DA;
+        line-height: 1.2;
+        text-decoration: none !important;
+      }
+      .link-desc p a {
+        color:#222;
+        text-decoration:none;
+        font-family: Georgia, sans-serif;
+        font-size: 15px;
+        display: block;
+        line-height: 1.5;
+      }
+        {
+        font-size: 13px;
+        font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        color: #888;
+        text-transform: lowercase;
+      }
+      p,ul {
+        margin-bottom:25px;
+        font-weight:normal;
+        font-size:15px;
+      }
+      p {
+        margin-bottom:0;
+        line-height: 1.5;
+      }
+      .link-desc p {
+        font-size:15px;
+        font-family: Georgia, sans-serif;
+      }
+      ul li {
+        margin-left:5px;
+        list-style-position:inside;
+      }
+      .container{
+        display:block!important;
+        max-width:650px!important;
+        width:100%!important;
+        margin:0 auto!important;
+        clear:both!important;
+        width: 650px;
+      }
+      .content,.header{
+        padding:20px;
+        max-width:650px;
+        width:100%!important;
+        margin:0 auto;
+        display:block;
+      }
+      .header {
+        padding: 0;
+      }
+      .header h3 {
+        font-size: 13px;
+        color: #515151;
+      }
+      .header p {
+        margin-bottom:10px;
+      }
+      .content {
+        padding-bottom: 0;
+        padding-left: 10px;
+      }
+      /*.content table {
+        width:100%;
+      }*/
+      sup {
+        font-size: 9px;
+        line-height: 0;
+      }
+      .code, pre {
+        background-color: #202020;
+        padding: 10px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        margin-top: 3px;
+        color: #FFF;
+        border-radius: 2px;
+        line-height: 1.35;
+        font-size: 13px;
+        padding-left: 5px;
+      }
+      pre code {
+        background: #202020;
+        color: inherit;
+        white-space: pre-wrap;
+        line-height: 1.25;
+      }
+      .code pre {
+        color: #FFF;
+        font-size: 13px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        line-height: 1.35;
+        display: block;
+        white-space: pre-wrap;
+      }
+      .code .comment {
+        color: #88888E;
+        font-size: 13px;
+        font-family: Menlo, Consolas, "Segoe UI Mono", monospace;
+        line-height: 1.35;
+        display: block;
+      }
+      .header-archive-links {
+        margin-top: 1em;
+        font-size: 15px;
+        color: #333;
+      }
+      .header-archive-links a {
+        font-size: 13px;
+        font-weight: 500;
+        color: #515151;
+      }
+      .badge {
+        background: #FFDE00;
+        color: #333;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: bold;
+        font-weight: 500;
+        padding: 3px 12px;
+        display:inline-block;
+      }
+      .alert {
+        background-color: #ECECEC;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 2px;
+        font-size: 15px;
+      }
+      .author-line {
+        font-size: 12px;
+        color: #3A3A3A;
+        font-weight: 500;
+        display: inline-block;
+        padding: 0px 2px 1px;
+        background-color: #FFF089;
+        border-radius: 2px;
+      }
+      .meta {
+        font-size: 13px;
+      }
+      .meta .domain {
+        color: #797979;
+      }
+      #tip-of-the-week h2 {
+        line-height: 1.2rem;
+        margin: 5px 0 10px 0;
+      }
+      h2 a {
+        line-height: 1.2;
+      }
+  </style>
+
+  </head>
+  <body bgcolor="#fff">
+  <center>
+  <table width="650" cellpadding="0" cellspacing="0">
+  <tr><td>
+  <div style="opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px">Your weekly must-read dev news.</div>
+    <!-- header-wrap -->
+    <table class="header-wrap" width="650">
+      <tbody><tr>
+        <td class="container" width="650">
+          <!-- header -->
+          <div class="header" style="min-height: 150px;">
+            <table style="width:100%">
+              <tbody><tr style="width:100%">
+                <td style="width:50%">
+                  <h1>
+                    <img src="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg" height="150" width="103" title="Fullweb Weekly" style="text-align:center;display:inline-block;border-left:3px solid #FCFCFA;box-sizing:content-box" />
+                  </h1>
+                </td>
+                <td style="width:50%; text-align:left;">
+                  <h2 id="issue-nb" style="font-size: 18px;font-weight: 600;line-height:1.75;margin-bottom:0" name="Issue-number" data-placeholder="">ISSUE #68
+  </h2>
+                  <h3 id="issue-date" data-placeholder="" name="Issue date">Tu&#8203;esday 11<sup>th</sup> Octob&#8203;er 2&#8203;016
+  </h3>
+                  <div class="header-archive-links">
+                    <a href="*|ARCHIVE|*" target="_blank">View on the web</a>
+                     · 
+                    <a href="http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907" target="_blank">Archives</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+          <!-- /header -->
+        </td>
+      </tr>
+    </tbody></table>
+
+<!-- 		<table class="body-wrap">       -->
+<!-- 			<tr>       -->
+<!-- 				<td class="container" bgcolor="#FFFFFF">       -->
+<!-- 					<div class="content">       -->
+<!-- 						<table>    -->
+<!-- 							<tr>     -->
+<!-- 								<td>     -->
+<!-- 									<div>     -->
+<!-- 									 <p>    -->
+<!-- 									<strong>Hi there ✨</strong>  -->
+<!-- 									<br />  -->
+<!-- 									If you’re on the look out for a new job, or maybe be just passively looking, be sure to read these recent HN threads:<br /> -->
+<!-- 									<strong>&bull; <a href='https://news.ycombinator.com/item?id=12627854'>Ask HN: Who wants to be hired? (October 2016)</a></strong><br /> -->
+<!-- 									<strong>&bull; <a href='https://news.ycombinator.com/item?id=12627853'>Ask HN: Freelancer? Seeking freelancer? (October 2016)</a></strong> <br /> -->
+<!-- 									<strong>&bull; <a href='https://news.ycombinator.com/item?id=12627852'>Ask HN: Who is hiring? (October 2016)</a></strong>.<br /> And if you’re just searching for open-source projects to join, see:<br />  -->
+<!-- 									<strong><a href='https://news.ycombinator.com/item?id=12627838'>Ask HN: Who needs contributors? (October 2016)</a></strong>  -->
+<!-- 									 </p>    -->
+<!-- 									</div>      -->
+<!-- 								</td>   -->
+<!-- 							</tr>     -->
+<!-- 						</table>     -->
+<!-- 					</div>     -->
+<!-- 				</td>     -->
+<!-- 			</tr>       -->
+<!-- 		</table>       -->
+
+    <!-- body -->
+    <table class="body-wrap"  style='max-width:650'>
+      <tbody><tr>
+        <td class="container" bgcolor="#FFFFFF" width="650">
+          <br />
+          <!-- content -->
+          <div class="content" style="padding-top: 0px">
+          <table cellspacing="0" cellpadding="0" style="margin: 15px 0 10px;">
+              <tr><td>
+          <table width="initial" style="font-size:16px;font-weight: bold;font-weight:500;background: #FFDE00; color: #333;border-radius: 2px; display: inline-block; padding: 3px 12px;" cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                  TOP 5 LINKS THIS WEEK
+                </td>
+              </tr>
+          </table>
+              </td></tr>
+              </table>
+          <br />
+          <table>
+
+          <!-- 1 - Link snippet -->
+            <tbody><tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I1-link-title">
+												<a href="http://mherman.org/blog/2016/09/25/node-passport-and-postgres/#.V_ycqJN9526">
+													Node, Passport and Postgres
+												</a>
+											</h2>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>
+                      <div class="meta">
+                        <span class="domain" data-placeholder="" id="I1-link-domain">mherman.&#8203;org</span> · <span data-placeholder="" id="I1-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Node, Passport, and Postgres&url=http://mherman.org/blog/2016/09/25/node-passport-and-postgres/#.V_ycqJN9526">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I1-link-desc" data-placeholder=""><a href="http://mherman.org/blog/2016/09/25/node-passport-and-postgres/#.V_ycqJN9526">
+												This tutorial takes a test-first approach to implementing authentication in a Node app using Passport and Postgres.
+												</a></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+											<span class="author-line" id="I4-author-line" data-placeholder="">From <a href="https://github.com/mjhea0/">Michael Herman</a>, Software Developer
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr />
+              </td>
+            </tr>
+
+          <!-- 2 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I2-link-title">
+                      <a href="https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2016/september/how-loading-javascript-can-slow-websites-down/">
+												How loading JavaScript can slow websites down (even if it’s asynchronous) 🤔
+                      </a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I2-link-domain">nccgroup&#8203;.trust
+  </span> · <span id="I2-share-twitter-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=How loading JavaScript can slow websites down (even if it’s asynchronous)&url=https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2016/september/how-loading-javascript-can-slow-websites-down/">tweet this link</a></span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I2-link-desc" data-placeholder=""><a href="https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2016/september/how-loading-javascript-can-slow-websites-down/">
+                       Some interesting insights on why asynchronous scripts can still be blocking the page rendering.
+                    </a>
+                    </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+											<span class="author-line" id="I4-author-line" data-placeholder="">Suggested by <a href="https://twitter.com/jbuty">Julien Buty</a>, Director of Eng. at LLVISION
+                      </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr />
+              </td>
+            </tr>
+
+          <!-- 3 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I3-link-title"><a href="http://blog.taadeem.net/english/2016/10/01/6_reasons_to_choose_PostgreSQL_9.6">
+												6 reasons to choose PostgreSQL 9.6 🐘
+											</a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I4-link-domain">taadeem&#8203;.net</span> · <span data-placeholder="" id="I4-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=6 reasons to choose PostgreSQL 9.6&url=http://blog.taadeem.net/english/2016/10/01/6_reasons_to_choose_PostgreSQL_9.6">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I3-link-desc" data-placeholder=""><a href="http://blog.taadeem.net/english/2016/10/01/6_reasons_to_choose_PostgreSQL_9.6">
+												A list of the greatest bits in Postgres latest release.
+                      </a></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+											<span class="author-line" id="I4-author-line" data-placeholder="">From <a href="https://twitter.com/daamien">Damien Clochard</a>, PostgreSQL Consultant
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr />
+              </td>
+            </tr>
+
+          <!-- 4 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I4-link-title"><a href="https://dansaber.wordpress.com/2016/10/02/a-dramatic-tour-through-pythons-data-visualization-landscape-including-ggplot-and-altair/">
+                       A dramatic tour through Python’s data visualization landscape (including ggplot and Altair)
+                      </a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I4-link-domain">wordpress&#8203;.com</span> · <span data-placeholder="" id="I4-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=A Dramatic Tour through Python’s Data Visualization Landscape (including ggplot and Altair)&url=https://dansaber.wordpress.com/2016/10/02/a-dramatic-tour-through-pythons-data-visualization-landscape-including-ggplot-and-altair/">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I4-link-desc" data-placeholder=""><a href="https://dansaber.wordpress.com/2016/10/02/a-dramatic-tour-through-pythons-data-visualization-landscape-including-ggplot-and-altair/">
+												The data visualization world can be a bit messy in Python. This post does a good job at explaining it all.
+                      </a>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+											<span class="author-line" id="I4-author-line" data-placeholder="">From <a href="https://twitter.com/Saber_Metrics">Dan Saber</a>,  Data Scientist
+  </span>
+                    </td>
+                  </tr>
+                </tbody></table>
+                <hr />
+              </td>
+            </tr>
+
+          <!-- 5 - Link snippet -->
+            <tr>
+              <td class="link-section">
+                <table>
+                  <tbody><tr>
+                    <td>
+                      <h2 data-placeholder="" id="I4-link-title"><a href="https://gist.github.com/hellerbarde/2843375">
+                        Latency numbers every programmer should know
+                      </a></h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="meta">
+                            <span class="domain" data-placeholder="" id="I4-link-domain">gist&#8203;.github.&#8203;com</span> · <span data-placeholder="" id="I4-twitter-share-link"><a href="https://twitter.com/intent/tweet?via=fullwebio&text=Latency numbers every programmer should know&url=https://gist.github.com/hellerbarde/2843375">tweet this link</a>
+  </span>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="link-desc">
+                      <p id="I4-link-desc" data-placeholder=""><a href="https://gist.github.com/hellerbarde/2843375">
+                       Raw numbers and visualization to understand how long computers need to do different things.
+                      </a>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+											<span class="author-line" id="I4-author-line" data-placeholder="">Suggested by <a href="https://twitter.com/jbuty">Julien Buty</a>, Director of Eng. at LLVISION
+  </span>
+                    </td>
+                  </tr>
+                </tbody>
+								</table>
+              </td>
+            </tr>
+          </tbody></table>
+          </div>
+          <!-- /content -->
+        </td>
+      </tr>
+    </tbody></table>
+  <br />
+
+      <!-- Tip of the week -->
+      <table class="body-wrap" width="650">
+      <tbody><tr>
+        <td class="container" bgcolor="#FFFFFF" width="650">
+          <!-- content -->
+          <div class="content">
+                <table cellspacing="0" cellpadding="0" style="margin-bottom:0px"><tr><td>
+                      <table width="initial" style="font-size:16px;font-weight: bold;font-weight:500;background: #FFDE00; color: #333;border-radius: 2px; display: inline-block; padding: 3px 12px;" cellspacing="0" cellpadding="0">
+                          <tr>
+                              <td>
+                                  TIP OF THE WEEK
+                              </td>
+                          </tr>
+                      </table>
+              </td></tr></table>
+
+           <table width='100%'>
+              <tbody>
+               <tr>
+                <td>
+              <tr>
+                <td data-placeholder="" name="Tip of the week" id="tip-of-the-week">
+									<br />
+									<h2 style='margin-top:10px'>
+										<a href="https://gist.github.com/nepsilon/640004a8df36c6326ced54a035bb5db2">
+											How to re-attach a running process to the terminal 📺
+										</a>
+									</h2>
+
+									<p style='margin-bottom:5px;margin-top:10px'>
+										<strong>In short:</strong>
+										<br />
+										<code>$ reptyr 123</code>	will get the process with PID <code>123</code> and attach it to your terminal.
+										<br />
+										It will now accept input from stdin and output on stdout 👍.
+									</p>
+
+									<p style='margin-bottom:5px;margin-top:10px'>
+									<strong>Installation:</strong>
+									</p>
+									<pre><code>$ git clone https:&#8203;//&#8203;github&#8203;.com/nelhage/reptyr&#8203;.git
+$ make
+$ make install
+</code></pre>
+									<p style='margin-bottom:5px;margin-top:10px'>
+									<strong>But when is it really useful?</strong>									
+									<br />
+									Sometimes a command may take longer than expected to finish and you have to leave.<br /> And when you forgot to run it in <code>screen</code> or <code>tmux</code>, you can just <code>disown</code> this process and <code>reptyr</code> it inside <code>screen</code>/<code>tmux</code>.
+									</p>
+									<p style='margin-bottom:5px;margin-top:10px'>
+									Then detach and go home, and re-attach <code>screen</code>/<code>tmux</code> whenever you need to 👏.
+									</p>
+
+									<p style='margin-bottom:5px;margin-top:10px'>
+									<strong>More info here: <a href='https://github.com/nelhage/reptyr'>github.com/nelhage/reptyr</a></strong>
+									</p>
+
+									<p style='margin-bottom:5px;margin-top:10px;font-size:17px;'>
+										<strong> 👉  <a style='text-decoration:underline' href="https://gist.github.com/nepsilon/640004a8df36c6326ced54a035bb5db2">Star or fork this gist on Github &raquo;</a></strong>
+										<br />
+									</p>
+              </td>
+              </tr>
+              <tr>
+                <td style="text-align:center;  padding: 0 0 30px 0;">
+									<br />
+									<hr />
+									<strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">All the best and see you next week! </strong>
+									<br />
+									<strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">— Julien</strong>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+    <!-- /body -->
+
+    <!-- footer -->
+    <table class="footer-wrap">
+      <tbody><tr>
+        <td class="container" width="650">
+          <center>
+          <!-- content -->
+          <div class="content" style="padding-top:10px">
+            <table>
+              <tbody><tr>
+                <td align="center">
+                  <p>💬<br />
+                    <strong style="color:#333"> Got feedback? Just hit reply.</strong>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <p>
+                    <br />
+                    <a href="http://fullweb.io/" target="_blank">Website</a> ·
+                    <a href="https://twitter.com/fullwebio" target="_blank">Follow us on Twitter</a> ·
+                    <a href="https://www.facebook.com/fullwebio" target="_blank">Like us on Facebook</a>
+                    <br /><br /><br />
+                    *|REWARDS|*
+                    <br /><br /><br />
+                    <a href="*|UNSUB|*">Unsubscribe</a>
+                  </p>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+          </center>
+          <!-- /content -->
+        </td>
+      </tr></tbody>
+		</table>
+    <!-- /footer -->
+
+    </td></tr></table>
+  </center>
+  </body>
+</html>
