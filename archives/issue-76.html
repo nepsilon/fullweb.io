@@ -1,0 +1,962 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>Fullweb Issue #76</title>
+  <meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png" />
+  <meta property="og:title" content="Fullweb Newsletter: Issue #76" />
+  <style type="text/css">
+    /* function css */
+    .wrapper {
+      width: 100%; }
+
+    #outlook a {
+      padding: 0; }
+
+    body {
+      width: 100% !important;
+      min-width: 100%;
+      -ms-text-size-adjust: 100%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-font-smoothing:antialiased;
+      -webkit-text-size-adjust:none;
+      height:  100%;
+    }
+
+    .ExternalClass {
+      width: 100%; }
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%; }
+
+    #backgroundTable {
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      line-height: 100% !important; }
+
+    img {
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+      width: auto;
+      max-width: 100%;
+      clear: both;
+      display: inline-block;
+      border:0;
+    }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse; }
+
+    td {
+      word-wrap: break-word;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      hyphens: auto;
+      border-collapse: collapse !important; }
+
+    table, tr, td {
+      padding: 0;
+      vertical-align: top;
+      text-align: left; }
+    table.body {
+      background: #f3f3f3;
+      height: 100%;
+      width: 100%; }
+
+    table.container {
+      width: 580px;
+      margin: 0 auto;
+      text-align: inherit; }
+
+    table.row {
+      padding: 0;
+      width: 100%;
+      position: relative; }
+
+    table.spacer {
+      width: 100%; }
+      table.spacer td {
+        mso-line-height-rule: exactly; }
+
+    table.container table.row {
+      display: table; }
+
+    td.large-6,
+    th.large-6 {
+      width: 274px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    .collapse > tbody > tr > td.large-6,
+    .collapse > tbody > tr > th.large-6 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 290px; }
+
+    .collapse td.large-6.first,
+    .collapse th.large-6.first,
+    .collapse td.large-6.last,
+    .collapse th.large-6.last {
+      width: 298px; }
+
+    .body .columns td.large-6,
+    .body .column td.large-6,
+    .body .columns th.large-6,
+    .body .column th.large-6 {
+      width: 50%; }
+
+
+    td.expander,
+    th.expander {
+      visibility: hidden;
+      width: 0;
+      padding: 0 !important; }
+
+    td.text-center{
+      text-align: center; }
+
+    table.float-center,
+    td.float-center{
+      margin: 0 auto;
+      float: none;
+      text-align: center; }
+
+    h4 {
+      margin-top: 1em;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    body,
+    table.body,
+    p,
+    td,
+    th {
+      font-size: 16px;
+      line-height: 1.3; }
+
+    pre {
+      margin: 10px 0;
+    }
+    body.outlook p {
+      display: inline !important; }
+
+    @media only screen and (max-width: 596px) {
+      table.body img {
+        width: auto;
+        height: auto; }
+      table.body center {
+        min-width: 0 !important; }
+      table.body .container {
+        width: 95% !important; }
+      table.body .columns {
+        height: auto !important;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 16px !important;
+        padding-right: 16px !important; }
+      table.body .collapse .columns {
+        padding-left: 0 !important;
+        padding-right: 0 !important; }
+      th.small-6 {
+        display: inline-block !important;
+        width: 50% !important; }
+      th.small-12 {
+        display: inline-block !important;
+        width: 100% !important; }
+      table.body table th.expander {
+        display: none !important; }
+ }
+
+    /*------end-------*/
+    * {
+      margin:0;
+      padding:0;
+      font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-size:100%;
+      line-height:1.6;
+      box-sizing: border-box;
+    }
+
+    a {
+      color:#0079DF;
+      text-decoration:none;
+    }
+    html{
+      background: #fcfcfa;
+    }
+    table.body{
+      background: #fcfcfa;
+    }
+    h1,h2,h3{
+      line-height:1.2;
+      margin-bottom:0;
+      color:#333;
+      margin:0;
+      font-weight:500;
+    }
+    table.body img.logo{
+      width:100px;
+      height: 150px;
+      line-height: 1.2;
+      font-size: 21px;
+    }
+    .wrapper.header {
+      background: #fcfcfa !important;
+      border-bottom: 2px solid #FFDE00;
+    }
+    .wrapper.header h2{
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom:0;
+      line-height:1.75;
+    }
+    .wrapper.header h3{
+      font-size: 12px;
+      color:#515151;
+    }
+    .wrapper.header .columns {
+      padding-bottom: 0 !important;
+    }
+    .header-archive-links{
+      padding-top: 1em;
+      font-size:  12px;
+      line-height: 1.3;
+      color:#333;
+    }
+    .header-archive-links a{
+      color: #515151;
+      font-weight: normal;
+    }
+    .wrapper .header-container{
+      background: #fcfcfa !important;
+    }
+    .wrapper.footer{
+      background: #fcfcfa !important;
+      border-top: 2px solid #FFDE00;
+      padding:30px 0;
+    }
+    .wrapper .footer td{
+      font-size: 12px;
+      color:#999;
+    }
+    .wrapper .footer strong{
+      color:#666;
+    }
+    .l-padding-t10{
+      padding-top:10px;
+    }
+    .l-padding-b30{
+      padding-bottom: 30px;
+    }
+    .wrapper .footer a{
+      color:#999;
+    }
+
+    /*content*/
+    .badge {
+      background: #FFDE00;
+      color: #333;
+      border-radius: 2px;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 3px 12px;
+      display:inline-block;
+    }
+    .avatar{
+      border-radius: 20px;
+      width: 20px;
+      height: 20px;
+      max-width: 20px;
+      max-height: 20px;
+      display: inline-block;
+    }
+    .quote-block{
+      font-size: 19px;
+      line-height: 1.25;
+      color: #1374DA;
+      font-weight: 500;
+    }
+    .quote-block h2 {
+      font-size:21px;
+      letter-spacing:-0.5px;
+      line-height:1.2;
+      font-weight:bold;
+    }
+    .quote-block a{
+      color: #1374DA;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    .quote-block h2 a {
+      line-height: 1.15;
+    }
+    .quote-block h2 a:visited {
+      color: #5C9CE0;
+    }
+    hr {
+      color: #EEEEEE;
+      background-color: #EEEEEE;
+      height: 1px;
+      border: 0;
+      width: 100%;
+      margin: 25px auto 25px;
+    }
+    .toptic-section .name{
+      color:#666;
+      font-weight: 600;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .quote-details{
+      font-size: 15px;
+      line-height: 1.4;
+      font-family: Georgia, serif;
+      padding-top: 0;
+    }
+    .quote-details a{
+      text-decoration:none;
+      display: block;
+      color: #0A0A0A;
+      padding: 0;
+      font-size: 15px;
+      line-height: 1.4;
+      font-family: Georgia, serif;
+      font-weight: normal;
+    }
+    .quote-details a.img-link {
+      min-height: 120px;
+      height: 120px;
+      max-height: 120px;
+      background: #fff;
+      overflow: hidden;
+      max-width: 270px;
+    }
+    .quote-details img{
+      max-width: 270px;
+      height: auto;
+    }
+    .quote-details td.large-6,.quote-details th.large-6{
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+    .quote-details a:visited {
+      color: #777;
+    }
+    .quote-details a.img-link:visited {
+      opacity: .7;
+    }
+    @media only screen and (max-width: 596px){
+      .quote-details td.large-6,.quote-details th.large-6{
+        padding: 0 0 2px 0;
+      }
+      .quote-details td.large-6.text-block,.quote-details th.large-6.text-block {
+        padding: 0 0 8px 0;
+      }
+      table.body img{
+        width:100%;
+      }
+      table.body .quote-details img{
+        max-width: 100%!important;
+        width:100%!important;
+      }
+      .bottom {
+        width: 100% !important;
+      }
+      .quote-details a.img-link {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+    .meta {
+      padding:0;
+      color: #777;
+			font-size: 12px !important;	
+    }
+    .bottom {
+      background-color: #fff089;
+      color: #333;
+      font-size: 12px !important;
+      font-weight: bold;
+      vertical-align: middle;
+      padding: 2px 5px;
+      border-radius: 3px;
+      display: inline-block;
+      margin-top: 5px;
+    }
+    .bottom img {
+      width:20px;
+      height: 20px;
+      vertical-align: middle;
+			display: inline-block;
+    }
+    .bottom a img {
+      text-decoration: none;
+			display: inline-block;
+    }
+    .bottom a.name {
+      color: #333;
+      text-decoration: underline;
+      font-size: 12px !important;
+    }
+    .meta img{
+      display: inline;
+			display: inline-block;
+      vertical-align: middle;
+      width:20px;
+      height: 20px;
+      max-width:20px;
+      max-height: 20px;
+    }
+    @media only screen and (max-width: 596px){
+      .meta img{
+        width:20px!important;
+        height: 20px!important;
+				display: inline-block;
+      }
+    }
+
+    .meta, .meta a, .meta span {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1.5;
+    }
+    .meta .text {
+			font-size: 12px !important;	
+      vertical-align: middle;
+    }
+    .meta .text a:hover {
+			font-size: 12px !important;	
+      text-decoration: underline;
+    }
+    .meta a.tweet-link{
+			font-size: 12px !important;	
+      color:#0079DF;
+      font-weight: normal;
+    }
+    .meta a.tweet-link:hover {
+			font-size: 12px !important;	
+      text-decoration: underline;
+    }
+
+    pre * {
+      font-family: Menlo, Monaco, monospace !important;
+    }
+
+    code {
+      display: inline-block;
+      font-family: Menlo, Monaco, monospace !important;
+      background-color: #EBEBEB;
+      padding: 0 3px;
+      border-radius: 2px;
+      line-height: 1.25;
+    }
+    th a code {
+			font-size: 13px;
+		}
+    h2, h2 a {
+      font-size:21px;
+      letter-spacing:-0.5px;
+      line-height:1.25;
+      font-weight:bold;
+    }
+    h2 a {
+      color: #0079DF;
+    }
+    p,ul {
+      margin-bottom:25px;
+      font-weight:normal;
+      font-size:15px;
+    }
+    p {
+      margin-bottom:0;
+    }
+
+    sup {
+      font-size: 9px;
+      line-height: 0;
+    }
+    .code, pre {
+      background-color: #202020;
+      padding: 10px;
+      font-family: Menlo, Monaco, monospace !important;
+      margin-top: 3px;
+      color: #FFF;
+      border-radius: 2px;
+      line-height: 1.35;
+      font-size: 13px;
+      padding-left: 5px;
+    }
+    pre code {
+      background: inherit;
+      color: inherit;
+      white-space: pre-line;
+    }
+    #me {
+     display: inline-block;
+     border-radius: 50%;
+     max-height: 40px;
+     max-width: 40px;
+    }
+    @media only screen and (max-width: 596px) {
+      #me {
+        max-height: 40px !important;
+        max-width: 40px !important;
+      }
+    }
+
+		p code {
+			font-size: 14px;
+			word-break: break-all;
+			display: inline;
+		}	
+
+		#issue-date {
+			font-size: 13px;
+		}
+  </style>
+
+</head>
+<body>
+  <!-- What is show to the user as preview: -->
+  <div style="opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px">Julien’s recommendation for this week</div>
+
+  <table class="body" data-made-with-foundation>
+    <tr>
+      <td class="float-center" align="center" valign="top">
+        <table class="wrapper">
+          <!-- header -->
+          <tr>
+            <td class="wrapper header">
+              <table align="center" class="container">
+                <tr>
+                  <td>
+                    <table class="row collapse" bgcolor="#fcfcfa">
+                      <tr>
+                        <th class="small-6 large-6 columns" valign="middle">
+                          <img src="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg" width="100" height="150" class="logo" title='Fullweb Weekly' />
+                        </th>
+                        <th class="small-6 large-6 columns" valign="middle">
+                          <table>
+                            <tr>
+                              <td>
+                                <h2 id="issue-nb" style='font-size:16px'>ISSUE #76</h2>
+                                <h3 id="issue-date" style='font-size:13px'>Tu&#8203;esday 29<sup>th</sup> Novemb&#8203;er 2&#8203;016</h3>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="header-archive-links">
+                                <a href="*|ARCHIVE|*" target="_blank">View on the web</a>
+                                 · 
+                                <a href="http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907" target="_blank">Archives</a>
+                              </td>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- content -->
+          <tr>
+            <td class="float-center" align="center" valign="top" bgcolor="ffffff">
+              <table class="container content-wrapper float-center">
+                <tr>
+                  <td height="50" style="font-size:50px;line-height: 50px;">&#xA0;</td>
+                </tr>
+                <tr>
+                  <td><span class="badge">TOP 5 LINKS THIS WEEK</span></td>
+                </tr>
+                <tr>
+                  <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                </tr>
+
+                <!-- one -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="https://hackernoon.com/asyncio-for-the-working-python-developer-5c468e6e2e8e">
+                            AsyncIO for the working Python developer
+                          </a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+                          hackernoon&#8203;.com · 
+                          <a href="https://twitter.com/intent/tweet?via=fullwebio&text=AsyncIO for the Working Python Developer&url=https://hackernoon.com/asyncio-for-the-working-python-developer-5c468e6e2e8e" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="https://hackernoon.com/asyncio-for-the-working-python-developer-5c468e6e2e8e">
+																	 ...it was an unreadable mash up of calls to threading and process library functions. Then I found asyncio, and everything changed.
+                                </a>
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://hackernoon.com/@yeraydiazdiaz">
+                            <img src="https://cdn-images-1.medium.com/fit/c/200/200/1*IribKzWQ0AVR8Fv_c9Y3jA.png" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://hackernoon.com/@yeraydiazdiaz" class="name">Yeray Diaz</a>, Senior Software Engineer
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- two -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="meta">
+                          <a href="https://twitter.com/jbuty">
+														<img src="https://avatars2.githubusercontent.com/u/600720?v=3&s=50" class="avatar"  width="20" height="20" />
+                          </a>
+                          <span class="text">
+                            <a href="https://twitter.com/jbuty" class="name">Julien Buty</a>
+                            <span>recommended this link:</span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="https://www.nngroup.com/articles/computer-skill-levels/">
+														The distribution of users’ computer skills: Worse than you think
+                          </a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+													nngroup&#8203;.com · 
+													<a href="https://twitter.com/intent/tweet?via=fullwebio&text=The Distribution of Users’ Computer Skills: Worse Than You Think&url=https://www.nngroup.com/articles/computer-skill-levels/" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="https://www.nngroup.com/articles/computer-skill-levels/">
+																	Across 33 rich countries, only 5% of the population has high computer-related abilities, and only a third of people can complete medium-complexity tasks.
+                                </a>
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://twitter.com/NNgroup">
+                            <img src="https://media.nngroup.com/media/people/photos/jakob-nielsen_cropped.jpg.300x300_q95_autocrop_crop_upscale.jpg" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://twitter.com/NNgroup" class="name">Jakob Nielsen</a>, User Advocate and Principal of the Nielsen Norman Group
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- three -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="http://cssreference.io/">
+														CSS Reference: A free visual guide to CSS
+                          </a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+													cssreference&#8203;.io · 
+													<a href="https://twitter.com/intent/tweet?via=fullwebio&text=A free visual guide to CSS&url=http://cssreference.io/" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="http://cssreference.io/">
+																	A free visual guide to CSS. It features the most popular properties, and explains them with illustrated and animated examples.
+                                </a>
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://twitter.com/jgthms">
+                            <img src="https://pbs.twimg.com/profile_images/765643433469997060/2ZTHZtqI_400x400.jpg" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://twitter.com/jgthms" class="name">Jeremy Thomas</a>, CSS Guru
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- four -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="meta">
+                          <a href="https://twitter.com/jbuty">
+														<img src="https://avatars2.githubusercontent.com/u/600720?v=3&s=50" class="avatar"  width="20" height="20" />
+                          </a>
+                          <span class="text">
+                            <a href="https://twitter.com/jbuty" class="name">Julien Buty</a>
+                            <span>recommended this link:</span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="https://m.subbu.org/dont-build-private-clouds-9a54b3d30c8b">
+													  Don’t build private clouds
+                          </a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+													subbu&#8203;.org · 
+													<a href="https://twitter.com/intent/tweet?via=fullwebio&text=Don’t Build Private Clouds&url=https://m.subbu.org/dont-build-private-clouds-9a54b3d30c8b" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="https://m.subbu.org/dont-build-private-clouds-9a54b3d30c8b">
+																	1. You don’t need to own data centers unless you’re special.
+																	2. Private cloud makes you procrastinate doing the right things.
+																	3. Private cloud cost models are misleading.
+                                </a>
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://twitter.com/sallamar">
+                            <img src="https://pbs.twimg.com/profile_images/445060049522548736/9H4CUKlQ_400x400.jpeg" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://twitter.com/sallamar" class="name">Subbu Allamaraju</a>, VP Cloud at Expedia
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- five -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="https://medium.com/python-pandemonium/never-write-for-loops-again-91a5a4c84baf#.epsub76u7">
+														Never write for-loops again
+                          </a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+													medium&#8203;.com · 
+													<a href="https://twitter.com/intent/tweet?via=fullwebio&text=Never Write For-Loops Again&url=https://medium.com/python-pandemonium/never-write-for-loops-again-91a5a4c84baf#.epsub76u7" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="https://medium.com/python-pandemonium/never-write-for-loops-again-91a5a4c84baf#.epsub76u7">
+																	An interesting introspection on Python loops. Feel free to let me know what you think on Twitter.
+                                </a>
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://twitter.com/dawranliou">
+                            <img src="https://pbs.twimg.com/profile_images/665300241768312832/UFfM-yth_400x400.jpg" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://twitter.com/dawranliou" class="name">Randy Daw-Ran Liou</a>, Software Engineer
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <br />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- code -->
+                <tr>
+                  <td class="float-center" align="center" valign="top">
+                    <table class="container" style='width: 100% !important'>
+                      <!-- Tip of the week -->
+                      <tr>
+                        <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="badge">TIP OF THE WEEK</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                      </tr>
+                      <tr>
+                        <td data-placeholder="" name="Tip of the week" id="tip-of-the-week">
+
+                          <h2><a href="https://gist.github.com/nepsilon/191e652ae97d39be2b1dc8cb28c9ffd7">
+														HTTP methods: It’s not only about GET and POST
+                          </a></h2>
+
+													<p style='margin: 10px 0 10px'>
+												   HTML forms let us only use GET and POST methods, but HTTP provides us with more:
+													</p>
+
+													<p style='margin: 10px 0 10px'>
+														<strong>HEAD</strong>
+														<br />
+														It works like GET but will not return the body. Useful for checking of the resource is 404 or has been updated (via caching headers).
+													</p>
+
+													<p style='margin: 10px 0 10px'>
+														<strong>PUT</strong>
+														<br />
+														A way for HTTP to tell "create or update if exist" the resource at this URL with my payload.
+													</p>
+
+													<p style='margin: 10px 0 10px'>
+														<strong>PATCH</strong>
+														<br />
+														Partially update the resource at this URL using the request payload.
+													</p>
+
+													<p style='margin: 10px 0 10px'>
+														<strong>DELETE</strong>
+														<br />
+													 	No surprise here, DELETE asks for the resource at this URL be deleted.
+													</p>
+
+													<p style='margin: 10px 0 10px'>
+														<strong>OPTIONS</strong>
+														<br />
+														HTTP’s own <code>ls</code> command. It returns the HTTP methods that the server supports at this URL.
+													</p>
+
+													<p style='margin: 10px 0 10px'>
+														<strong>TRACE</strong>
+														<br />
+														A way to query for the changes on any intermediate server. Most of the time not supported.
+													</p>
+
+													<p style='margin: 10px 0 10px'>
+														<strong>CONNECT</strong>
+														<br />
+														Used to create a transparent TCP/IP tunnel, most of the time to facilitate SSL communication through a proxy.
+													</p>
+
+                          <br/>
+                          <strong>👉 You can keep this <a href="https://gist.github.com/nepsilon/191e652ae97d39be2b1dc8cb28c9ffd7" style="font-weight: bold;text-decoration:underline">Gist on Github »</a></strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" class="text-center" style="padding:20px 0">
+                          <hr />
+													<strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">All the best and see you next week &nbsp;<span style='font-style:normal;font-size: 19px'>🙌 </span></strong>
+                          <br />
+                          <img id='me' src='https://avatars3.githubusercontent.com/u/600720?v=3&s=360' width='50' height='50' style='display:inline-block' />
+                          <strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;vertical-align:14px">— Julien</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" class="text-center" style="padding:20px 0;font-size:12px;color: #777">
+                          <hr />
+													<br />
+													<br />
+													Not interested in my emails anymore?
+													<br />
+													<a style='color: #777; text-decoration:underline' href="*|UNSUB|*">Unsubscribe</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
