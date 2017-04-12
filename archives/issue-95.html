@@ -1,0 +1,998 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>Fullweb Issue #95</title>
+  <meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png" />
+  <meta property="og:title" content="Fullweb Newsletter: Issue #95" />
+  <style type="text/css">
+    /* function css */
+    .wrapper {
+      width: 100%; }
+
+    #outlook a {
+      padding: 0; }
+
+    body {
+      -moz-box-sizing: border-box;
+      -ms-text-size-adjust: 100%;
+      -webkit-box-sizing: border-box;
+      -webkit-font-smoothing:antialiased;
+      -webkit-text-size-adjust:none;
+      box-sizing: border-box;
+      height:  100%;
+      min-width: 100%;
+      width: 100% !important;
+    }
+
+    .ExternalClass {
+      width: 100%; }
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%; }
+
+    #backgroundTable {
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      line-height: 100% !important; }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+      border:0;
+      clear: both;
+      display: inline-block;
+      max-width: 100%;
+      outline: none;
+      text-decoration: none;
+      width: auto;
+    }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse; }
+
+    td {
+      word-wrap: break-word;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      hyphens: auto;
+      border-collapse: collapse !important; }
+
+    table, tr, td {
+      padding: 0;
+      vertical-align: top;
+      text-align: left; }
+    table.body {
+      background: #f3f3f3;
+      height: 100%;
+      width: 100%; }
+
+    table.container {
+      width: 580px;
+      margin: 0 auto;
+      text-align: inherit; }
+
+    table.row {
+      padding: 0;
+      width: 100%;
+      position: relative; }
+
+    table.spacer {
+      width: 100%; }
+      table.spacer td {
+        mso-line-height-rule: exactly; }
+
+    table.container table.row {
+      display: table; }
+
+    td.large-6,
+    th.large-6 {
+      width: 274px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    .collapse > tbody > tr > td.large-6,
+    .collapse > tbody > tr > th.large-6 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 290px; }
+
+    .collapse td.large-6.first,
+    .collapse th.large-6.first,
+    .collapse td.large-6.last,
+    .collapse th.large-6.last {
+      width: 298px; }
+
+    .body .columns td.large-6,
+    .body .column td.large-6,
+    .body .columns th.large-6,
+    .body .column th.large-6 {
+      width: 50%; }
+
+
+    td.expander,
+    th.expander {
+      visibility: hidden;
+      width: 0;
+      padding: 0 !important; }
+
+    td.text-center{
+      text-align: center; }
+
+    table.float-center,
+    td.float-center{
+      margin: 0 auto;
+      float: none;
+      text-align: center; }
+
+    h4 {
+      margin-top: 1em;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    body,
+    table.body,
+    p,
+    td,
+    th {
+      font-size: 16px;
+      line-height: 1.3; }
+
+    pre {
+      margin: 10px 0;
+    }
+    body.outlook p {
+      display: inline !important; }
+
+    @media only screen and (max-width: 596px) {
+      table.body img {
+        width: auto;
+        height: auto; }
+      table.body center {
+        min-width: 0 !important; }
+      table.body .container {
+        width: 95% !important; }
+      table.body .columns {
+        height: auto !important;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 16px !important;
+        padding-right: 16px !important; }
+      table.body .collapse .columns {
+        padding-left: 0 !important;
+        padding-right: 0 !important; }
+      th.small-6 {
+        display: inline-block !important;
+        width: 50% !important; }
+      th.small-12 {
+        display: inline-block !important;
+        width: 100% !important; }
+      table.body table th.expander {
+        display: none !important; }
+ }
+
+    /*------end-------*/
+    * {
+      margin:0;
+      padding:0;
+      font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-size:100%;
+      line-height:1.6;
+      box-sizing: border-box;
+    }
+
+    a {
+      color:#0079DF;
+      text-decoration:none;
+    }
+    html{
+      background: #fcfcfa;
+    }
+    table.body{
+      background: #fcfcfa;
+    }
+    h1,h2,h3{
+      line-height:1.2;
+      margin-bottom:0;
+      color:#333;
+      margin:0;
+      font-weight:500;
+    }
+    table.body img.logo{
+      width:100px;
+      height: 150px;
+      line-height: 1.2;
+      font-size: 21px;
+    }
+    .wrapper.header {
+      background: #fcfcfa !important;
+      border-bottom: 2px solid #FFDE00;
+    }
+    .wrapper.header h2{
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom:0;
+      line-height:1.75;
+    }
+    .wrapper.header h3{
+      font-size: 12px;
+      color:#515151;
+    }
+    .wrapper.header .columns {
+      padding-bottom: 0 !important;
+    }
+    .header-archive-links{
+      padding-top: 1em;
+      font-size:  12px;
+      line-height: 1.3;
+      color:#333;
+    }
+    .header-archive-links a{
+      color: #515151;
+      font-weight: normal;
+    }
+    .wrapper .header-container{
+      background: #fcfcfa !important;
+    }
+    .wrapper.footer{
+      background: #fcfcfa !important;
+      border-top: 2px solid #FFDE00;
+      padding:30px 0;
+    }
+    .wrapper .footer td{
+      font-size: 12px;
+      color:#999;
+    }
+    .wrapper .footer strong{
+      color:#666;
+    }
+    .l-padding-t10{
+      padding-top:10px;
+    }
+    .l-padding-b30{
+      padding-bottom: 30px;
+    }
+    .wrapper .footer a{
+      color:#999;
+    }
+
+    /*content*/
+    .badge {
+      background: #FFDE00;
+      color: #333;
+      border-radius: 2px;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 3px 12px;
+      display:inline-block;
+    }
+    .avatar{
+      border-radius: 20px;
+      width: 20px;
+      height: 20px;
+      max-width: 20px;
+      max-height: 20px;
+      display: inline-block;
+    }
+    .quote-block{
+      font-size: 19px;
+      line-height: 1.25;
+      color: #1374DA;
+      font-weight: 500;
+    }
+    .quote-block h2 {
+      font-size:21px;
+      letter-spacing:-0.5px;
+      line-height:1.2;
+      font-weight:bold;
+    }
+    .quote-block a{
+      color: #1374DA;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    .quote-block h2 a {
+      line-height: 1.15;
+    }
+    .quote-block h2 a:visited {
+      color: #5C9CE0;
+    }
+    hr {
+      color: #EEEEEE;
+      background-color: #EEEEEE;
+      height: 1px;
+      border: 0;
+      width: 100%;
+      margin: 25px auto 25px;
+    }
+    .toptic-section .name{
+      color:#666;
+      font-weight: 600;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .quote-details{
+      font-size: 15px;
+      line-height: 1.4;
+      font-family: Georgia, serif;
+      padding-top: 0;
+    }
+    .quote-details a{
+      text-decoration:none;
+      display: block;
+      color: #0A0A0A;
+      padding: 0;
+      font-size: 15px;
+      line-height: 1.4;
+      font-family: Georgia, serif;
+      font-weight: normal;
+    }
+    .quote-details a.img-link {
+      min-height: 120px;
+      height: 120px;
+      max-height: 120px;
+      background: #fff;
+      overflow: hidden;
+      max-width: 270px;
+    }
+    .quote-details img{
+      max-width: 270px;
+      height: auto;
+    }
+    .quote-details td.large-6,.quote-details th.large-6{
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+    .quote-details a:visited {
+      color: #777;
+    }
+    .quote-details a.img-link:visited {
+      opacity: .7;
+    }
+    @media only screen and (max-width: 596px){
+      .quote-details td.large-6,.quote-details th.large-6{
+        padding: 0 0 2px 0;
+      }
+      .quote-details td.large-6.text-block,.quote-details th.large-6.text-block {
+        padding: 0 0 8px 0;
+      }
+      table.body img{
+        width:100%;
+      }
+      table.body .quote-details img{
+        max-width: 100%!important;
+        width:100%!important;
+      }
+      .bottom {
+        width: 100% !important;
+      }
+      .quote-details a.img-link {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+    .meta {
+      padding:0;
+      color: #777;
+			font-size: 12px !important;	
+    }
+    .bottom {
+      background-color: #fff;
+      color: #333;
+      font-size: 12px !important;
+      font-weight: bold;
+      vertical-align: middle;
+      padding: 0;
+      border-radius: 3px;
+      display: inline-block;
+      margin-top: 5px;
+    }
+    .bottom img {
+      width:20px;
+      height: 20px;
+      vertical-align: middle;
+			display: inline-block;
+    }
+    .bottom a img {
+      text-decoration: none;
+			display: inline-block;
+    }
+    .bottom a.name {
+      color: #333;
+      text-decoration: underline;
+      font-size: 12px !important;
+    }
+    .meta img{
+      display: inline;
+			display: inline-block;
+      vertical-align: middle;
+      width:20px;
+      height: 20px;
+      max-width:20px;
+      max-height: 20px;
+    }
+    @media only screen and (max-width: 596px){
+      .meta img{
+        width:20px!important;
+        height: 20px!important;
+				display: inline-block;
+      }
+    }
+
+    .meta, .meta a, .meta span {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1.5;
+    }
+    .meta .text {
+			font-size: 12px !important;	
+      vertical-align: middle;
+    }
+    .meta .text a:hover {
+			font-size: 12px !important;	
+      text-decoration: underline;
+    }
+    .meta a.tweet-link{
+			font-size: 12px !important;	
+      color:#0079DF;
+      font-weight: normal;
+    }
+    .meta a.tweet-link:hover {
+			font-size: 12px !important;	
+      text-decoration: underline;
+    }
+
+    pre * {
+      font-family: Menlo, Monaco, monospace !important;
+    }
+
+    code {
+      display: inline-block;
+      font-family: Menlo, Monaco, monospace !important;
+      background-color: #EBEBEB;
+      padding: 0 3px;
+      border-radius: 2px;
+      line-height: 1.25;
+    }
+    th a code {
+			font-size: 13px;
+		}
+    h2, h2 a {
+      font-size:21px;
+      letter-spacing:-0.5px;
+      line-height:1.25;
+      font-weight:bold;
+    }
+    h2 a {
+      color: #0079DF;
+    }
+    p,ul {
+      margin-bottom:25px;
+      font-weight:normal;
+      font-size:15px;
+    }
+    p {
+      margin-bottom:0;
+    }
+
+    sup {
+      font-size: 9px;
+      line-height: 0;
+    }
+    .code, pre {
+      background-color: #202020;
+      padding: 10px;
+      font-family: Menlo, Monaco, monospace !important;
+      margin-top: 3px;
+      color: #FFF;
+      border-radius: 2px;
+      line-height: 1.35;
+      font-size: 13px;
+      padding-left: 5px;
+    }
+    pre code {
+      background: inherit;
+      color: inherit;
+      white-space: pre-line;
+    }
+    #me {
+     display: inline-block;
+     border-radius: 50%;
+     max-height: 40px;
+     max-width: 40px;
+    }
+    @media only screen and (max-width: 596px) {
+      #me {
+        max-height: 40px !important;
+        max-width: 40px !important;
+      }
+    }
+
+		p code {
+			font-size: 14px;
+			word-break: break-all;
+			display: inline;
+		}	
+
+		#issue-date {
+			font-size: 13px;
+		}
+		/*
+
+		Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+		*/
+
+		.hljs {
+			display: block;
+			overflow-x: auto;
+			padding: 0.5em;
+			background: #23241f;
+		}
+
+		.hljs,
+		.hljs-tag,
+		.hljs-subst {
+			  color: #f8f8f2;
+		}
+
+		.hljs-strong,
+		.hljs-emphasis {
+			  color: #a8a8a2;
+		}
+
+		.hljs-bullet,
+		.hljs-quote,
+		.hljs-number,
+		.hljs-regexp,
+		.hljs-literal,
+		.hljs-link {
+			  color: #ae81ff;
+		}
+
+		.hljs-code,
+		.hljs-title,
+		.hljs-section,
+		.hljs-selector-class {
+			  color: #a6e22e;
+		}
+
+		.hljs-strong {
+			  font-weight: bold;
+		}
+
+		.hljs-emphasis {
+			  font-style: italic;
+		}
+
+		.hljs-keyword,
+		.hljs-selector-tag,
+		.hljs-name,
+		.hljs-attr {
+			  color: #f92672;
+		}
+
+		.hljs-symbol,
+		.hljs-attribute {
+			  color: #66d9ef;
+		}
+
+		.hljs-params,
+		.hljs-class .hljs-title {
+			  color: #f8f8f2;
+		}
+
+		.hljs-string,
+		.hljs-type,
+		.hljs-built_in,
+		.hljs-builtin-name,
+		.hljs-selector-id,
+		.hljs-selector-attr,
+		.hljs-selector-pseudo,
+		.hljs-addition,
+		.hljs-variable,
+		.hljs-template-variable {
+			  color: #e6db74;
+		}
+
+		.hljs-comment,
+		.hljs-deletion,
+		.hljs-meta {
+			  color: #75715e;
+		}
+  </style>
+
+</head>
+<body>
+  <!-- What is show to the user as preview: -->
+  <div style="opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px">Julien’s recommendation for this week</div>
+
+  <table class="body" data-made-with-foundation>
+    <tr>
+      <td class="float-center" align="center" valign="top">
+        <table class="wrapper">
+          <!-- header -->
+          <tr>
+            <td class="wrapper header">
+              <table align="center" class="container">
+                <tr>
+                  <td>
+                    <table class="row collapse" bgcolor="#fcfcfa">
+                      <tr>
+                        <th class="small-6 large-6 columns" valign="middle">
+                          <img src="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg" width="100" height="150" class="logo" title='Fullweb Weekly' />
+                        </th>
+                        <th class="small-6 large-6 columns" valign="middle">
+                          <table>
+                            <tr>
+                              <td>
+                                <h2 id="issue-nb" style='font-size:16px'>ISSUE #95</h2>
+                                <h3 id="issue-date" style='font-size:13px'>Tu&#8203;esday 11<sup>th</sup> Apr&#8203;il 2&#8203;017</h3>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="header-archive-links">
+                                <a href="*|ARCHIVE|*" target="_blank">View on the web</a>
+                                 · 
+                                <a href="http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907" target="_blank">Archives</a>
+                              </td>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- content -->
+          <tr>
+            <td class="float-center" align="center" valign="top" bgcolor="ffffff">
+              <table class="container content-wrapper float-center">
+                <tr>
+                  <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                </tr>
+                <tr>
+                  <td><span class="badge">TOP 5 LINKS THIS WEEK</span></td>
+                </tr>
+                <tr>
+                  <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                </tr>
+
+                <!-- one -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="https://medium.muz.li/how-to-use-white-space-in-web-design-68ab49f866a1">
+															How to use white space in Web design
+                          </a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+                          muz&#8203;.li · 
+													<a href="https://twitter.com/intent/tweet?via=fullwebio&text=How To Use White Space In Web Design&url=https://medium.muz.li/how-to-use-white-space-in-web-design-68ab49f866a1" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="https://medium.muz.li/how-to-use-white-space-in-web-design-68ab49f866a1">
+																	It is a designers role to create compelling layouts users like to use. White space is a concept that will help you to make beautiful, easy to read websites.
+                                </a>
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://twitter.com/jakub_paniaczyk">
+                            <img src="https://cdn-images-1.medium.com/fit/c/200/200/1*FdhHZCp3Oq3LZc3fDh7NOw.png" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://twitter.com/jakub_paniaczyk" class="name">Jakub Paniączyk</a>, Digital Designer
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- two -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="https://www.smashingmagazine.com/2017/04/secure-web-app-http-headers/">
+														How to secure your Web app with HTTP headers
+                          </a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+													smashingmagazine&#8203;.com · 
+													<a href="https://twitter.com/intent/tweet?via=fullwebio&text=How To Secure Your Web App With HTTP Headers&url=https://www.smashingmagazine.com/2017/04/secure-web-app-http-headers/" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="https://www.smashingmagazine.com/2017/04/secure-web-app-http-headers/">
+																	HTTP response headers can be leveraged to tighten up the security of web apps, typically just by adding a few lines of code. In this article, we’ll show how web developers can use HTTP headers to build secure apps.
+                                </a>
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://github.com/lupesko">
+                            <img src="https://secure.gravatar.com/avatar/9b01b0809fab07fcb721c9a959a7a2b1?s=40&d=mm&r=g" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://github.com/lupesko" class="name">Hagay Lupesko</a>, Engineering Leader at Postmates
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- three -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="https://blog.timescale.com/when-boring-is-awesome-building-a-scalable-time-series-database-on-postgresql-2900ea453ee2">
+															When Boring is Awesome: Building a scalable time-series database on PostgreSQL
+                          </a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+													timescale&#8203;.com · 
+													<a href="https://twitter.com/intent/tweet?via=fullwebio&text=When Boring is Awesome: Building a scalable time-series database on PostgreSQL&url=https://blog.timescale.com/when-boring-is-awesome-building-a-scalable-time-series-database-on-postgresql-2900ea453ee2" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="https://blog.timescale.com/when-boring-is-awesome-building-a-scalable-time-series-database-on-postgresql-2900ea453ee2">
+																TimescaleDB, a new open-source time-series database optimized for fast ingest and complex queries, now available on GitHub under the Apache 2 license. TimescaleDB is engineered up from PostgreSQL (packaged as an extension).
+                                </a>
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://twitter.com/acoustik">
+                            <img src="https://cdn-images-1.medium.com/fit/c/200/200/1*RPl1Qx9IiYOJ5zjbB6eakA.png" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://twitter.com/acoustik" class="name">Ajay Kulkarni</a>, Co-Founder/CEO at TimescaleDB
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- four -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="https://madebymike.com.au/writing/the-invisible-parts-of-CSS/">
+													  The invisible parts of CSS
+                          </a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+													madebymike&#8203;.com · 
+													<a href="https://twitter.com/intent/tweet?via=fullwebio&text=The invisible parts of CSS&url=https://madebymike.com.au/writing/the-invisible-parts-of-CSS/" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="https://madebymike.com.au/writing/the-invisible-parts-of-CSS/">
+																  You may not have realised it, but the visual results of CSS are often an indirect consequence of manipulating hidden properties.
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://twitter.com/MikeRiethmuller">
+                            <img src="https://madebymike.com.au/stuff/mug.jpg" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://twitter.com/MikeRiethmuller" class="name">Mike Riethmuller</a>, Web Developer
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- five -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="https://medium.com/dailyjs/npm-and-the-front-end-950c79fc22ce">
+														Npm and the frontend
+                          </a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+													medium&#8203;.com ·
+													<a href="https://twitter.com/intent/tweet?via=fullwebio&text=npm and the front end&url=https://medium.com/dailyjs/npm-and-the-front-end-950c79fc22ce" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="https://medium.com/dailyjs/npm-and-the-front-end-950c79fc22ce">
+																  Working with npm on the front end comes with many issues. In the following article, I explore the way we use and reuse front end components (such as Sass partials) seamlessly through the npm registry.
+                                </a>
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://twitter.com/wilkowskidom">
+                            <img src="https://cdn-images-1.medium.com/fit/c/200/200/0*LwI2TEJ6u2CXtJMy.png" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://twitter.com/wilkowskidom" class="name">Dominik Wilkowski</a>, Design Systems Developer
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <br />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- code -->
+                <tr>
+                  <td class="float-center" align="center" valign="top">
+                    <table class="container" style='width: 100% !important'>
+                      <!-- Tip of the week -->
+                      <tr>
+                        <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="badge">PROTIP OF THE WEEK</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                      </tr>
+                      <tr>
+												<td>
+
+                          <h2><a href="https://medium.com/fullwebio/3-vim-tips-with-external-commands-2fecc73fd583" style='color: #0079DF'>
+														3 Vim tips with external commands
+                          </a></h2>
+
+													<p style='margin: 10px 0 10px'>
+													  Vim has this <code>!</code> special character that will run any shell command without having to close it. Here are 3 ways I often use it:
+													</p>
+
+													<p style='margin: 10px 0 10px'>
+													  <strong>1. Format a JSON blob:</strong>
+													</p>
+													<pre><code>:%!python -m json.tool</code></pre>
+
+													<p style='margin: 10px 0 10px'>
+													  <strong>2. Count number of characters:</strong>
+													</p>
+													<pre><code>:! wc -c %</code></pre>
+
+													<p style='margin: 10px 0 10px'>
+													  <strong>3. Load a directory listing:</strong>
+													</p>
+													<pre><code>:r ! ls -1 /my/dir </code></pre>
+
+													<p style='margin: 10px 0 10px'>
+													The possibilities are virtually unlimited. Remember <code>%</code> will be replaced with the current filename, and <code>:r</code> (<code>:read</code>) will copy the output of what follows into the current file.
+													</p>
+
+
+                          <br/>
+                          <strong>⭐️  <a href="https://gist.github.com/nepsilon/1abe9a699f4aee93a897b438542d3355" style="font-weight: bold;text-decoration:underline; ">Keep this article as a Github Gist »</a></strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" class="text-center" style="padding:20px 0">
+                          <hr />
+													<strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">All the best and see you next week! &nbsp;<span style='font-style:normal;font-size: 19px'>👊 </span></strong>
+                          <br />
+                          <img id='me' src='https://avatars3.githubusercontent.com/u/600720?v=3&s=360' width='50' height='50' style='display:inline-block' />
+                          <strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;vertical-align:14px">— Julien</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" class="text-center" style="padding:20px 0;font-size:12px;color: #777">
+                          <hr />
+													<br />
+													<br />
+													Not interested in my emails anymore?
+													<br />
+													You can <a style='color: #777; text-decoration:underline' href="*|UNSUB|*">unsubscribe</a> :(
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
