@@ -1,0 +1,996 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>Fullweb Weekly Issue #101</title>
+  <meta property="og:image" content="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/public/static/fullweb-logo.png" />
+  <meta property="og:title" content="Issue #101 — How to secure your site with HTTPS?" />
+  <style type="text/css">
+    /* function css */
+    .wrapper {
+      width: 100%; }
+
+    #outlook a {
+      padding: 0; }
+
+    body {
+      -moz-box-sizing: border-box;
+      -ms-text-size-adjust: 100%;
+      -webkit-box-sizing: border-box;
+      -webkit-font-smoothing:antialiased;
+      -webkit-text-size-adjust:none;
+      box-sizing: border-box;
+      height:  100%;
+      min-width: 100%;
+      width: 100% !important;
+    }
+
+    .ExternalClass {
+      width: 100%; }
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%; }
+
+    #backgroundTable {
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      line-height: 100% !important; }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+      border:0;
+      clear: both;
+      display: inline-block;
+      max-width: 100%;
+      outline: none;
+      text-decoration: none;
+      width: auto;
+    }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse; }
+
+    td {
+      word-wrap: break-word;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      hyphens: auto;
+      border-collapse: collapse !important; }
+
+    table, tr, td {
+      padding: 0;
+      vertical-align: top;
+      text-align: left; }
+    table.body {
+      background: #f3f3f3;
+      height: 100%;
+      width: 100%; }
+
+    table.container {
+      width: 580px;
+      margin: 0 auto;
+      text-align: inherit; }
+
+    table.row {
+      padding: 0;
+      width: 100%;
+      position: relative; }
+
+    table.spacer {
+      width: 100%; }
+      table.spacer td {
+        mso-line-height-rule: exactly; }
+
+    table.container table.row {
+      display: table; }
+
+    td.large-6,
+    th.large-6 {
+      width: 274px;
+      padding-left: 8px;
+      padding-right: 8px; }
+
+    .collapse > tbody > tr > td.large-6,
+    .collapse > tbody > tr > th.large-6 {
+      padding-right: 0;
+      padding-left: 0;
+      width: 290px; }
+
+    .collapse td.large-6.first,
+    .collapse th.large-6.first,
+    .collapse td.large-6.last,
+    .collapse th.large-6.last {
+      width: 298px; }
+
+    .body .columns td.large-6,
+    .body .column td.large-6,
+    .body .columns th.large-6,
+    .body .column th.large-6 {
+      width: 50%; }
+
+
+    td.expander,
+    th.expander {
+      visibility: hidden;
+      width: 0;
+      padding: 0 !important; }
+
+    td.text-center{
+      text-align: center; }
+
+    table.float-center,
+    td.float-center{
+      margin: 0 auto;
+      float: none;
+      text-align: center; }
+
+    h4 {
+      margin-top: 1em;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    body,
+    table.body,
+    p,
+    td,
+    th {
+      font-size: 16px;
+      line-height: 1.3; }
+
+    pre {
+      margin: 10px 0;
+    }
+    body.outlook p {
+      display: inline !important; }
+
+    @media only screen and (max-width: 596px) {
+      table.body img {
+        width: auto;
+        height: auto; }
+      table.body center {
+        min-width: 0 !important; }
+      table.body .container {
+        width: 95% !important; }
+      table.body .columns {
+        height: auto !important;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 16px !important;
+        padding-right: 16px !important; }
+      table.body .collapse .columns {
+        padding-left: 0 !important;
+        padding-right: 0 !important; }
+      th.small-6 {
+        display: inline-block !important;
+        width: 50% !important; }
+      th.small-12 {
+        display: inline-block !important;
+        width: 100% !important; }
+      table.body table th.expander {
+        display: none !important; }
+ }
+
+    /*------end-------*/
+    * {
+      margin:0;
+      padding:0;
+      font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-size:100%;
+      line-height:1.6;
+      box-sizing: border-box;
+    }
+
+    a {
+      color:#0079DF;
+      text-decoration:none;
+    }
+    html{
+      background: #fcfcfa;
+    }
+    table.body{
+      background: #fcfcfa;
+    }
+    h1,h2,h3{
+      line-height:1.2;
+      margin-bottom:0;
+      color:#333;
+      margin:0;
+      font-weight:500;
+    }
+    table.body img.logo{
+      width:100px;
+      height: 150px;
+      line-height: 1.2;
+      font-size: 21px;
+    }
+    .wrapper.header {
+      background: #fcfcfa !important;
+      border-bottom: 2px solid #FFDE00;
+    }
+    .wrapper.header h2{
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom:0;
+      line-height:1.75;
+    }
+    .wrapper.header h3{
+      font-size: 12px;
+      color:#515151;
+    }
+    .wrapper.header .columns {
+      padding-bottom: 0 !important;
+    }
+    .header-archive-links{
+      padding-top: 1em;
+      font-size:  12px;
+      line-height: 1.3;
+      color:#333;
+    }
+    .header-archive-links a{
+      color: #515151;
+      font-weight: normal;
+    }
+    .wrapper .header-container{
+      background: #fcfcfa !important;
+    }
+    .wrapper.footer{
+      background: #fcfcfa !important;
+      border-top: 2px solid #FFDE00;
+      padding:30px 0;
+    }
+    .wrapper .footer td{
+      font-size: 12px;
+      color:#999;
+    }
+    .wrapper .footer strong{
+      color:#666;
+    }
+    .l-padding-t10{
+      padding-top:10px;
+    }
+    .l-padding-b30{
+      padding-bottom: 30px;
+    }
+    .wrapper .footer a{
+      color:#999;
+    }
+
+    /*content*/
+    .badge {
+      background: #FFDE00;
+      color: #333;
+      border-radius: 2px;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 3px 12px;
+      display:inline-block;
+    }
+    .avatar{
+      border-radius: 20px;
+      width: 20px;
+      height: 20px;
+      max-width: 20px;
+      max-height: 20px;
+      display: inline-block;
+    }
+    .quote-block{
+      font-size: 19px;
+      line-height: 1.25;
+      color: #1374DA;
+      font-weight: 500;
+    }
+    .quote-block h2 {
+      font-size:21px;
+      letter-spacing:-0.5px;
+      line-height:1.2;
+      font-weight:bold;
+    }
+    .quote-block a{
+      color: #1374DA;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    .quote-block h2 a {
+      line-height: 1.15;
+    }
+    .quote-block h2 a:visited {
+      color: #5C9CE0;
+    }
+    hr {
+      color: #EEEEEE;
+      background-color: #EEEEEE;
+      height: 1px;
+      border: 0;
+      width: 100%;
+      margin: 25px auto 25px;
+    }
+    .toptic-section .name{
+      color:#666;
+      font-weight: 600;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .quote-details{
+      font-size: 15px;
+      line-height: 1.4;
+      font-family: Georgia, serif;
+      padding-top: 0;
+    }
+    .quote-details a{
+      text-decoration:none;
+      display: block;
+      color: #0A0A0A;
+      padding: 0;
+      font-size: 15px;
+      line-height: 1.4;
+      font-family: Georgia, serif;
+      font-weight: normal;
+    }
+    .quote-details a.img-link {
+      min-height: 120px;
+      height: 120px;
+      max-height: 120px;
+      background: #fff;
+      overflow: hidden;
+      max-width: 270px;
+    }
+    .quote-details img{
+      max-width: 270px;
+      height: auto;
+    }
+    .quote-details td.large-6,.quote-details th.large-6{
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+    .quote-details a:visited {
+      color: #777;
+    }
+    .quote-details a.img-link:visited {
+      opacity: .7;
+    }
+    @media only screen and (max-width: 596px){
+      .quote-details td.large-6,.quote-details th.large-6{
+        padding: 0 0 2px 0;
+      }
+      .quote-details td.large-6.text-block,.quote-details th.large-6.text-block {
+        padding: 0 0 8px 0;
+      }
+      table.body img{
+        width:100%;
+      }
+      table.body .quote-details img{
+        max-width: 100%!important;
+        width:100%!important;
+      }
+      .bottom {
+        width: 100% !important;
+      }
+      .quote-details a.img-link {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+    .meta {
+      padding:0;
+      color: #777;
+			font-size: 12px !important;	
+    }
+    .bottom {
+      background-color: #fff;
+      color: #333;
+      font-size: 12px !important;
+      font-weight: bold;
+      vertical-align: middle;
+      padding: 0;
+      border-radius: 3px;
+      display: inline-block;
+      margin-top: 5px;
+    }
+    .bottom img {
+      width:20px;
+      height: 20px;
+      vertical-align: middle;
+			display: inline-block;
+    }
+    .bottom a img {
+      text-decoration: none;
+			display: inline-block;
+    }
+    .bottom a.name {
+      color: #333;
+      text-decoration: underline;
+      font-size: 12px !important;
+    }
+    .meta img{
+      display: inline;
+			display: inline-block;
+      vertical-align: middle;
+      width:20px;
+      height: 20px;
+      max-width:20px;
+      max-height: 20px;
+    }
+    @media only screen and (max-width: 596px){
+      .meta img{
+        width:20px!important;
+        height: 20px!important;
+				display: inline-block;
+      }
+    }
+
+    .meta, .meta a, .meta span {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1.5;
+    }
+    .meta .text {
+			font-size: 12px !important;	
+      vertical-align: middle;
+    }
+    .meta .text a:hover {
+			font-size: 12px !important;	
+      text-decoration: underline;
+    }
+    .meta a.tweet-link{
+			font-size: 12px !important;	
+      color:#0079DF;
+      font-weight: normal;
+    }
+    .meta a.tweet-link:hover {
+			font-size: 12px !important;	
+      text-decoration: underline;
+    }
+
+    pre * {
+      font-family: Menlo, Monaco, monospace !important;
+    }
+
+    code {
+      display: inline-block;
+      font-family: Menlo, Monaco, monospace !important;
+      background-color: #EBEBEB;
+      padding: 0 3px;
+      border-radius: 2px;
+      line-height: 1.25;
+    }
+    th a code {
+			font-size: 13px;
+		}
+    h2, h2 a {
+      font-size:21px;
+      letter-spacing:-0.5px;
+      line-height:1.25;
+      font-weight:bold;
+    }
+    h2 a {
+      color: #0079DF;
+    }
+    p,ul {
+      margin-bottom:25px;
+      font-weight:normal;
+      font-size:15px;
+    }
+    p {
+      margin-bottom:0;
+    }
+
+    sup {
+      font-size: 9px;
+      line-height: 0;
+    }
+    .code, pre {
+      background-color: #202020;
+      padding: 10px;
+      font-family: Menlo, Monaco, monospace !important;
+      margin-top: 3px;
+      color: #FFF;
+      border-radius: 2px;
+      line-height: 1.35;
+      font-size: 13px;
+      padding-left: 5px;
+    }
+    pre code {
+      background: inherit;
+      color: inherit;
+      white-space: pre-line;
+    }
+    #me {
+     display: inline-block;
+     border-radius: 50%;
+     max-height: 40px;
+     max-width: 40px;
+    }
+    @media only screen and (max-width: 596px) {
+      #me {
+        max-height: 40px !important;
+        max-width: 40px !important;
+      }
+    }
+
+		p code {
+			font-size: 14px;
+			display: inline;
+		}	
+
+		#issue-date {
+			font-size: 13px;
+		}
+		/*
+
+		Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+		*/
+
+		.hljs {
+			display: block;
+			overflow-x: auto;
+			padding: 0.5em;
+			background: #23241f;
+		}
+
+		.hljs,
+		.hljs-tag,
+		.hljs-subst {
+			  color: #f8f8f2;
+		}
+
+		.hljs-strong,
+		.hljs-emphasis {
+			  color: #a8a8a2;
+		}
+
+		.hljs-bullet,
+		.hljs-quote,
+		.hljs-number,
+		.hljs-regexp,
+		.hljs-literal,
+		.hljs-link {
+			  color: #ae81ff;
+		}
+
+		.hljs-code,
+		.hljs-title,
+		.hljs-section,
+		.hljs-selector-class {
+			  color: #a6e22e;
+		}
+
+		.hljs-strong {
+			  font-weight: bold;
+		}
+
+		.hljs-emphasis {
+			  font-style: italic;
+		}
+
+		.hljs-keyword,
+		.hljs-selector-tag,
+		.hljs-name,
+		.hljs-attr {
+			  color: #f92672;
+		}
+
+		.hljs-symbol,
+		.hljs-attribute {
+			  color: #66d9ef;
+		}
+
+		.hljs-params,
+		.hljs-class .hljs-title {
+			  color: #f8f8f2;
+		}
+
+		.hljs-string,
+		.hljs-type,
+		.hljs-built_in,
+		.hljs-builtin-name,
+		.hljs-selector-id,
+		.hljs-selector-attr,
+		.hljs-selector-pseudo,
+		.hljs-addition,
+		.hljs-variable,
+		.hljs-template-variable {
+			  color: #e6db74;
+		}
+
+		.hljs-comment,
+		.hljs-deletion,
+		.hljs-meta {
+			  color: #75715e;
+		}
+  </style>
+
+</head>
+<body>
+  <!-- What is show to the user as preview: -->
+  <div style="opacity:0;font-size:0;color:#FCFCFA;background:#FCFCFA;display:block;height:0;max-height:0;margin-left:-9999px">Julien’s recommendation for this week</div>
+
+  <table class="body" data-made-with-foundation>
+    <tr>
+      <td class="float-center" align="center" valign="top">
+        <table class="wrapper">
+          <!-- header -->
+          <tr>
+            <td class="wrapper header">
+              <table align="center" class="container">
+                <tr>
+                  <td>
+                    <table class="row collapse" bgcolor="#fcfcfa">
+                      <tr>
+                        <th class="small-6 large-6 columns" valign="middle">
+                          <img src="https://raw.githubusercontent.com/nepsilon/fullweb.io/gh-pages/email_template_fullweb-logo.jpg" width="100" height="150" class="logo" title='Fullweb Weekly' />
+                        </th>
+                        <th class="small-6 large-6 columns" valign="middle">
+                          <table>
+                            <tr>
+                              <td>
+                                <h2 id="issue-nb" style='font-size:16px'>ISSUE #101</h2>
+                                <h3 id="issue-date" style='font-size:13px'>Tu&#8203;esday 23<sup>rd</sup> Ma&#8203;y 2&#8203;017</h3>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="header-archive-links">
+                                <a href="*|ARCHIVE|*" target="_blank">View on the web</a>
+                                 · 
+                                <a href="http://us11.campaign-archive2.com/home/?u=8e9d09ec89c0c4ededef3beab&id=b98e776907" target="_blank">Archives</a>
+                              </td>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- content -->
+          <tr>
+            <td class="float-center" align="center" valign="top" bgcolor="ffffff">
+              <table class="container content-wrapper float-center">
+                <tr>
+                  <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                </tr>
+                <tr>
+                  <td><span class="badge">TOP 5 LINKS THIS WEEK</span></td>
+                </tr>
+                <tr>
+                  <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                </tr>
+
+                <!-- one -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2">
+														Rearchitecting Airbnb’s frontend
+                          </a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+                          medium&#8203;.com · 
+													<a href="https://twitter.com/intent/tweet?via=fullwebio&text=Rearchitecting Airbnb’s Frontend&url=https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2">
+																	This post will look at (1) the product drivers that precipitated the changes, (2) the steps we took to move away from our legacy Rails solutions, and (3) some of the key pillars of the new stack.
+                                </a>
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://twitter.com/AdamRNeary">
+                            <img src="https://avatars2.githubusercontent.com/u/1247751?v=3&s=40" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://twitter.com/AdamRNeary" class="name">Adam Neary</a>, Software Engineer at AirBnB
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- two -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="https://github.com/yandex/gixy">
+														Nginx configuration static analyzer
+                          </a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+													github&#8203;.com · 
+													<a href="https://twitter.com/intent/tweet?via=fullwebio&text=Nginx configuration static analyzer&url=https://github.com/yandex/gixy" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="https://github.com/yandex/gixy">
+																	The main goal of Gixy is to prevent security misconfiguration and automate flaw detection.
+                                </a>
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://github.com/yandex">
+                            <img src="https://avatars3.githubusercontent.com/u/7323495?v=3&s=40" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://github.com/yandex" class="name">Andrew Krasichkov &amp; team</a>, Software Engineers at Yandex
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- three -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/">
+														StackOverflow: Helping one million developers exit Vim
+													</a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+													stackoverflow&#8203;.blog · 
+													<a href="https://twitter.com/intent/tweet?via=fullwebio&text=StackOverflow: Helping one million developers exit Vim&url=https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/">
+																	In the five years since this question was asked, there have been over a million other developers who got stuck in Vim and couldn’t escape without a bit of help.
+                                </a>
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://twitter.com/drob">
+                            <img src="https://avatars0.githubusercontent.com/u/994718?v=3&s=40" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://twitter.com/drob" class="name">David Robinson</a>, Data Scientist at StackOverflow
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- four -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="https://www.smashingmagazine.com/2017/05/why-no-framework/">
+													  Why we didn’t use a framework: A case study
+                          </a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+													smashingmagazine&#8203;.com · 
+													<a href="https://twitter.com/intent/tweet?via=fullwebio&text=Why We Didn’t Use A Framework (Case Study)&url=https://www.smashingmagazine.com/2017/05/why-no-framework/" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="https://www.smashingmagazine.com/2017/05/why-no-framework/">
+																	We gathered our requirements, reviewed our team’s skillset and ultimately decided to use vanilla JavaScript and to avoid a front-end framework.
+																</a>
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://twitter.com/ngauthier">
+                            <img src="https://avatars3.githubusercontent.com/u/13654?v=3&s=40" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://twitter.com/ngauthier" class="name">Nick Gauthier</a>, Web Developer 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <hr />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- five -->
+                <tr>
+                  <td>
+                    <table class="toptic-section" align="center">
+                      <tr>
+                        <td class="quote-block">
+                          <h2><a href="https://medium.com/statuscode/the-many-faces-of-distinct-in-postgresql-c52490de5954">
+														The many faces of <code>DISTINCT</code> in PostgreSQL
+                          </a></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="meta">
+													medium&#8203;.com ·
+													<a href="https://twitter.com/intent/tweet?via=fullwebio&text=The many faces of DISTINCT in PostgreSQL&url=https://medium.com/statuscode/the-many-faces-of-distinct-in-postgresql-c52490de5954" class="tweet-link">tweet this link</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="quote-details">
+                          <table class="row">
+                            <tr>
+                              <th class="small-12 large-12">
+                                <a href="https://medium.com/statuscode/the-many-faces-of-distinct-in-postgresql-c52490de5954">
+																	I found some nice unique features in PostgreSQL. Oddly enough, a lot of them contained the word <code>DISTINCT</code>.
+                                </a>
+                              </th>
+                              <th class="expander"></th>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bottom">
+                          By
+                          <a href="https://twitter.com/be_haki">
+                            <img src="https://avatars0.githubusercontent.com/u/6884290?v=3&s=40" class="avatar" width="20" height="20" />
+                          </a>
+                          <a href="https://twitter.com/be_haki" class="name">Haki Benita</a>, FullStack Developer
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" height="1">
+                          <br />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- code -->
+                <tr>
+                  <td class="float-center" align="center" valign="top">
+                    <table class="container" style='width: 100% !important'>
+                      <!-- Tip of the week -->
+                      <tr>
+                        <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="badge">PROTIP OF THE WEEK</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="30" style="font-size:30px;line-height: 30px;">&#xA0;</td>
+                      </tr>
+                      <tr>
+												<td>
+
+                          <h2><a href="https://medium.com/fullwebio/how-to-secure-your-site-with-https-ee513660dc3e" style='color: #0079DF'>
+														How to secure your site with HTTPS? 
+                          </a></h2>
+
+													<p style='margin: 10px 0 10px'>
+													With HTTP everything is visible when traveling on the Internet. By generating an SSL certificate and configuring your web server you can force browsers to use HTTPS. Here is how to proceed:
+													</p>
+
+<pre><code><span class="hljs-comment">1. Install letsencrypt</span>
+pip install letsencrypt
+<span class="hljs-comment">2. Generate a cerficate for your doman</span>
+certbot certonly -d mydomain.com
+<span class="hljs-comment">3. Configure your nginx config file </span>
+listen 443 ssl;
+ssl_certificate     /etc/letsencrypt/live/mydomain.com/fullchain.pem;
+ssl_certificate_key /etc/letsencrypt/live/mydomain.com/privkey.pem;
+<span class="hljs-comment">4. Reload nginx and you're done </span>
+service nginx reload
+</code></pre>
+
+													<p style='margin: 10px 0 10px'>
+													These are the most essential steps to get SSL configured on your web server. See <a href="https://gist.github.com/nepsilon/d8db61cd9d464e0e15a2992ac7c656f9" style="font-weight: bold;text-decoration:underline; ">this Github gist</a> for redirecting HTTP to HTTPS and ensuring the browser only accepts and uses the most secure SSL options.
+													</p>
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" class="text-center" style="padding:20px 0">
+                          <hr />
+													<strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;">All the best and see you next week! &nbsp;<span style='font-style:normal;font-size: 19px'>👾 </span></strong>
+                          <br />
+													<a href='https://twitter.com/jbuty'>
+														<img id='me' src='https://avatars3.githubusercontent.com/u/600720?v=3&s=150' width='50' height='50' style='display:inline-block' />
+													</a>
+                          <strong style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;vertical-align:14px"> — 
+														<a style="font-family: Georgia; color: #5A5A5A;font-weight: 500; font-style: italic;" href='https://twitter.com/jbuty'>Julien</a>
+													</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" class="text-center" style="padding:20px 0;font-size:12px;color: #777">
+                          <hr />
+													<br />
+													<br />
+													Not interested in my emails anymore?
+													<br />
+													You can <a style='color: #777; text-decoration:underline' href="*|UNSUB|*">unsubscribe</a> :(
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
