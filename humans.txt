@@ -8,13 +8,6 @@
                                                             
                                                                       
 
-/* TEAM */
-
-Newsletter creator, developer and designer: Julien Buty <julien.buty@gmail.com>
-Location: Beijing, China
-Code: https://github.com/nepsilon/fullweb.io
-
-
 /* SITE & THANKS */
 
 Tech stack:
