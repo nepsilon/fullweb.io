@@ -25,6 +25,6 @@ Tech stack:
 
 Site Credits:
   - Unsplash for images: https://unsplash.com
-  - Vincent Zhang for the Fullweb Logo
+  - Vincent Zhang for the Fullweb Logo: Vincent <muse.vincent@gmail.com>
 
 Newsletters sent with MailChimp (http://mailchimp.com).
